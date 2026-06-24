@@ -46,4 +46,4 @@ This project is the **foundation layer** of the portfolio. Every subsequent proj
 
 ---
 
-*Author: Karun · AIGP (AI Governance Professional)*
+*Karun · AIGP (AI Governance Professional)*
