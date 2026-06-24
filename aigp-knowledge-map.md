@@ -91,4 +91,4 @@ Recognising that all four of these are "the same risk" viewed through four diffe
 
 ---
 
-*Author: Anju Karun · AIGP (AI Governance Professional)*
+*Author: Karun · AIGP (AI Governance Professional)*
