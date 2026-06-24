@@ -59,4 +59,4 @@ A list that simply states "Article 14 = human oversight" adds little value beyon
 
 ---
 
-*Author: Anju Karun · AIGP (AI Governance Professional)*
+*Author: Karun · AIGP (AI Governance Professional)*
