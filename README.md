@@ -18,4 +18,4 @@ Five well-built projects demonstrate execution. This reference layer demonstrate
 
 ---
 
-*Author: Anju Karun · AIGP (AI Governance Professional)*
+*Karun · AIGP (AI Governance Professional)*
