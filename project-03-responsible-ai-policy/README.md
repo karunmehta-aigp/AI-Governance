@@ -47,4 +47,4 @@ This project is the **third layer** of the portfolio, and a deliberate shift in 
 
 ---
 
-*Author: Anju Karun · AIGP (AI Governance Professional)*
+*Karun · AIGP (AI Governance Professional)*
