@@ -1,7 +1,7 @@
 # AI Governance Toolkit — Core + Industry Overlays
 
 **Project 6 of the AI Governance Portfolio**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ## Disclaimer
 
