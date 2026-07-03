@@ -1,7 +1,7 @@
 # Conformity Assessment Checklist
 
 **Doc ID:** EUAI-005 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun · AIGP (AI Governance Professional)
 
 ---
 
