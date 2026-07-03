@@ -1,4 +1,4 @@
-# AI Governance Toolkit — Core + Industry Overlays
+# AI Governance Toolkit 
 
 **Project 6 of the AI Governance Portfolio**
 **Author:** Karun. · AIGP (AI Governance Professional)
