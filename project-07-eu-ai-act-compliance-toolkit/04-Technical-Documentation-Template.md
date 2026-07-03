@@ -1,7 +1,7 @@
 # Technical Documentation Template
 
 **Doc ID:** EUAI-004 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ---
 
