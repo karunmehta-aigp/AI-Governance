@@ -1,7 +1,7 @@
 # EU AI Act Applicability Assessment
 
 **Doc ID:** EUAI-001 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ---
 
