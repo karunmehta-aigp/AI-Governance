@@ -1,7 +1,7 @@
 # High-Risk AI System Checklist
 
 **Doc ID:** EUAI-003 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ---
 
