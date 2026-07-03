@@ -7,7 +7,7 @@
 
 **Disclaimer:** *This document is a portfolio artefact created for demonstration and educational purposes only. It does not represent the policies, systems, or practices of any real organisation, and no organisation, vendor, or individual named or implied within it refers to an actual entity. All identifiers (e.g. ORG-AI-0XX) are fictional and used solely to illustrate a coherent governance scenario. This template does not constitute legal advice and should not be relied upon for regulatory compliance without review by qualified counsel and subject-matter experts.*
 
-**Anju K. · AIGP (AI Governance Professional)**
+**Karun · AIGP (AI Governance Professional)**
 
 ---
 
