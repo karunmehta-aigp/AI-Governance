@@ -1,7 +1,7 @@
 # Incident Reporting Procedure
 
 **Doc ID:** EUAI-008 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun · AIGP (AI Governance Professional)
 
 ---
 
