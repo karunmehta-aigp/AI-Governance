@@ -30,7 +30,7 @@ The projects draw on these frameworks throughout:
 ├── project-03-responsible-ai-policy/      # Policy, principles, and operating model
 ├── project-04-incident-response/          # AI failure scenario, timeline, and root cause analysis
 ├── project-05-high-risk-documentation/    # EU AI Act conformity documentation pack
-├── project-06-ai-governance-toolkit/      # Reusable governance toolkit + 4 industry overlays
+├── project-06-ai-governance-toolkit/      # Reusable governance toolkit
 ├── reference-library/                     # Cross-portfolio reference: knowledge map & crosswalks
 └── README.md                              # This file
 ```
