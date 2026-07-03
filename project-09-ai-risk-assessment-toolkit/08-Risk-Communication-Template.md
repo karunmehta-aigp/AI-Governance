@@ -1,7 +1,7 @@
 # Risk Communication Template
 
 **Doc ID:** RISK-008 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ---
 
