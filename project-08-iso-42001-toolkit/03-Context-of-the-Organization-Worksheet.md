@@ -1,7 +1,7 @@
 # Context of the Organization Worksheet
 
 **Doc ID:** ISO-003 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun. · AIGP (AI Governance Professional)
 
 ---
 
