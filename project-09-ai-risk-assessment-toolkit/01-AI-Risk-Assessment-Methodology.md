@@ -1,7 +1,7 @@
 # AI Risk Assessment Methodology
 
 **Doc ID:** RISK-001 · **Version 1.0**
-**Author:** Anju K. · AIGP (AI Governance Professional)
+**Author:** Karun · AIGP (AI Governance Professional)
 
 ---
 
