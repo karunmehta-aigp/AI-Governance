@@ -78,7 +78,7 @@ Full details for each: see that project's own `README.md`.
 | 3 | [Responsible AI Policy & Operating Model](./project-03-responsible-ai-policy/) | NIST AI RMF (Govern) | Policy, review process, and operating model |
 | 4 | [AI Incident Response & Regulatory Escalation](./project-04-incident-response/) | NIST AI RMF (Manage) · EU AI Act | Incident timeline + root cause analysis |
 | 5 | [High-Risk AI Documentation & Conformity Pack](./project-05-high-risk-documentation/) | EU AI Act (Articles 9–17) | Full conformity documentation, two systems |
-| 6 | [AI Governance Toolkit + Industry Overlays](./project-06-ai-governance-toolkit/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 · OECD | Reusable core toolkit + 4 sector overlays |
+| 6 | [AI Governance Toolkit](./project-06-ai-governance-toolkit/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 · OECD | Reusable core toolkit + 4 sector overlays |
 | 7 | [EU AI Act Compliance Toolkit](./project-07-eu-ai-act-compliance-toolkit/) | EU AI Act | Applicability through conformity documentation |
 | 8 | [ISO/IEC 42001 Toolkit](./project-08-iso-42001-toolkit/) | ISO/IEC 42001 | Full AIMS resource package |
 | 9 | [AI Risk Assessment Toolkit](./project-09-ai-risk-assessment-toolkit/) | NIST AI RMF · Internal risk practice | Risk register, scoring, dashboard |
