@@ -12,11 +12,11 @@ A short version of the thread:
 
 ---
 
-## The Toolkits (Projects 6–10)
+## The Toolkits (Projects 6–11)
 
-Projects 6–10 step outside the fictional narrative deliberately. Where Projects 1–5 show governance applied to one organisation's specific systems, Projects 6–10 are **generic, industry-agnostic, reusable toolkits** — the kind of starting kit an organisation would stand up *before* any of the Project 1–5 work becomes possible.
+Projects 6–11 step outside the fictional narrative deliberately. Where Projects 1–5 show governance applied to one organisation's specific systems, Projects 6–11 are **generic, industry-agnostic, reusable toolkits and instruments** — the kind of starting kit an organisation would stand up *before* any of the Project 1–5 work becomes possible.
 
-Projects 6–9 are **focused toolkits**, each going deep on a single discipline or framework. Project 10 is the **consolidated counterpart** — a single enterprise operating framework that brings the crosswalk, controls, registers, and operating model together into one workbook. Read 6–9 to see each discipline in isolation; read 10 to see how they combine into one governance programme.
+Projects 6–9 are **focused toolkits**, each going deep on a single discipline or framework. Project 10 is the **consolidated counterpart** — a single enterprise operating framework that brings the crosswalk, controls, registers, and operating model together into one workbook. Project 11 is the **technical counterpart** — it closes the gap between governance paperwork and actual ML/LLM engineering practice, mapping real evaluation tooling directly to the evidence it produces. Read 6–9 to see each discipline in isolation; read 10 to see how they combine into one governance programme; read 11 to see how that programme's evidence requirements actually get satisfied by day-to-day engineering work.
 
 | Project | Toolkit | Focus |
 |---|---|---|
@@ -25,6 +25,7 @@ Projects 6–9 are **focused toolkits**, each going deep on a single discipline 
 | 8 | ISO/IEC 42001 Toolkit | Gap assessment, AIMS policy, context worksheet, risk & opportunity register, objectives/KPIs, internal audit, management review, corrective action |
 | 9 | AI Risk Assessment Toolkit | Risk methodology, risk register, scoring matrix, treatment plans, vendor risk assessment, incident log, live monitoring dashboard |
 | 10 | Enterprise AI Governance Operating Framework (AIGOF) | A single 43-worksheet workbook consolidating the above into one operating framework: a master crosswalk across NIST AI RMF, ISO/IEC 42001 & the EU AI Act, detailed audit checklists, controls library, registers (risk, incident, exception), executive dashboard, maturity scoring, and sector/privacy overlays |
+| 11 | AI Governance Technical-Control Mapping Reference | Maps real LLM engineering tooling — RAGAS, LangSmith, Promptfoo, a full LangChain pipeline — directly to the EU AI Act / NIST AI RMF / ISO 42001 / SR 11-7 requirement each one evidences, alongside a full enterprise governance program layer (inventory, RACI, incidents, KPIs, master control register, crosswalk) |
 
 Full details for each: see that project's own `README.md`.
 
@@ -44,12 +45,13 @@ Full details for each: see that project's own `README.md`.
 | 8 | [ISO/IEC 42001 Toolkit](./project-08-iso-42001-toolkit/) | ISO/IEC 42001 | Full AIMS resource package |
 | 9 | [AI Risk Assessment Toolkit](./project-09-ai-risk-assessment-toolkit/) | NIST AI RMF · Internal risk practice | Risk register, scoring, dashboard |
 | 10 | [Enterprise AI Governance Operating Framework (AIGOF)](./project-10-enterprise-governance-toolkit/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 | 43-worksheet consolidated operating framework |
+| 11 | [AI Governance Technical-Control Mapping Reference](./project-11-ai-governance-technical-control-mapping/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 · SR 11-7 | LLM engineering-tool-to-regulatory-evidence crosswalk |
 
 ---
 
 ## Reference Library
 
-Sitting outside all ten numbered projects, the **Reference Library** organises and cross-references the whole portfolio against external standards:
+Sitting outside all eleven numbered projects, the **Reference Library** organises and cross-references the whole portfolio against external standards:
 
 | File | Description |
 |---|---|
@@ -66,9 +68,9 @@ Sitting outside all ten numbered projects, the **Reference Library** organises a
 Each project folder contains:
 
 - **`README.md`** — scenario context, objectives, key design decisions, and how the project's artefacts connect both to the underlying frameworks and to the rest of the portfolio
-- **Artefacts** — the actual governance documents themselves: inventories, risk registers, policies, incident records, conformity documentation, and (for Projects 6–10) reusable templates
+- **Artefacts** — the actual governance documents themselves: inventories, risk registers, policies, incident records, conformity documentation, and (for Projects 6–11) reusable templates and instruments
 
-Projects 1–5 are designed to be read in order — each builds on the governance maturity and specific findings established by the one before it — but every project is also fully standalone. Projects 6–10 and the Reference Library can be used independently of the narrative at any time. If you are preparing for a specific interview or assessing fit for a specific role, navigate directly to the project most relevant to that conversation; each README explains its scenario in full without assuming you have read the others.
+Projects 1–5 are designed to be read in order — each builds on the governance maturity and specific findings established by the one before it — but every project is also fully standalone. Projects 6–11 and the Reference Library can be used independently of the narrative at any time. If you are preparing for a specific interview or assessing fit for a specific role, navigate directly to the project most relevant to that conversation; each README explains its scenario in full without assuming you have read the others.
 
 ---
 
@@ -102,7 +104,8 @@ Beyond the specific skills listed in each project's own README, the portfolio as
 - That **classification, risk assessment, policy, incident response, and conformity documentation are not five separate disciplines** but connected views of the same underlying governance responsibility, which is why the same systems and the same findings recur deliberately across Projects 1–5
 - That **honest documentation of an unresolved gap is more valuable, and more credible, than documentation that asserts a premature compliance position** — several artefacts in this portfolio explicitly state that a requirement is not yet met, with a remediation date attached, rather than rounding up to "compliant"
 - That **proportionality is the organising discipline of good governance** — minimal-risk systems throughout this portfolio are governed lightly and explicitly are not over-engineered, while high-risk systems receive the full weight of scrutiny the framework intends
-- That governance capability is **portable** — Projects 6–10 show the same disciplines demonstrated narratively in Projects 1–5 distilled into reusable foundations any organisation, in any sector, could stand up from day one
+- That governance capability is **portable** — Projects 6–11 show the same disciplines demonstrated narratively in Projects 1–5 distilled into reusable foundations any organisation, in any sector, could stand up from day one
+- That governance and engineering **can and should share a common evidence language** — Project 11 shows the same regulatory obligations Projects 6–10 document at the policy level, satisfied directly by specific, real evaluation tooling output
 
 ---
 
