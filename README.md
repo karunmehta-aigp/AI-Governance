@@ -31,6 +31,16 @@ Full details for each: see that project's own `README.md`.
 
 ---
 
+## Emerging Practice Areas (Projects 12–13)
+
+Where Projects 1–11 cover established, well-documented governance disciplines, Projects 12 and 13 extend the portfolio into newer, less settled territory — agentic AI governance and applied sector-specific case studies — deliberately choosing subjects where the standards themselves are still catching up.
+
+**Project 12 — Agentic AI Governance** is a hybrid of the two approaches above. Like Projects 1–5, it runs specific narratives: a fictional three-agent expense-reimbursement pipeline (`ORG-AI-011`) walked end-to-end through governance, deployment, and one real incident, plus a second, contrasting finance-sector case study — a loan pre-approval agent, deliberately chosen to show how regulation-driven risk (credit decisioning is high-risk by classification under the EU AI Act regardless of autonomy) differs from the autonomy-driven risk that governs the first case study. Like Projects 6–11, it also ships as a fully reusable, industry-agnostic toolkit: a governance charter, a 16-control library, a compliance crosswalk spanning six frameworks (NIST AI RMF, EU AI Act, ISO/IEC 42001, OWASP LLM Top 10, MITRE ATLAS, GDPR), eight fillable templates, and five completed worked examples. It's the newest and most actively evolving project in the portfolio, because agentic AI governance itself is still an unresolved, live regulatory conversation.
+
+**Project 13 — Enterprise AI Governance Case Studies** applies the portfolio's governance thinking to specific, high-stakes sector deployments, one use case at a time. The first use case, **Wealth Management AI Financial Advisor**, governs an AI system supporting licensed financial advisors with portfolio analysis, market research, investment insight, and recommendation drafting — with the central governance question being where AI assistance legitimately ends and regulated financial advice begins. The use case documents the operating models evaluated and explicitly rejected — fully autonomous AI recommendation (unacceptable fiduciary and regulatory risk) and confidence-score-based auto-approval (insufficient human oversight) — before landing on the model actually adopted, which preserves advisor accountability and client trust throughout the decision-making process.
+
+---
+
 ## The Projects
 
 | # | Project | Primary Framework | Key Artefact |
@@ -46,12 +56,14 @@ Full details for each: see that project's own `README.md`.
 | 9 | [AI Risk Assessment Toolkit](./project-09-ai-risk-assessment-toolkit/) | NIST AI RMF · Internal risk practice | Risk register, scoring, dashboard |
 | 10 | [Enterprise AI Governance Operating Framework (AIGOF)](./project-10-enterprise-governance-toolkit/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 | 43-worksheet consolidated operating framework |
 | 11 | [AI Governance Technical-Control Mapping Reference](./project-11-ai-governance-technical-control-mapping/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 · SR 11-7 | LLM engineering-tool-to-regulatory-evidence crosswalk |
+| 12 | [Agentic AI Governance](./project-12-agentic-ai-governance/) | EU AI Act · NIST AI RMF · ISO/IEC 42001 · OWASP LLM Top 10 · MITRE ATLAS · GDPR | Governance charter, 16-control library, 2 end-to-end agent case studies, 8 templates, 5 worked examples |
+| 13 | [Enterprise AI Governance Case Studies](./project-13-enterprise-ai-governance-case-studies/) | Sector-specific applied governance | Wealth Management AI Financial Advisor use case — governance decision, rejected alternatives, and adopted operating model |
 
 ---
 
 ## Reference Library
 
-Sitting outside all eleven numbered projects, the **Reference Library** organises and cross-references the whole portfolio against external standards:
+Sitting outside all numbered projects, the **Reference Library** organises and cross-references the whole portfolio against external standards:
 
 | File | Description |
 |---|---|
@@ -68,9 +80,9 @@ Sitting outside all eleven numbered projects, the **Reference Library** organise
 Each project folder contains:
 
 - **`README.md`** — scenario context, objectives, key design decisions, and how the project's artefacts connect both to the underlying frameworks and to the rest of the portfolio
-- **Artefacts** — the actual governance documents themselves: inventories, risk registers, policies, incident records, conformity documentation, and (for Projects 6–11) reusable templates and instruments
+- **Artefacts** — the actual governance documents themselves: inventories, risk registers, policies, incident records, conformity documentation, and (for Projects 6–12) reusable templates and instruments
 
-Projects 1–5 are designed to be read in order — each builds on the governance maturity and specific findings established by the one before it — but every project is also fully standalone. Projects 6–11 and the Reference Library can be used independently of the narrative at any time. If you are preparing for a specific interview or assessing fit for a specific role, navigate directly to the project most relevant to that conversation; each README explains its scenario in full without assuming you have read the others.
+Projects 1–5 are designed to be read in order — each builds on the governance maturity and specific findings established by the one before it — but every project is also fully standalone. Projects 6–13 and the Reference Library can be used independently of the narrative at any time. If you are preparing for a specific interview or assessing fit for a specific role, navigate directly to the project most relevant to that conversation; each README explains its scenario in full without assuming you have read the others.
 
 ---
 
@@ -106,6 +118,8 @@ Beyond the specific skills listed in each project's own README, the portfolio as
 - That **proportionality is the organising discipline of good governance** — minimal-risk systems throughout this portfolio are governed lightly and explicitly are not over-engineered, while high-risk systems receive the full weight of scrutiny the framework intends
 - That governance capability is **portable** — Projects 6–11 show the same disciplines demonstrated narratively in Projects 1–5 distilled into reusable foundations any organisation, in any sector, could stand up from day one
 - That governance and engineering **can and should share a common evidence language** — Project 11 shows the same regulatory obligations Projects 6–10 document at the policy level, satisfied directly by specific, real evaluation tooling output
+- That governance frameworks must **extend to emerging AI paradigms without being rebuilt from scratch** — Project 12 shows the same governance disciplines applied throughout this portfolio extending cleanly to autonomous, tool-using agents, a category most existing frameworks were never written for
+- That governance judgment is best demonstrated **applied to a specific, high-stakes decision** — Project 13 shows what it looks like to evaluate and reject tempting-but-unacceptable operating models before landing on the one that actually holds up
 
 ---
 
