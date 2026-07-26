@@ -1,3 +1,4 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/45216aff-a101-4dba-9a01-d7f977673926" />
 
 AI Governance in Practice
 Enterprise AI Governance – Financial Advisor
