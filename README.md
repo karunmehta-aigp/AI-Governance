@@ -1,3 +1,11 @@
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/84f1f063-fece-462e-9ee4-fb2b94275bfe" />
+
+
+
+
+
+
 ## The Narrative Thread (Projects 1–5)
 
 Every narrative project in this portfolio operates on the same fictional organisation and the same AI system inventory, established in Project 1 (systems `ORG-AI-001` through `ORG-AI-010`). This is a deliberate design choice: real governance work is never a series of unrelated exercises — a risk assessment references a classification that was already made, an incident response draws on a system that was already known to have gaps, and a conformity pack closes out remediation that an earlier project first identified. The portfolio is built to demonstrate that connected reasoning explicitly, not just to produce five separate-looking documents.
