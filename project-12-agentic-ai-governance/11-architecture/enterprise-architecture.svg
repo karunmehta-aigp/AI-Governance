@@ -1,0 +1,164 @@
+<svg viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1500" fill="url(#bge)"/>
+
+  <text x="50" y="55" font-family="Georgia, serif" font-size="28" fill="#EDEEF2" font-weight="bold">Enterprise Agentic AI Governance — Layered View</text>
+  <text x="50" y="80" font-size="13" fill="#8792A6">Each band names a governed layer; the right column names the artefact that governs it</text>
+  <line x1="50" y1="98" x2="950" y2="98" stroke="#24344F"/>
+
+  <!-- Bands: y start, height, label, sublabel, color, doc -->
+  <!-- Layer 1: Business -->
+  <g>
+    <rect x="50" y="120" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="155" font-size="17" fill="#EDEEF2" font-weight="bold">Business</text>
+    <rect x="690" y="120" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="155" font-size="12" fill="#8792A6">Sponsor, use-case demand</text>
+  </g>
+
+  <!-- Layer 2: Product -->
+  <g>
+    <rect x="50" y="184" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="219" font-size="17" fill="#EDEEF2" font-weight="bold">Product</text>
+    <rect x="690" y="184" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="219" font-size="12" fill="#8792A6">Agent Lifecycle, Stage 1-2</text>
+  </g>
+
+  <!-- Layer 3: Governance -->
+  <g>
+    <rect x="50" y="248" width="620" height="60" fill="#1C1710" stroke="#D4A843"/>
+    <text x="70" y="283" font-size="17" fill="#D4A843" font-weight="bold">AI Governance</text>
+    <rect x="690" y="248" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="277" font-size="12" fill="#8792A6">Charter, Control Library,</text>
+    <text x="710" y="292" font-size="12" fill="#8792A6">RACI</text>
+  </g>
+
+  <!-- Layer 4: Security -->
+  <g>
+    <rect x="50" y="312" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="347" font-size="17" fill="#EDEEF2" font-weight="bold">Security</text>
+    <rect x="690" y="312" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="341" font-size="12" fill="#8792A6">Agent Identity Governance,</text>
+    <text x="710" y="356" font-size="12" fill="#8792A6">MCP Governance</text>
+  </g>
+
+  <!-- Layer 5: Privacy -->
+  <g>
+    <rect x="50" y="376" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="411" font-size="17" fill="#EDEEF2" font-weight="bold">Privacy</text>
+    <rect x="690" y="376" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="411" font-size="12" fill="#8792A6">Data Governance</text>
+  </g>
+
+  <!-- Layer 6: Risk -->
+  <g>
+    <rect x="50" y="440" width="620" height="60" fill="#1C1710" stroke="#D4A843"/>
+    <text x="70" y="475" font-size="17" fill="#D4A843" font-weight="bold">Risk</text>
+    <rect x="690" y="440" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="475" font-size="12" fill="#8792A6">Risk Classification Addendum</text>
+  </g>
+
+  <!-- Layer 7: Engineering -->
+  <g>
+    <rect x="50" y="504" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="539" font-size="17" fill="#EDEEF2" font-weight="bold">Engineering</text>
+    <rect x="690" y="504" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="539" font-size="12" fill="#8792A6">Agent Lifecycle, Stage 4-7</text>
+  </g>
+
+  <!-- Layer 8: Prompt Layer -->
+  <g>
+    <rect x="50" y="568" width="620" height="60" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="70" y="603" font-size="17" fill="#6FBF8B" font-weight="bold">Prompt Layer</text>
+    <rect x="690" y="568" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="603" font-size="12" fill="#8792A6">Prompt Governance</text>
+  </g>
+
+  <!-- Layer 9: Agent Layer -->
+  <g>
+    <rect x="50" y="632" width="620" height="70" fill="#122A1E" stroke="#6FBF8B" stroke-width="2"/>
+    <text x="70" y="662" font-size="18" fill="#6FBF8B" font-weight="bold">Agent Layer</text>
+    <text x="70" y="684" font-size="12" fill="#8FBF9C">Intake → Policy-Compliance → Disbursement (ORG-AI-011)</text>
+    <rect x="690" y="632" width="260" height="70" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="662" font-size="12" fill="#8792A6">Agent Policy, Human</text>
+    <text x="710" y="677" font-size="12" fill="#8792A6">Oversight Framework,</text>
+    <text x="710" y="692" font-size="12" fill="#8792A6">Agent Inventory Register</text>
+  </g>
+
+  <!-- Layer 10: LLM -->
+  <g>
+    <rect x="50" y="712" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="747" font-size="17" fill="#EDEEF2" font-weight="bold">Foundation Model (LLM)</text>
+    <rect x="690" y="712" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="747" font-size="12" fill="#8792A6">Model Governance</text>
+  </g>
+
+  <!-- Layer 11: MCP -->
+  <g>
+    <rect x="50" y="776" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="811" font-size="17" fill="#EDEEF2" font-weight="bold">MCP / Tool-Calling Layer</text>
+    <rect x="690" y="776" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="811" font-size="12" fill="#8792A6">MCP Governance</text>
+  </g>
+
+  <!-- Layer 12: Tools -->
+  <g>
+    <rect x="50" y="840" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="875" font-size="17" fill="#EDEEF2" font-weight="bold">Tools / Memory / Vector DB</text>
+    <rect x="690" y="840" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="875" font-size="12" fill="#8792A6">Memory Governance</text>
+  </g>
+
+  <!-- Layer 13: Enterprise Systems -->
+  <g>
+    <rect x="50" y="904" width="620" height="60" fill="#1F1414" stroke="#C1543C"/>
+    <text x="70" y="939" font-size="17" fill="#E37A63" font-weight="bold">Enterprise Systems (payment, HR, ERP)</text>
+    <rect x="690" y="904" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="939" font-size="12" fill="#8792A6">Where consequential</text>
+    <text x="710" y="954" font-size="12" fill="#8792A6">actions land</text>
+  </g>
+
+  <!-- Layer 14: Monitoring -->
+  <g>
+    <rect x="50" y="968" width="620" height="60" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="1003" font-size="17" fill="#EDEEF2" font-weight="bold">Monitoring</text>
+    <rect x="690" y="968" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="1003" font-size="12" fill="#8792A6">Runtime Governance</text>
+  </g>
+
+  <!-- Layer 15: Audit -->
+  <g>
+    <rect x="50" y="1032" width="620" height="60" fill="#1C1710" stroke="#D4A843"/>
+    <text x="70" y="1067" font-size="17" fill="#D4A843" font-weight="bold">Audit &amp; Assurance</text>
+    <rect x="690" y="1032" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="1061" font-size="12" fill="#8792A6">Evidence Library, AI</text>
+    <text x="710" y="1076" font-size="12" fill="#8792A6">Assurance Framework</text>
+  </g>
+
+  <!-- Layer 16: SIEM -->
+  <g>
+    <rect x="50" y="1096" width="620" height="60" fill="#1F1414" stroke="#C1543C"/>
+    <text x="70" y="1131" font-size="17" fill="#E37A63" font-weight="bold">SIEM (cross-cutting correlation)</text>
+    <rect x="690" y="1096" width="260" height="60" fill="#0F1B2E" stroke="#24344F"/>
+    <text x="710" y="1125" font-size="12" fill="#8792A6">Governance Automation —</text>
+    <text x="710" y="1140" font-size="12" fill="#8792A6">correlates runtime + identity signals</text>
+  </g>
+
+  <!-- flow arrow down the left margin -->
+  <line x1="30" y1="130" x2="30" y2="1146" stroke="#3A4A66" stroke-width="2" marker-end="url(#archArrow)"/>
+  <defs>
+    <marker id="archArrow" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#3A4A66"/>
+    </marker>
+  </defs>
+
+  <line x1="50" y1="1174" x2="950" y2="1174" stroke="#24344F"/>
+  <text x="50" y="1204" font-size="13" fill="#8792A6">Incident response (AI Incident Response Playbook) and Third-Party AI Governance cut across every layer above —</text>
+  <text x="50" y="1224" font-size="13" fill="#8792A6">they are not single bands because they apply wherever the failure or the vendor relationship actually sits.</text>
+
+  <text x="950" y="1470" font-size="11" fill="#5C6B85" text-anchor="end">Karun Mehta · AIGP (AI Governance Professional) · Project 12</text>
+</svg>

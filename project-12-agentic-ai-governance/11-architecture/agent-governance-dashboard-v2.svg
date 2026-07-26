@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1160 920" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+  </defs>
+  <rect width="1160" height="920" fill="url(#bgd2)"/>
+
+  <text x="50" y="55" font-family="Georgia, serif" font-size="27" fill="#EDEEF2" font-weight="bold">Agent Governance — Executive Dashboard (v2)</text>
+  <text x="50" y="79" font-size="13" fill="#8792A6">Illustrative snapshot · Project 12 · tied to the Agentic AI Control Library</text>
+  <line x1="50" y1="96" x2="1110" y2="96" stroke="#24344F"/>
+
+  <!-- Row 1: 4 tiles -->
+  <g>
+    <rect x="50" y="120" width="255" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="155" font-size="34" fill="#EDEEF2" font-weight="bold">18</text>
+    <text x="70" y="178" font-size="12" fill="#8792A6">AI systems in inventory</text>
+    <text x="70" y="196" font-size="10" fill="#5C6B85">Project 1 + Project 12 combined</text>
+  </g>
+  <g>
+    <rect x="315" y="120" width="255" height="100" rx="6" fill="#1C1710" stroke="#D4A843"/>
+    <text x="335" y="155" font-size="34" fill="#D4A843" font-weight="bold">4</text>
+    <text x="335" y="178" font-size="12" fill="#B8892F">High-risk systems</text>
+    <text x="335" y="196" font-size="10" fill="#6B7280">post autonomy-multiplier</text>
+  </g>
+  <g>
+    <rect x="580" y="120" width="255" height="100" rx="6" fill="#1C1710" stroke="#D4A843"/>
+    <text x="600" y="155" font-size="34" fill="#D4A843" font-weight="bold">3</text>
+    <text x="600" y="178" font-size="12" fill="#B8892F">High-risk agents</text>
+    <text x="600" y="196" font-size="10" fill="#6B7280">Conditional/Full autonomy</text>
+  </g>
+  <g>
+    <rect x="845" y="120" width="265" height="100" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="865" y="155" font-size="34" fill="#6FBF8B" font-weight="bold">97%</text>
+    <text x="865" y="178" font-size="12" fill="#8FBF9C">Policy compliance rate</text>
+    <text x="865" y="196" font-size="10" fill="#5C8A6B">AI-CNTRL-A06</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g>
+    <rect x="50" y="236" width="255" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="271" font-size="34" fill="#EDEEF2" font-weight="bold">4.1%</text>
+    <text x="70" y="294" font-size="12" fill="#8792A6">Human override rate</text>
+    <text x="70" y="312" font-size="10" fill="#5C6B85">6-mo trend below</text>
+  </g>
+  <g>
+    <rect x="315" y="236" width="255" height="100" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="335" y="271" font-size="34" fill="#6FBF8B" font-weight="bold">2</text>
+    <text x="335" y="294" font-size="12" fill="#8FBF9C">Audit findings — open</text>
+    <text x="335" y="312" font-size="10" fill="#5C8A6B">both on track, not overdue</text>
+  </g>
+  <g>
+    <rect x="580" y="236" width="255" height="100" rx="6" fill="#1F1414" stroke="#C1543C"/>
+    <text x="600" y="271" font-size="34" fill="#E37A63" font-weight="bold">0</text>
+    <text x="600" y="294" font-size="12" fill="#D18775">Open critical incidents</text>
+    <text x="600" y="312" font-size="10" fill="#8B5D51">target: zero, always</text>
+  </g>
+  <g>
+    <rect x="845" y="236" width="265" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="865" y="271" font-size="34" fill="#EDEEF2" font-weight="bold">3</text>
+    <text x="865" y="294" font-size="12" fill="#8792A6">Model versions in production</text>
+    <text x="865" y="312" font-size="10" fill="#5C6B85">all pinned, none on "latest"</text>
+  </g>
+
+  <!-- Row 3 -->
+  <g>
+    <rect x="50" y="352" width="255" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="387" font-size="34" fill="#EDEEF2" font-weight="bold">3</text>
+    <text x="70" y="410" font-size="12" fill="#8792A6">Third-party AI vendors in use</text>
+    <text x="70" y="428" font-size="10" fill="#5C6B85">all with signed DPAs</text>
+  </g>
+  <g>
+    <rect x="315" y="352" width="255" height="100" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="335" y="387" font-size="34" fill="#6FBF8B" font-weight="bold">18/18</text>
+    <text x="335" y="410" font-size="12" fill="#8FBF9C">Kill switches current</text>
+    <text x="335" y="428" font-size="10" fill="#5C8A6B">AI-CNTRL-A04 · &lt;90 days</text>
+  </g>
+  <g>
+    <rect x="580" y="352" width="255" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="600" y="387" font-size="34" fill="#EDEEF2" font-weight="bold">1</text>
+    <text x="600" y="410" font-size="12" fill="#8792A6">Shadow agents found (qtr)</text>
+    <text x="600" y="428" font-size="10" fill="#5C6B85">AI-CNTRL-A07 · remediating</text>
+  </g>
+  <g>
+    <rect x="845" y="352" width="265" height="100" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="865" y="387" font-size="34" fill="#EDEEF2" font-weight="bold">$0.014</text>
+    <text x="865" y="410" font-size="12" fill="#8792A6">Avg cost per transaction</text>
+    <text x="865" y="428" font-size="10" fill="#5C6B85">within budget baseline</text>
+  </g>
+
+  <!-- Trend chart -->
+  <text x="50" y="500" font-size="16" fill="#EDEEF2" font-weight="bold">Risk Trend — Portfolio-Wide, Trailing 6 Months</text>
+  <text x="50" y="518" font-size="11" fill="#5C6B85">Combined weighted risk score across all inventoried agentic systems</text>
+
+  <g stroke="#24344F" stroke-width="1">
+    <line x1="50" y1="700" x2="1110" y2="700"/>
+    <line x1="50" y1="540" x2="50" y2="700"/>
+  </g>
+  <polyline points="70,600 240,590 410,560 580,575 750,565 920,548 1090,545" fill="none" stroke="#D4A843" stroke-width="3"/>
+  <circle cx="1090" cy="545" r="5" fill="#D4A843"/>
+  <text x="1000" y="530" font-size="12" fill="#D4A843">trending down</text>
+
+  <text x="70" y="718" font-size="11" fill="#5C6B85">Feb</text>
+  <text x="240" y="718" font-size="11" fill="#5C6B85">Mar</text>
+  <text x="410" y="718" font-size="11" fill="#5C6B85">Apr</text>
+  <text x="580" y="718" font-size="11" fill="#5C6B85">May</text>
+  <text x="750" y="718" font-size="11" fill="#5C6B85">Jun</text>
+  <text x="920" y="718" font-size="11" fill="#5C6B85">Jul</text>
+
+  <line x1="50" y1="750" x2="1110" y2="750" stroke="#24344F"/>
+  <text x="1110" y="790" font-size="11" fill="#5C6B85" text-anchor="end">Karun Mehta · AIGP (AI Governance Professional) · Project 12</text>
+</svg>

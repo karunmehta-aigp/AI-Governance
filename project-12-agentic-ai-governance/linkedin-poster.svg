@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+    <marker id="arrowP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5C6B85"/>
+    </marker>
+  </defs>
+
+  <rect width="1080" height="1350" fill="url(#bgp)"/>
+
+  <!-- top eyebrow -->
+  <text x="70" y="100" font-size="15" fill="#D4A843" font-family="Courier New, monospace" letter-spacing="2">AI GOVERNANCE · CASE STUDY</text>
+  <line x1="70" y1="118" x2="330" y2="118" stroke="#D4A843" stroke-width="2"/>
+
+  <!-- Headline -->
+  <text x="70" y="205" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#EDEEF2" font-weight="bold">Most AI governance</text>
+  <text x="70" y="265" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#EDEEF2" font-weight="bold">wasn't built for</text>
+  <text x="70" y="325" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#D4A843" font-weight="bold">agents.</text>
+
+  <text x="70" y="380" font-size="20" fill="#8792A6">Models produce an output. Agents take the action.</text>
+  <text x="70" y="410" font-size="20" fill="#8792A6">The EU AI Act's risk tiers weren't drafted for that.</text>
+
+  <!-- Divider -->
+  <line x1="70" y1="460" x2="1010" y2="460" stroke="#24344F" stroke-width="1"/>
+
+  <!-- mini pipeline diagram -->
+  <text x="70" y="510" font-size="16" fill="#EDEEF2" font-weight="bold">ORG-AI-011 · Autonomous Expense Reviewer</text>
+
+  <g>
+    <rect x="70" y="540" width="220" height="90" rx="6" fill="#16233B" stroke="#2A3F5F" stroke-width="1.5"/>
+    <text x="180" y="580" font-size="16" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Intake</text>
+    <text x="180" y="602" font-size="12" fill="#8792A6" text-anchor="middle">Agent</text>
+  </g>
+  <line x1="292" y1="585" x2="345" y2="585" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowP)"/>
+
+  <g>
+    <rect x="347" y="540" width="220" height="90" rx="6" fill="#16233B" stroke="#2A3F5F" stroke-width="1.5"/>
+    <text x="457" y="580" font-size="16" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Policy Check</text>
+    <text x="457" y="602" font-size="12" fill="#8792A6" text-anchor="middle">Agent</text>
+  </g>
+  <line x1="569" y1="585" x2="622" y2="585" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowP)"/>
+
+  <g>
+    <rect x="624" y="527" width="150" height="116" rx="6" fill="#1C1710" stroke="#D4A843" stroke-width="2"/>
+    <line x1="650" y1="583" x2="725" y2="565" stroke="#D4A843" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="650" cy="583" r="6" fill="#D4A843"/>
+    <text x="699" y="620" font-size="12" fill="#D4A843" text-anchor="middle" font-family="Courier New, monospace">CHECKPOINT</text>
+  </g>
+  <line x1="776" y1="585" x2="829" y2="585" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowP)"/>
+
+  <g>
+    <rect x="831" y="540" width="180" height="90" rx="6" fill="#16233B" stroke="#2A3F5F" stroke-width="1.5"/>
+    <text x="921" y="580" font-size="15" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Disbursement</text>
+    <text x="921" y="602" font-size="12" fill="#8792A6" text-anchor="middle">Agent</text>
+  </g>
+
+  <!-- Key insight block -->
+  <rect x="70" y="700" width="940" height="230" rx="8" fill="#12203A" stroke="#24344F" stroke-width="1"/>
+  <text x="105" y="750" font-size="15" fill="#D4A843" font-family="Courier New, monospace" letter-spacing="1">THE LIVE DEBATE</text>
+  <text x="105" y="790" font-size="24" fill="#EDEEF2" font-weight="bold">Should agentic AI be classified</text>
+  <text x="105" y="825" font-size="24" fill="#EDEEF2" font-weight="bold">high-risk by default —</text>
+  <text x="105" y="860" font-size="24" fill="#EDEEF2" font-weight="bold">regardless of use case?</text>
+  <text x="105" y="900" font-size="16" fill="#8792A6">I built the risk-scoring logic to answer it operationally,</text>
+  <text x="105" y="925" font-size="16" fill="#8792A6">before regulators answer it formally.</text>
+
+  <!-- What's included -->
+  <text x="70" y="990" font-size="16" fill="#EDEEF2" font-weight="bold">Included in the case study:</text>
+  <text x="90" y="1025" font-size="16" fill="#8792A6">→ Agentic AI System Charter — direct / advisory / delegated decision rights</text>
+  <text x="90" y="1057" font-size="16" fill="#8792A6">→ Agent Policy — non-human identity, least-privilege, runtime enforcement</text>
+  <text x="90" y="1089" font-size="16" fill="#8792A6">→ Risk Classification Addendum — the autonomy multiplier</text>
+
+  <!-- Footer -->
+  <line x1="70" y1="1150" x2="1010" y2="1150" stroke="#24344F" stroke-width="1"/>
+  <text x="70" y="1195" font-size="16" fill="#EDEEF2" font-weight="bold">Karun Mehta · AIGP (AI Governance Professional)</text>
+  <text x="70" y="1222" font-size="14" fill="#5C6B85">Project 12 · AI-Governance portfolio · link in comments</text>
+
+  <text x="1010" y="1195" font-size="14" fill="#5C6B85" text-anchor="end">#AIGovernance</text>
+  <text x="1010" y="1218" font-size="14" fill="#5C6B85" text-anchor="end">#AgenticAI · #EUAIAct</text>
+</svg>

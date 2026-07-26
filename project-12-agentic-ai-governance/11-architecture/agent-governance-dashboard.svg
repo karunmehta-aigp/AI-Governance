@@ -1,0 +1,94 @@
+<svg viewBox="0 0 1100 720" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="720" fill="url(#bgd)"/>
+
+  <text x="50" y="55" font-family="Georgia, serif" font-size="28" fill="#EDEEF2" font-weight="bold">Agent Governance — Executive Dashboard</text>
+  <text x="50" y="80" font-size="13" fill="#8792A6">Illustrative snapshot · Project 12 · reviewed quarterly per Agentic AI Control Library</text>
+  <line x1="50" y1="98" x2="1050" y2="98" stroke="#24344F" stroke-width="1"/>
+
+  <!-- KPI tiles row 1 -->
+  <g>
+    <rect x="50" y="130" width="230" height="110" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="165" font-size="40" fill="#EDEEF2" font-weight="bold">14</text>
+    <text x="70" y="190" font-size="13" fill="#8792A6">Agents in inventory</text>
+    <text x="70" y="210" font-size="11" fill="#5C6B85">across 6 systems</text>
+  </g>
+
+  <g>
+    <rect x="300" y="130" width="230" height="110" rx="6" fill="#1C1710" stroke="#D4A843"/>
+    <text x="320" y="165" font-size="40" fill="#D4A843" font-weight="bold">3</text>
+    <text x="320" y="190" font-size="13" fill="#B8892F">High / Conditional-autonomy</text>
+    <text x="320" y="210" font-size="11" fill="#6B7280">post autonomy-multiplier</text>
+  </g>
+
+  <g>
+    <rect x="550" y="130" width="230" height="110" rx="6" fill="#1F1414" stroke="#C1543C"/>
+    <text x="570" y="165" font-size="40" fill="#E37A63" font-weight="bold">0</text>
+    <text x="570" y="190" font-size="13" fill="#D18775">Critical alerts open</text>
+    <text x="570" y="210" font-size="11" fill="#8B5D51">target: zero, always</text>
+  </g>
+
+  <g>
+    <rect x="800" y="130" width="250" height="110" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="820" y="165" font-size="40" fill="#6FBF8B" font-weight="bold">97%</text>
+    <text x="820" y="190" font-size="13" fill="#8FBF9C">Policy compliance rate</text>
+    <text x="820" y="210" font-size="11" fill="#5C8A6B">AI-CNTRL-A06</text>
+  </g>
+
+  <!-- KPI tiles row 2 -->
+  <g>
+    <rect x="50" y="260" width="230" height="110" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="70" y="295" font-size="40" fill="#EDEEF2" font-weight="bold">2</text>
+    <text x="70" y="320" font-size="13" fill="#8792A6">Human escalations (30d)</text>
+    <text x="70" y="340" font-size="11" fill="#5C6B85">AI-CNTRL-A03 / A08</text>
+  </g>
+
+  <g>
+    <rect x="300" y="260" width="230" height="110" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+    <text x="320" y="295" font-size="40" fill="#6FBF8B" font-weight="bold">14/14</text>
+    <text x="320" y="320" font-size="13" fill="#8FBF9C">Kill switches current</text>
+    <text x="320" y="340" font-size="11" fill="#5C8A6B">AI-CNTRL-A04 · &lt;90 days</text>
+  </g>
+
+  <g>
+    <rect x="550" y="260" width="230" height="110" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="570" y="295" font-size="40" fill="#EDEEF2" font-weight="bold">1</text>
+    <text x="570" y="320" font-size="13" fill="#8792A6">Shadow agents found (qtr)</text>
+    <text x="570" y="340" font-size="11" fill="#5C6B85">AI-CNTRL-A07 · remediating</text>
+  </g>
+
+  <g>
+    <rect x="800" y="260" width="250" height="110" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="820" y="295" font-size="40" fill="#EDEEF2" font-weight="bold">0</text>
+    <text x="820" y="320" font-size="13" fill="#8792A6">Suspended agents</text>
+    <text x="820" y="340" font-size="11" fill="#5C6B85">none out of compliance</text>
+  </g>
+
+  <!-- trend chart -->
+  <text x="50" y="410" font-size="16" fill="#EDEEF2" font-weight="bold">Human Override Rate — Trailing 6 Months</text>
+  <text x="50" y="428" font-size="11" fill="#5C6B85">Sustained rise signals miscalibrated autonomy threshold, not noise — AI-CNTRL-A08</text>
+
+  <g stroke="#24344F" stroke-width="1">
+    <line x1="50" y1="600" x2="1050" y2="600"/>
+    <line x1="50" y1="450" x2="50" y2="600"/>
+  </g>
+  <!-- trend line: gentle decline then flat, illustrative -->
+  <polyline points="70,520 220,500 370,470 520,485 670,530 820,545 970,540" fill="none" stroke="#D4A843" stroke-width="3"/>
+  <circle cx="970" cy="540" r="5" fill="#D4A843"/>
+  <text x="990" y="544" font-size="12" fill="#D4A843">4.1%</text>
+
+  <text x="70" y="618" font-size="11" fill="#5C6B85">Feb</text>
+  <text x="220" y="618" font-size="11" fill="#5C6B85">Mar</text>
+  <text x="370" y="618" font-size="11" fill="#5C6B85">Apr</text>
+  <text x="520" y="618" font-size="11" fill="#5C6B85">May</text>
+  <text x="670" y="618" font-size="11" fill="#5C6B85">Jun</text>
+  <text x="820" y="618" font-size="11" fill="#5C6B85">Jul</text>
+
+  <line x1="50" y1="650" x2="1050" y2="650" stroke="#24344F"/>
+  <text x="1050" y="690" font-size="11" fill="#5C6B85" text-anchor="end">Karun Mehta · AIGP (AI Governance Professional) · Project 12</text>
+</svg>

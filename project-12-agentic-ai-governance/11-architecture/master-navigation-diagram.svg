@@ -1,0 +1,111 @@
+<svg viewBox="0 0 900 1400" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+    <marker id="arrowN" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#D4A843"/>
+    </marker>
+  </defs>
+  <rect width="900" height="1400" fill="url(#bgn)"/>
+
+  <text x="50" y="55" font-family="Georgia, serif" font-size="27" fill="#EDEEF2" font-weight="bold">Project 12 — Master Navigation</text>
+  <text x="50" y="80" font-size="13" fill="#8792A6">How every artefact in this project fits into one operating sequence</text>
+  <line x1="50" y1="98" x2="850" y2="98" stroke="#24344F"/>
+
+  <!-- helper: nodes at x=200 (center 450), width 500, height 78, gap 40 -->
+  <!-- Node 1: Charter -->
+  <g>
+    <rect x="200" y="120" width="500" height="78" rx="7" fill="#1C1710" stroke="#D4A843" stroke-width="2"/>
+    <text x="450" y="150" font-size="18" fill="#D4A843" text-anchor="middle" font-weight="bold">Governance Charter</text>
+    <text x="450" y="172" font-size="12" fill="#B8892F" text-anchor="middle">Decision rights, scope, escalation triggers</text>
+  </g>
+  <line x1="450" y1="198" x2="450" y2="238" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowN)"/>
+
+  <!-- Node 2: Operating Model -->
+  <g>
+    <rect x="200" y="240" width="500" height="78" rx="7" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="450" y="270" font-size="18" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Operating Model</text>
+    <text x="450" y="292" font-size="12" fill="#8792A6" text-anchor="middle">Governance bodies and how they hand off to each other</text>
+  </g>
+  <line x1="450" y1="318" x2="450" y2="358" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowNgrey)"/>
+
+  <!-- Node 3: RACI -->
+  <g>
+    <rect x="200" y="360" width="500" height="78" rx="7" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="450" y="390" font-size="18" fill="#EDEEF2" text-anchor="middle" font-weight="bold">RACI</text>
+    <text x="450" y="412" font-size="12" fill="#8792A6" text-anchor="middle">Who is Responsible / Accountable / Consulted / Informed</text>
+  </g>
+  <line x1="450" y1="438" x2="450" y2="478" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowNgrey)"/>
+
+  <!-- Node 4: Lifecycle -->
+  <g>
+    <rect x="200" y="480" width="500" height="78" rx="7" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="450" y="510" font-size="18" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Agent Lifecycle</text>
+    <text x="450" y="532" font-size="12" fill="#8792A6" text-anchor="middle">13 gates, idea to retirement, each with required evidence</text>
+  </g>
+  <line x1="450" y1="558" x2="450" y2="598" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowNgrey)"/>
+
+  <!-- Node 5: Risk Assessment -->
+  <g>
+    <rect x="200" y="600" width="500" height="78" rx="7" fill="#1C1710" stroke="#D4A843" stroke-width="2"/>
+    <text x="450" y="630" font-size="18" fill="#D4A843" text-anchor="middle" font-weight="bold">Risk Assessment</text>
+    <text x="450" y="652" font-size="12" fill="#B8892F" text-anchor="middle">Risk Classification Addendum — autonomy multiplier applied</text>
+  </g>
+  <line x1="450" y1="678" x2="450" y2="718" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowN)"/>
+
+  <!-- Node 6: Control Library -->
+  <g>
+    <rect x="200" y="720" width="500" height="78" rx="7" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="450" y="750" font-size="18" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Control Library</text>
+    <text x="450" y="772" font-size="12" fill="#8792A6" text-anchor="middle">AI-CNTRL-A01 to A15, each ownable and evidence-backed</text>
+  </g>
+  <line x1="450" y1="798" x2="450" y2="838" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowNgrey)"/>
+
+  <!-- Node 7: Runtime Governance -->
+  <g>
+    <rect x="200" y="840" width="500" height="78" rx="7" fill="#122A1E" stroke="#6FBF8B" stroke-width="2"/>
+    <text x="450" y="870" font-size="18" fill="#6FBF8B" text-anchor="middle" font-weight="bold">Runtime Governance</text>
+    <text x="450" y="892" font-size="12" fill="#8FBF9C" text-anchor="middle">Live enforcement, drift detection, continuous observation</text>
+  </g>
+  <line x1="450" y1="918" x2="450" y2="958" stroke="#6FBF8B" stroke-width="2" marker-end="url(#arrowNgreen)"/>
+
+  <!-- Node 8: KPI Catalog -->
+  <g>
+    <rect x="200" y="960" width="500" height="78" rx="7" fill="#122A1E" stroke="#6FBF8B" stroke-width="2"/>
+    <text x="450" y="990" font-size="18" fill="#6FBF8B" text-anchor="middle" font-weight="bold">KPI Catalog</text>
+    <text x="450" y="1012" font-size="12" fill="#8FBF9C" text-anchor="middle">Canonical metric definitions feeding the Executive Dashboard</text>
+  </g>
+  <line x1="450" y1="1038" x2="450" y2="1078" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowNgrey)"/>
+
+  <!-- Node 9: AI Assurance -->
+  <g>
+    <rect x="200" y="1080" width="500" height="78" rx="7" fill="#1C1710" stroke="#D4A843" stroke-width="2"/>
+    <text x="450" y="1110" font-size="18" fill="#D4A843" text-anchor="middle" font-weight="bold">AI Assurance</text>
+    <text x="450" y="1132" font-size="12" fill="#B8892F" text-anchor="middle">Govern → Validate → Monitor → Audit → Improve</text>
+  </g>
+  <line x1="450" y1="1158" x2="450" y2="1198" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowN)"/>
+
+  <!-- Node 10: Audit & Evidence -->
+  <g>
+    <rect x="200" y="1200" width="500" height="78" rx="7" fill="#16233B" stroke="#2A3F5F"/>
+    <text x="450" y="1230" font-size="18" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Audit &amp; Evidence</text>
+    <text x="450" y="1252" font-size="12" fill="#8792A6" text-anchor="middle">Evidence Library — retrievable by system and by control</text>
+  </g>
+
+  <!-- feedback loop back to Governance Charter -->
+  <path d="M 700 1239 C 830 1239 830 159 700 159" fill="none" stroke="#D4A843" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowN)"/>
+  <text x="835" y="700" font-size="12" fill="#D4A843" text-anchor="middle" transform="rotate(90 835 700)">Improve findings revise the Charter and Risk methodology (Framework Change Control)</text>
+
+  <defs>
+    <marker id="arrowNgrey" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#5C6B85"/>
+    </marker>
+    <marker id="arrowNgreen" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#6FBF8B"/>
+    </marker>
+  </defs>
+
+  <text x="850" y="1370" font-size="11" fill="#5C6B85" text-anchor="end">Karun Mehta · AIGP (AI Governance Professional) · Project 12</text>
+</svg>

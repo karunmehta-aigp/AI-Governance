@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1100 780" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E1A2E"/>
+      <stop offset="100%" stop-color="#0A1421"/>
+    </linearGradient>
+    <marker id="arrowT" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5C6B85"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="780" fill="url(#bgt)"/>
+
+  <text x="50" y="50" font-family="Georgia, serif" font-size="26" fill="#EDEEF2" font-weight="bold">AI Governance Intake Decision Tree</text>
+  <text x="50" y="74" font-size="13" fill="#8792A6">Applied at Agent Lifecycle Stage 1-2 — routes a new request to the right governance path</text>
+  <line x1="50" y1="90" x2="1050" y2="90" stroke="#24344F"/>
+
+  <!-- Root -->
+  <rect x="470" y="115" width="160" height="55" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+  <text x="550" y="148" font-size="15" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Is this AI?</text>
+
+  <line x1="470" y1="142" x2="330" y2="200" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+  <text x="380" y="185" font-size="12" fill="#8792A6">No</text>
+  <rect x="200" y="200" width="180" height="50" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+  <text x="290" y="230" font-size="13" fill="#6FBF8B" text-anchor="middle">Standard IT/vendor process</text>
+
+  <line x1="630" y1="142" x2="750" y2="200" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+  <text x="700" y="185" font-size="12" fill="#8792A6">Yes</text>
+
+  <!-- Predictive/Generative/Agentic branch -->
+  <rect x="640" y="200" width="220" height="55" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+  <text x="750" y="225" font-size="14" fill="#EDEEF2" text-anchor="middle" font-weight="bold">What kind of AI?</text>
+  <text x="750" y="243" font-size="11" fill="#8792A6" text-anchor="middle">Predictive / Generative / Agentic</text>
+
+  <!-- three branches -->
+  <line x1="700" y1="255" x2="530" y2="320" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+  <line x1="750" y1="255" x2="750" y2="320" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+  <line x1="800" y1="255" x2="970" y2="320" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+
+  <rect x="440" y="320" width="180" height="55" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+  <text x="530" y="345" font-size="13" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Predictive</text>
+  <text x="530" y="363" font-size="11" fill="#8792A6" text-anchor="middle">→ Projects 1-5 process</text>
+
+  <rect x="660" y="320" width="180" height="55" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+  <text x="750" y="345" font-size="13" fill="#EDEEF2" text-anchor="middle" font-weight="bold">Generative</text>
+  <text x="750" y="363" font-size="11" fill="#8792A6" text-anchor="middle">→ Model Governance +</text>
+  <text x="750" y="376" font-size="11" fill="#8792A6" text-anchor="middle">Prompt Governance</text>
+
+  <rect x="880" y="320" width="180" height="55" rx="6" fill="#1C1710" stroke="#D4A843"/>
+  <text x="970" y="345" font-size="13" fill="#D4A843" text-anchor="middle" font-weight="bold">Agentic</text>
+  <text x="970" y="363" font-size="11" fill="#B8892F" text-anchor="middle">→ this project applies</text>
+
+  <!-- Agentic continues down -->
+  <line x1="970" y1="375" x2="970" y2="420" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowT)"/>
+
+  <rect x="850" y="420" width="240" height="60" rx="6" fill="#1C1710" stroke="#D4A843"/>
+  <text x="970" y="448" font-size="13" fill="#D4A843" text-anchor="middle" font-weight="bold">Apply autonomy multiplier</text>
+  <text x="970" y="466" font-size="11" fill="#B8892F" text-anchor="middle">Risk Classification Addendum</text>
+
+  <line x1="970" y1="480" x2="970" y2="520" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowT)"/>
+
+  <rect x="850" y="520" width="240" height="55" rx="6" fill="#16233B" stroke="#2A3F5F"/>
+  <text x="970" y="545" font-size="13" fill="#EDEEF2" text-anchor="middle" font-weight="bold">High risk (post-multiplier)?</text>
+  <text x="970" y="563" font-size="11" fill="#8792A6" text-anchor="middle">Risk Classification Addendum</text>
+
+  <line x1="900" y1="575" x2="820" y2="630" stroke="#5C6B85" stroke-width="2" marker-end="url(#arrowT)"/>
+  <text x="835" y="615" font-size="12" fill="#8792A6">No</text>
+  <rect x="690" y="630" width="220" height="55" rx="6" fill="#122A1E" stroke="#6FBF8B"/>
+  <text x="800" y="655" font-size="13" fill="#6FBF8B" text-anchor="middle" font-weight="bold">Advisory decision rights</text>
+  <text x="800" y="672" font-size="10" fill="#8FBF9C" text-anchor="middle">system owner + committee consulted</text>
+
+  <line x1="1040" y1="575" x2="1040" y2="630" stroke="#D4A843" stroke-width="2" marker-end="url(#arrowT)"/>
+  <text x="1050" y="605" font-size="12" fill="#D4A843">Yes</text>
+  <rect x="930" y="630" width="160" height="55" rx="6" fill="#1F1414" stroke="#C1543C"/>
+  <text x="1010" y="653" font-size="13" fill="#E37A63" text-anchor="middle" font-weight="bold">Human approval</text>
+  <text x="1010" y="670" font-size="10" fill="#D18775" text-anchor="middle">required (Direct decision, Charter §3)</text>
+
+  <text x="1050" y="740" font-size="11" fill="#5C6B85" text-anchor="end">Karun Mehta · AIGP (AI Governance Professional) · Project 12</text>
+</svg>
