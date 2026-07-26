@@ -7,11 +7,13 @@ Author:
 Karun Mehta · AIGP (AI Governance Professional)
 
 Business Context
+
 Financial institution deploying an AI Financial Advisor to assist licensed advisors.
 AI supports portfolio analysis, market research, investment insights, and recommendation drafting.
 Objective: Improve advisor productivity while maintaining client trust, fiduciary responsibility, and regulatory compliance.
 
 Governance Challenge
+
 Determine where AI assistance ends and regulated financial advice begins.
 Prevent AI from independently making or communicating investment decisions.
 Maintain transparency, accountability, and human oversight throughout the decision-making process.
@@ -21,15 +23,18 @@ Governance Decision
 Evaluated multiple operating models before selecting the final approach.
 
 Rejected
+
 Fully autonomous AI recommendations (high fiduciary and regulatory risk).
 AI auto-approval based on confidence scores (insufficient human accountability).
 Manual-only process (reduced productivity and limited business value).
 
 Selected
+
 Human-in-the-Loop (HITL) operating model.
 Licensed advisors review and approve every client-facing recommendation before delivery.
 
 Operational Governance Controls
+
 Risk-based governance controls.
 Human oversight and approval workflow.
 Role-based access and security controls.
@@ -37,6 +42,7 @@ Audit logging and end-to-end traceability.
 Continuous monitoring and governance reviews.
 
 AI Validation & Testing
+
 Suitability testing — Flagged cases where rebalancing logic ignored stated client risk tolerance; corrected before deployment.
 Recommendation accuracy validation.
 Hallucination detection and groundedness validation.
@@ -45,6 +51,7 @@ Bias and fairness evaluation — Demographic parity using the 4/5ths threshold, 
 Privacy and security testing.
 
 Framework & Regulatory Alignment
+
 NIST AI RMF — Govern • Map • Measure • Manage.
 EU AI Act — Provider vs. Deployer assessment, Articles 9–15, Article 27 (where applicable), and Article 50 transparency obligations.
 ISO/IEC 42001 — AI Management System governing the AI lifecycle, including data, models, risk management, and human oversight.
@@ -53,6 +60,7 @@ GDPR — DPIA considerations, data minimization, and Article 22 assessment (like
 SEC / FINRA — Suitability, supervision, advisor accountability, and recordkeeping.
 
 Key Trade-offs
+
 Innovation vs. Risk Management.
 Automation vs. Human Oversight.
 Productivity vs. Regulatory Compliance.
@@ -63,6 +71,7 @@ Decision
 We accepted additional human review effort and a longer review cycle in exchange for lower fiduciary risk, stronger client trust, improved regulatory compliance, and greater audit readiness—choosing controllable risk over unmanaged speed.
 
 Business Outcomes (Illustrative Example)
+
 AI improves advisor productivity while preserving regulated human decision-making.
 Consistent governance controls across the AI lifecycle.
 Enhanced audit readiness through end-to-end traceability and approval records.
