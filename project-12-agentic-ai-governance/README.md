@@ -129,10 +129,8 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 **Templates** (`08-templates/` folder — see [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) for how to sequence using them)
 | Artefact | Purpose |
 |---|---|
-
 | `08-templates/risk-assessment-template.md` | Fillable risk scoring form implementing the Risk Classification Addendum |
 | `08-templates/pre-deployment-review-record.md` | Fillable go/no-go decision record for Lifecycle Stage 7 (Human Approval) — checks scaled to autonomy level, findings table, decision, sign-off |
-| `08-templates/exception-request-form.md` | Fillable form implementing Exception Management |
 | `08-templates/exception-request-form.md` | Fillable form implementing Exception Management |
 | `08-templates/vendor-assessment-form.md` | Fillable scoring form implementing Third-Party AI Governance |
 | `08-templates/agent-inventory-entry-template.md` | Fillable single-agent entry matching the Inventory Register schema |
@@ -142,12 +140,10 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | `08-templates/control-implementation-tracker.md` | Per-control status tracker (16 controls) with roll-up completeness percentage |
 
 **Examples** (`09-examples/` folder — completed instances of the templates above)
-| `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
-| `09-examples/completed-pre-deployment-review-example.md` | `ORG-AI-013`'s Stage 7 review — Critical findings on launch, remediation plan, Conditional Go |
-| `09-examples/completed-vendor-assessment-example.md` | The foundation model provider's scored vendor assessment |
 | Artefact | Purpose |
 |---|---|
 | `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
+| `09-examples/completed-pre-deployment-review-example.md` | `ORG-AI-013`'s Stage 7 review — Critical findings on launch, remediation plan, Conditional Go |
 | `09-examples/completed-vendor-assessment-example.md` | The foundation model provider's scored vendor assessment |
 | `09-examples/completed-incident-report-example.md` | The full incident narrated in the end-to-end case study below |
 | `09-examples/completed-runtime-review-example.md` | The recovery-period review following that incident |
