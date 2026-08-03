@@ -4,8 +4,6 @@
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9080d35a-2fbe-4fe7-b057-eccca46eda09" />
 
 
-
-
 # Enterprise Agentic Wealth Advisory Governance Lifecycle
 
 ### From Critical Risk Classification to Controlled Production Monitoring
