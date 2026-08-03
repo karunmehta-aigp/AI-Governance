@@ -79,7 +79,7 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | `agent-inventory-register.md` + `.csv` | The CMDB for agents — autonomy level, tool/credential scope, kill-switch status |
 | `agent-identity-governance.md` | Non-human identity: scoped credentials, vault, rotation, revocation independent of the agent |
 | `agentic-control-library.md` | Sixteen numbered, categorized, ownable, evidence-backed controls (`AI-CNTRL-A01`–`A16`) across 10 control categories |
-| `05-control-library/agentic-compliance-crosswalk.md` | Maps controls to NIST AI RMF, EU AI Act, ISO/IEC 42001, OWASP LLM Top 10, MITRE ATLAS, GDPR, and SOC 2/NIST 800-53 |
+| `05-control-library/agentic-compliance-crosswalk.md` | Maps controls to NIST AI RMF, EU AI Act, ISO/IEC 42001, OWASP LLM Top 10, MITRE ATLAS, AIUC-1, GDPR, and SOC 2/NIST 800-53 |
 | `agentic-ai-governance-raci.md` | Responsible/Accountable/Consulted/Informed across every activity in this project |
 
 **Layer-specific governance**
@@ -129,7 +129,10 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 **Templates** (`08-templates/` folder — see [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) for how to sequence using them)
 | Artefact | Purpose |
 |---|---|
+
 | `08-templates/risk-assessment-template.md` | Fillable risk scoring form implementing the Risk Classification Addendum |
+| `08-templates/pre-deployment-review-record.md` | Fillable go/no-go decision record for Lifecycle Stage 7 (Human Approval) — checks scaled to autonomy level, findings table, decision, sign-off |
+| `08-templates/exception-request-form.md` | Fillable form implementing Exception Management |
 | `08-templates/exception-request-form.md` | Fillable form implementing Exception Management |
 | `08-templates/vendor-assessment-form.md` | Fillable scoring form implementing Third-Party AI Governance |
 | `08-templates/agent-inventory-entry-template.md` | Fillable single-agent entry matching the Inventory Register schema |
@@ -139,6 +142,9 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | `08-templates/control-implementation-tracker.md` | Per-control status tracker (16 controls) with roll-up completeness percentage |
 
 **Examples** (`09-examples/` folder — completed instances of the templates above)
+| `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
+| `09-examples/completed-pre-deployment-review-example.md` | `ORG-AI-013`'s Stage 7 review — Critical findings on launch, remediation plan, Conditional Go |
+| `09-examples/completed-vendor-assessment-example.md` | The foundation model provider's scored vendor assessment |
 | Artefact | Purpose |
 |---|---|
 | `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
