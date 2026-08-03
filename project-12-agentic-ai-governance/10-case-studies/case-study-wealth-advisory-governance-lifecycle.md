@@ -2,6 +2,8 @@
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d8cbbdf8-109c-425d-aee4-6499e3bc420a" />
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d2056762-4fa2-4a81-ab57-871838971ab8" />
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9080d35a-2fbe-4fe7-b057-eccca46eda09" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/39dc064e-161e-41e3-8380-1448ee90f2e1" />
+
 
 
 # Enterprise Agentic Wealth Advisory Governance Lifecycle
