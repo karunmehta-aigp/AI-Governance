@@ -51,7 +51,7 @@ If you have five minutes, read these four in order: Charter → Control Library 
 | Assurance Framework | Continuous governance lifecycle | [`ai-assurance-framework.md`](./07-ai-assurance/ai-assurance-framework.md) |
 | Governance Automation | Automated vs. human controls | [`governance-automation.md`](./12-implementation-guide/governance-automation.md) |
 | End-to-End Case Study | One system, all 12 lifecycle stages, one real incident, told as a story | [`case-study-expense-agent-lifecycle.md`](./10-case-studies/case-study-expense-agent-lifecycle.md) |
-| Multi-Agent Case Study | Agentic Investment Management System — 15-component, 9-phase multi-agent chain with a mandatory human gate | [`Agentic-investment-management-governance-lifecycle.md`](./10-case-studies/Agentic-investment-management-governance-lifecycle.md) |
+| Multi-Agent Case Study | Agentic Investment Management System — 15-component, 9-phase multi-agent chain with a mandatory human gate | [`case-study-Agentic-investment-management-governance-lifecycle.md`](./10-case-studies/case-study-Agentic-investment-management-governance-lifecycle.md) |
 | Finance Sector Case Study | Loan Pre-Approval Agent — a structurally different, regulation-driven high-risk system | [`case-study-loan-approval-agent.md`](./10-case-studies/case-study-loan-approval-agent.md) |
 | How to Implement | 5-week starting path for adopting this framework | [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) |
 | Templates | Fillable forms — risk assessment, exceptions, vendor review, incidents | [`08-templates/`](./08-templates/) |
