@@ -4,13 +4,13 @@
 
 ---
 
-This project is covered by the license at the root of the AI-Governance repository. If that root license is MIT or Apache 2.0, the following applies to everything in this project:
+This project is covered by the MIT License at the root of the AI-Governance repository. The following applies to everything in this project:
 
 - **Reuse is permitted**, including adapting the templates, charter, and control library for your own organisation's governance programme
-- **Commercial reuse is permitted** under those license terms — you don't need to ask permission to use this as a starting point for real internal governance documentation
-- **Attribution is appreciated but not legally required** beyond what the chosen license specifies — a mention or link back is welcome, not mandatory
+- **Commercial reuse is permitted** under the MIT License — you don't need to ask permission to use this as a starting point for real internal governance documentation
+- **Attribution is appreciated but not legally required** beyond what the MIT License specifies — a mention or link back is welcome, not mandatory
 
-**If the root license is currently unset or a more restrictive default (e.g., no license, which under default copyright means no reuse rights are granted at all):** consider explicitly adding an MIT or Apache 2.0 license at the repository root. Portfolio work intended to demonstrate practical, reusable governance thinking is more credible — and more useful to the community — when reuse rights are explicit rather than ambiguous. Apache 2.0 additionally includes an explicit patent grant, which is a reasonable choice if any of the templates or frameworks here overlap with process innovations you'd want reused freely without ambiguity.
+**Note on Project 13:** the same root MIT License covers [Project 13's case studies](../project-13-enterprise-ai-governance-case-studies/) as well, since it applies repository-wide rather than per-project. This document is scoped to Project 12 specifically because it's the toolkit project with fillable templates and a reusable control library — Project 13's content is narrative case studies rather than reusable instruments, but the same reuse terms apply if you want to adapt any of it.
 
 **What this project's content is, license aside:** every organisation, system, incident, and figure is fictional, illustrative material. Using it as a starting template for real governance work is exactly the intended use — but it is not legal advice, and any organisation adapting it should have its own legal and compliance function review the result against its actual regulatory obligations before treating it as operative policy.
 
