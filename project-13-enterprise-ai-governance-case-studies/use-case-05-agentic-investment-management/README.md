@@ -1,4 +1,3 @@
-
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/455548b5-0a2a-4a37-99bc-be1c263070b5" />
 
 
@@ -481,9 +480,9 @@ Every field this document's evidence traces back to, in one representative recor
 
 ## Related Documents
 
-- [AI Risk Tiering Spine](../04-risk-framework/ai-risk-tiering-spine.md)
-- [Multi-Agent Orchestration Risk Addendum](../04-risk-framework/multi-agent-orchestration-risk-addendum.md)
-- [Pre-Deployment Review & Sign-Off](../09-examples/completed-pre-deployment-review-example.md)
-- [Formal Risk Assessment with Precedent Analysis](../09-examples/formal-risk-assessment-org-ai-013.md)
-- [Remediation Close-Out & Re-Review](../09-examples/remediation-and-go-review-org-ai-013.md)
-- [Agentic AI Control Library](../05-control-library/agentic-control-library.md)
+These reference documents live in Project 12's toolkit layer, which this case study draws on but doesn't duplicate:
+
+- [Pre-Deployment Review & Sign-Off](../../project-12-agentic-ai-governance/09-examples/completed-pre-deployment-review-example.md)
+- [Agentic AI Control Library](../../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)
+
+The following are referenced in this case study's narrative but not yet published as standalone documents: AI Risk Tiering Spine, Multi-Agent Orchestration Risk Addendum, Formal Risk Assessment with Precedent Analysis, and Remediation Close-Out & Re-Review. These remain open items on the portfolio backlog.
