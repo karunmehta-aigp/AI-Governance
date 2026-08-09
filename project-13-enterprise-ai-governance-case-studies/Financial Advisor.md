@@ -1,1 +1,0 @@
-AI Governance - FA.png
