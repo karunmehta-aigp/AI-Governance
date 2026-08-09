@@ -1,83 +1,153 @@
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/25539ef5-b640-42e8-9394-8f54dec7b5ee" />
 
-AI Governance in Practice
-Enterprise AI Governance – Investment Research Agent
-Investment Management
+## Case Study: `ORG-AI-014` — Investment Research Agent Risk Assessment Framework
 
-Author:
-Karun Mehta · AIGP (AI Governance Professional)
+> Part of the Project 13 Enterprise AI Governance Case Studies portfolio — fictional example for educational purposes. See root README for the full disclaimer. A practical end-to-end evaluation using NIST AI RMF, ISO/IEC 42001, and applicable law.
 
-Business Context
+**Assessment Date:** 15 Jul 2026 · **Review Date:** 30 Jul 2026 · **Next Review:** 15 Oct 2026
+**Method:** NIST AI RMF 1.0
+**Criteria:** NIST AI RMF 1.0 · ISO/IEC 42001:2023 · EU AI Act 2024/1689 · SEC/FINRA
+**Assessment Version:** 1.0
 
-Financial institution deploying a GenAI + RAG research summarization tool for its investment research team.
-AI reads internal research, filings, news, market data, and client holdings, then produces summaries and insights for ~220 analysts (~3,200 briefs/month) globally.
-Objective: Cut research turnaround time while keeping analysts — not the model — accountable for what goes into client-facing investment decisions.
+### Governance Lifecycle
 
-Governance Challenge
+`1 Intake → 2 Context → 3 Regulatory → 4 Risk Identification → 5 Risk Analysis → 6 Control Design → 7 Validation → 8 Decision → 9 Monitoring → 10 Continuous Improvement`
 
-Prevent factual errors ("hallucinations") in AI-generated research from reaching analysts and, downstream, clients.
-Ensure research outputs remain fair, balanced, and not misleading, as SEC/FINRA requires of all investment research regardless of who or what produced it.
-Close a live gap: the system had been in production 10 months with no performance or drift monitoring, no bias testing, and no formal risk assessment before this review.
+---
 
-Governance Decision
+### Step 1 — Assessment Metadata
 
-Evaluated the system's existing informal governance against a formal risk assessment before deciding how to proceed.
+| Field | Value |
+|---|---|
+| Assessor | AI Governance Team |
+| Organization / Business Unit | Org1 (Research Technology) |
+| Document Owner | AI Risk Lead |
+| Scope | High-Risk AI System in Production |
+| Criteria | NIST AI RMF 1.0, ISO/IEC 42001:2023, EU AI Act 2024/1689, SEC/FINRA |
+| Review Frequency | Quarterly |
+| Assessment Version | 1.0 |
 
-Rejected
+### Step 2 — AI System Profile
 
-Continued ad-hoc review with no formal risk assessment or bias testing (the state the system was found in — unacceptable for a production high-risk system).
-Full Go with no conditions (8 of 50 test prompts produced hallucinated financial facts — too high a rate to approve without remediation).
+| Field | Value |
+|---|---|
+| System Purpose | AI Investment Research Summarizer |
+| Business Owner | Research Technology (Head of Research) |
+| System Type | GenAI (LLM) + RAG over proprietary research library |
+| What It Does | Summarizes internal & external research and generates insights |
+| Decision Authority | Analyst-in-the-loop — outputs influence investment decisions; no autonomous decision-making |
+| Users / Scale | ~220 analysts · ~3,200 briefs/month · Global |
+| Key Data Inputs | Internal research, filings, news, market data, client holdings |
+| Deployment | Production · Deployed 10 months ago |
+| Training Data | Proprietary + vendor models. No fine-tuning |
+| Monitoring | No performance or drift monitoring in place |
+| Governance to Date | Ad-hoc review. No formal risk assessment or bias testing |
 
-Selected
+### Step 3 — Applicable Regulations & Standards
 
-Conditional Go — analyst-in-the-loop model, formalized rather than ad hoc.
-Outputs influence investment decisions but do not autonomously drive them; go-live is contingent on closing all Critical findings and completing High-risk controls first.
+| Regulation / Framework | Applies? | Why It Applies / What It Demands |
+|---|---|---|
+| EU AI Act 2024/1689 (Amended Digital Omnibus) | ✅ | Investment research tools used in investment decisions are Annex III high-risk. Obligations from 2 Dec 2027 (deferred). Design for requirements now (Arts. 9, 10, 13, 14, 26, 43). |
+| UK GDPR / GDPR | ✅ | Art. 22 — no solely automated decisions with legal or similarly significant effect without human intervention. DPIA required (Art. 35). |
+| SEC / FINRA | ✅ | Research that influences investment decisions must be fair, balanced, and not misleading. Recordkeeping required. |
+| Title VII / ADEA / ADA | ✅ | If model output is used in hiring-related research or comps, disparate-impact risk items exist. |
+| NYC Local Law 144 | ✅ | Annual bias audit and public summary apply, notify candidates within 10 business days. |
+| Colorado AI Act (SB 26-189) | ⚠️ WATCH | Notice and explanation obligations from 1 Jan 2027 for covered decisions. |
 
-Operational Governance Controls
+**AI Classification (EU AI Act):** ☑ High Risk (Annex III, Arts. 6–49) — Unacceptable (Art. 5), Limited Risk (Transparency, Arts. 50–52), and Minimal Risk not applicable.
 
-Preventive: prompt guardrails & content filters, source allow-list for RAG, data minimization & redaction, analyst training on AI use, change management for model updates.
-Detective: output factuality testing, bias testing (demographic parity), prompt injection tests, data leakage scanning, human review sampling.
-Corrective: analyst escalation workflow, correct & retract process, model rollback plan, incident response runbook, vendor escalation & SLAs.
+**Assessed Against:** ☑ NIST AI RMF 1.0 · ☑ ISO/IEC 42001:2023 · ☑ EU AI Act · ☑ ISO/IEC 23894 · ☑ Internal AI Policy · ☐ AIUC-1
 
-AI Validation & Testing
+### Step 4 — Risk Register (with Precedents)
 
-Factuality testing — 8 of 50 test prompts produced hallucinated financial facts; rated Critical and gated go-live.
-Bias and fairness evaluation — demographic parity testing identified as a gap; no baseline existed prior to this assessment.
-Data leakage and prompt-injection testing — no controls implemented or tested in production prior to this review.
-Citation and traceability testing — outputs lacked source citations, creating both a factuality risk and an SEC/FINRA recordkeeping gap.
-Vendor dependency testing — a prior (2024) vendor model update was found to have changed output and caused policy misrepresentation, establishing precedent for ongoing vendor-update monitoring.
+| # | Risk | NIST Function | Real-World Precedent |
+|---|---|---|---|
+| 1 | Hallucinated Financial Facts | MEASURE | Org1 chatbot (2023) provided incorrect information on ESG funds, causing client confusion and reputational damage. |
+| 2 | Biased Framing of Sectors / Companies | MAP | Org1 study (2016) showed algorithmic bias in risk scoring due to biased historical data and opaque features. |
+| 3 | Data Leakage via Prompts | MANAGE | Org1 engineers (2023) leaked proprietary source code to a chatbot through prompts; data exposure risk. |
+| 4 | Lack of Citations & Traceability | GOVERN | Org1 enforcement action (2024) — firm failed to disclose AI use and produced misleading research summaries. |
+| 5 | Vendor Dependency & Model Updates | MANAGE | Org1 chatbot case (2024) — vendor model update changed output and caused policy misrepresentation. |
 
-Framework & Regulatory Alignment
+### Step 5 — Risk Analysis & Rating
 
-NIST AI RMF — Map • Measure • Manage • Govern, used as the assessment method end-to-end.
-EU AI Act — Annex III high-risk classification (investment research used in investment decisions); obligations deferred to 2 Dec 2027 under the Amended Digital Omnibus, but the system is being designed to Articles 9, 10, 13, 14, 26, and 43 now rather than waiting for the deadline.
-GDPR — Article 22 (no solely automated decisions with legal or similarly significant effect without human intervention); DPIA required under Article 35.
-SEC / FINRA — research that influences investment decisions must be fair, balanced, and not misleading, with recordkeeping obligations.
-NYC Local Law 144 — annual bias audit and public summary apply where outputs touch hiring-related research or comparisons.
-Colorado AI Act (SB 26-189) — watch item; notice and explanation obligations begin 1 Jan 2027 for covered decisions.
+Scale: Low 1–4 · Medium 5–8 · High 9–14 · Critical 15–25
 
-Key Trade-offs
+| # | Risk | Likelihood (1–5) | Impact (1–5) | Score (L×I) | Level |
+|---|---|---|---|---|---|
+| 1 | Hallucinated Financial Facts | 4 | 5 | 20 | 🔴 CRITICAL |
+| 2 | Biased Framing of Sectors | 4 | 4 | 16 | 🟠 HIGH |
+| 3 | Data Leakage via Prompts | 4 | 4 | 16 | 🟠 HIGH |
+| 4 | Lack of Citations & Traceability | 3 | 5 | 15 | 🟠 HIGH |
+| 5 | Vendor Dependency & Updates | 5 | 3 | 15 | 🟠 HIGH |
 
-Research speed vs. factual reliability.
-Analyst productivity vs. mandatory human review of AI-influenced research.
-Vendor-model flexibility vs. governance control over unannounced model changes.
-Regulatory readiness now vs. deferred EU AI Act enforcement dates.
+*Note: rows 3–4 were reconstructed from a partially legible source poster — verify the exact Likelihood × Impact split against your original working file before treating this as final.*
 
-Decision
+### Step 6 — Controls & Framework Mapping
 
-We accepted a remediation delay — no full production Go until factuality guardrails, bias testing, and leakage controls were in place — in exchange for a defensible SEC/FINRA and EU AI Act posture, rather than approving a system already shown to hallucinate financial facts in 16% of test prompts.
+**Preventive controls (stop problems):** prompt guardrails & content filters · source allow-list for RAG · data minimization & redaction · analyst training on AI use · change management for model updates
 
-Business Outcomes (Illustrative Example)
+**Detective controls (find issues):** output factuality testing · bias testing (demographic parity) · prompt injection tests · data leakage scanning · human review sampling
 
-Formal risk register replaces ad-hoc review, with 1 Critical and 4 High findings tracked to named owners and target dates.
-Conditional Go structure keeps the research pipeline moving while critical remediation is completed on a defined timeline (05–26 Sep 2026).
-Quarterly reassessment cadence established (next full review 15 Oct 2026), closing the monitoring gap that existed at intake.
-Illustrative observation: weekly factuality testing and monthly bias testing were adopted as ongoing KPIs rather than one-time deployment gates, so drift is caught between formal reviews rather than only at them.
+**Corrective controls (fix issues):** analyst escalation workflow · correct & retract process · model rollback plan · incident response runbook · vendor escalation & SLAs
 
-Key Takeaway
+| Risk | NIST AI RMF | ISO/IEC 42001 | EU AI Act |
+|---|---|---|---|
+| Hallucinated Facts | Measure | A.7, A.8, A.10 | Art. 9, 13, 14 |
+| Biased Framing | Map | A.6, A.7 | Art. 10, 13 |
+| Data Leakage | Manage | A.5, A.8 | Art. 9, 26 |
+| Lack of Citations | Govern | A.2, A.7 | Art. 13, 26 |
+| Vendor Dependency | Manage | A.5, A.15 | Art. 26, 43 |
 
-A GenAI research tool doesn't need to be autonomous to be high-risk — SEC/FINRA's fair-and-balanced standard and the EU AI Act's Annex III classification both attach to what the output is used for, not how much autonomy the system has. This use case demonstrates governing a single-system, analyst-in-the-loop GenAI+RAG tool against the same NIST AI RMF / EU AI Act discipline applied elsewhere in this portfolio, while showing what a Conditional Go decision looks like when Critical findings exist but the business case for continued operation is strong enough to justify a time-bound remediation path instead of a hard stop.
+### Step 7 — Formal Audit Findings (Top 3)
 
-Disclaimer
+| ID | Condition (Observed) | Criteria (Should Be) | Cause | Severity |
+|---|---|---|---|---|
+| F-01 | Hallucinated facts in 8 of 50 test prompts | Outputs must be accurate and grounded | Analysts may rely on incorrect data, leading to poor decisions | CRITICAL |
+| F-02 | No bias testing performed | Bias testing before deployment and periodically thereafter | No bias validation process defined or executed | HIGH |
+| F-03 | No prompt-injection or data-leakage controls in production | Security controls must protect data and system integrity | Controls not implemented, no testing performed | HIGH |
 
-This is an illustrative AI Governance use case created for professional learning, portfolio development, and discussion. Any scenarios, metrics, or examples are illustrative and intended to demonstrate governance design concepts rather than represent production results. This material is not legal or regulatory advice. Organizations should consult their legal, compliance, risk, and information security teams when designing or implementing AI governance programs.
+### Step 8 — Recommendations & Action Plan
+
+| # | Recommendation | Owner | Priority | Target Date |
+|---|---|---|---|---|
+| 1 | Implement factuality guardrails and citation enforcement | AI Engineering | CRITICAL | 05 Sep 2026 |
+| 2 | Run AI bias assessment & quarterly testing | Data Science | HIGH | 12 Sep 2026 |
+| 3 | Deploy data leakage prevention & prompt security | Security Ops | HIGH | 12 Sep 2026 |
+| 4 | Establish monitoring & drift alerts | AI Operations | HIGH | 19 Sep 2026 |
+| 5 | Vendor contract update & SLA alignment | Vendor Management | HIGH | 26 Sep 2026 |
+
+### Step 9 — Governance Decision & Sign-Off
+
+**Decision:** ✅ Conditional Go — subject to remediation of all critical findings (F-01) and completion of high-risk controls (F-02, F-03).
+
+**Conditions:**
+- All critical findings closed with evidence
+- Bias testing baseline completed
+- Monitoring & alerting live
+- Analyst training completed
+- Vendor SLA & rollback plan validated
+
+| Role | Signature | Date |
+|---|---|---|
+| Business Owner (Research Technology) | Signed | 30 Jul 2026 |
+| AI Risk Lead | Signed | 30 Jul 2026 |
+| Compliance Officer | Signed | 30 Jul 2026 |
+| Legal Counsel | Signed | 30 Jul 2026 |
+
+### Step 10 — Monitoring & Evidence
+
+- **Next full risk review:** 15 Oct 2026 (Quarterly)
+- **Ongoing monitoring:** weekly factuality tests · monthly bias tests · active and tested incident response plan
+- **Key KPIs:** hallucination rate · bias metrics · analyst override rate
+- **Evidence artifacts (maintain & retain):** risk register · control validation pack · test reports · bias & fairness report · approval record · monitoring reports · incident logs · training records
+
+### Step 11 — Governance Principles
+
+- **Evidence before assurance** — every control decision is backed by verifiable evidence.
+- **Human accountability over AI autonomy** — humans remain accountable for outcomes.
+- **Risk-based, not risk-blind** — focus on material risks and real business impact.
+- **Continuous governance, not one-time approval** — monitor, learn, and improve as models, data, and regulations evolve.
+
+---
+
+**Author:** Karun Mehta · AIGP (AI Governance Professional)
