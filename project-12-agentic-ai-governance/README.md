@@ -12,7 +12,7 @@
 
 ### Where This Project Sits in the Portfolio
 
-Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 follows the Projects 6–11 model: it's a fully reusable, industry-agnostic **toolkit** for governing autonomous, tool-using agentic AI — a governance charter, a 16-control library, a compliance crosswalk, layer-specific governance instruments (identity, MCP, memory, prompts, models, data, vendors), fillable templates, and completed worked examples. The applied, narrative case studies that use this toolkit — four agentic and single-system scenarios spanning finance operations, lending, wealth management, and investment research — live in **[Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/)**, so that all of this portfolio's applied narratives sit in one place regardless of whether the system involved is agentic or not.
+Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 follows the Projects 6–11 model: it's a fully reusable, industry-agnostic **toolkit** for governing autonomous, tool-using agentic AI — a governance charter, a 16-control library, a compliance crosswalk, layer-specific governance instruments (identity, MCP, memory, prompts, models, data, vendors), fillable templates, and completed worked examples. The applied, narrative case studies that use this toolkit live in **[Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/)**, so that all of this portfolio's applied narratives sit in one place regardless of whether the system involved is agentic or not.
 
 ### Repository Structure
 
@@ -38,7 +38,7 @@ This project asks the question most 2026 governance programmes are currently get
 
 ### What You'll Find — Start Here
 
-If you have five minutes, read these four in order: Charter → Control Library → Compliance Crosswalk → Executive Dashboard. For applied worked examples of this toolkit in use, go to [Project 13](../project-13-enterprise-ai-governance-case-studies/), which now houses all five of this portfolio's agentic and single-system case studies.
+If you have five minutes, read these four in order: Charter → Control Library → Compliance Crosswalk → Executive Dashboard. For applied worked examples of this toolkit in use, go to [Project 13](../project-13-enterprise-ai-governance-case-studies/).
 
 | Area | Purpose | Start With |
 |---|---|---|
@@ -49,7 +49,7 @@ If you have five minutes, read these four in order: Charter → Control Library 
 | Runtime Governance | Production monitoring and enforcement | [`runtime-governance.md`](./06-runtime-governance/runtime-governance.md) |
 | Assurance Framework | Continuous governance lifecycle | [`ai-assurance-framework.md`](./07-ai-assurance/ai-assurance-framework.md) |
 | Governance Automation | Automated vs. human controls | [`governance-automation.md`](./12-implementation-guide/governance-automation.md) |
-| Case Studies | Four worked examples applying this toolkit — three agentic, one single-system (a fifth Project 13 use case, Wealth Management AI Financial Advisor, was built independently and doesn't draw on this toolkit) | [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/) |
+| Case Studies | Worked examples applying this toolkit | [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/) |
 | How to Implement | 5-week starting path for adopting this framework | [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) |
 | Templates | Fillable forms — risk assessment, exceptions, vendor review, incidents | [`08-templates/`](./08-templates/) |
 | Completed Examples | Every template filled out against a real (fictional) scenario | [`09-examples/`](./09-examples/) |
@@ -87,17 +87,6 @@ If you have five minutes, read these four in order: Charter → Control Library 
 | `data-governance.md` | Classification, masking in logs, retention, residency, lineage across the agent pipeline |
 | `third-party-ai-governance.md` | Vendor assessment: retraining rights, residency, DPAs, subprocessors, kill-switch independence |
 
-**Case studies**
-
-Four of this portfolio's agentic and single-system case studies were built directly on this toolkit and now live in [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/), so applied narratives sit in one consistent place across the whole portfolio:
-
-| Use Case | System | Purpose |
-|---|---|---|
-| [Autonomous Expense & Reimbursement Reviewer](../project-13-enterprise-ai-governance-case-studies/use-case-03-expense-reimbursement-agent/README.md) | `ORG-AI-011` | Three-agent pipeline narrated end-to-end: business request through a real incident through lessons learned |
-| [Loan Pre-Approval Agent](../project-13-enterprise-ai-governance-case-studies/use-case-04-loan-pre-approval-agent/README.md) | `ORG-AI-012` | Contrasts a regulation-driven high-risk system (EU AI Act Annex III, GDPR Art. 22, ECOA) against `ORG-AI-011`'s autonomy-driven risk |
-| [Agentic Investment Management System](../project-13-enterprise-ai-governance-case-studies/use-case-05-agentic-investment-management/README.md) | `ORG-AI-013` | This portfolio's most detailed case study: 15 components, 9 phases, first to contrast orchestrated agent-chain governance (A2A handoffs, confused-deputy risk, segregation of duties) against single-pipeline and regulation-driven risk |
-| [Investment Research Agent](../project-13-enterprise-ai-governance-case-studies/use-case-02-investment-research-agent/README.md) | `ORG-AI-014` | Single GenAI+RAG system, analyst-in-the-loop — tests factuality/hallucination risk and SEC/FINRA obligations rather than orchestration risk |
-
 **Operating model & metrics**
 | Artefact | Purpose |
 |---|---|
@@ -120,7 +109,7 @@ Four of this portfolio's agentic and single-system case studies were built direc
 | Artefact | Purpose |
 |---|---|
 | `master-navigation-diagram.svg`/`.png` | The single sequence — Charter → Operating Model → RACI → Lifecycle → Risk → Controls → Runtime → KPIs → Assurance → Audit — with the Improve feedback loop shown explicitly |
-| `agentic-governance-architecture.svg`/`.png` | The `ORG-AI-011` pipeline, checkpoint, and decision-rights split — see Project 13's Use Case 03 for the full narrative |
+| `agentic-governance-architecture.svg`/`.png` | Reference pipeline, checkpoint, and decision-rights split — see Project 13 for the full applied narrative |
 | `agent-governance-dashboard-v2.svg`/`.png` | Expanded executive KPI dashboard (inventory, risk, cost, vendors, trend) |
 | `enterprise-architecture.svg`/`.png` | Full layered stack, Business through Audit, each layer mapped to its governing artefact |
 | `agent-governance-dashboard.svg`/`.png` | Earlier v1 dashboard, kept for the version history this project's own Change Control document argues for |
@@ -144,7 +133,7 @@ Four of this portfolio's agentic and single-system case studies were built direc
 | `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
 | `09-examples/completed-pre-deployment-review-example.md` | `ORG-AI-013`'s Stage 7 review — Critical findings on launch, remediation plan, Conditional Go |
 | `09-examples/completed-vendor-assessment-example.md` | The foundation model provider's scored vendor assessment |
-| `09-examples/completed-incident-report-example.md` | The full incident narrated in Project 13's Use Case 03 |
+| `09-examples/completed-incident-report-example.md` | The full incident narrated in Project 13's case studies |
 | `09-examples/completed-runtime-review-example.md` | The recovery-period review following that incident |
 | `09-examples/completed-exception-request-example.md` | A time-bound kill-switch testing exception during a platform migration |
 
