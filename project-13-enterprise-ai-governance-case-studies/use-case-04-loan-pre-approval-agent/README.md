@@ -1,52 +1,79 @@
-## Case Study: `ORG-AI-012` — Loan Pre-Approval Agent (Financial Services)
+AI Governance in Practice
+Enterprise AI Governance – Loan Pre-Approval Agent
+Consumer Lending
 
-> Part of the Project 12 Agentic AI Governance portfolio — fictional example for educational purposes. See root README for the full disclaimer.
+Author:
+Karun Mehta · AIGP (AI Governance Professional)
 
----
+Business Context
 
-### Why This Case Study Is a Better Test of the Framework Than a Second Copy of `ORG-AI-011`
+Financial institution deploying a three-agent pipeline to support, not replace, the consumer lending team's pre-approval process.
+Document Intake Agent reads submitted income verification, credit bureau pull, and application data; Creditworthiness Assessment Agent scores the application against lending policy and produces a recommendation with rationale; Decision-Support Agent drafts the approval, denial, or counter-offer communication, including any legally required adverse action notice.
+Objective: speed up pre-approval turnaround while keeping the actual credit decision with a licensed loan officer, not the system.
 
-`ORG-AI-011`'s risk profile is *created* by autonomy — an ordinary internal process becomes governed-as-high-priority because the autonomy multiplier pushes it there. `ORG-AI-012` is the opposite case: credit-worthiness assessment is explicitly named as high-risk under the EU AI Act's Annex III regardless of how much autonomy the system has, and separately triggers rights under GDPR Article 22 and disclosure obligations under the U.S. Equal Credit Opportunity Act (Regulation B) the moment an automated system materially drives a credit decision. This case study exists to show the framework handles a system that's high-risk *by regulatory classification*, not just by behaviour — a genuinely different governance problem, not a re-skin of the first.
+Governance Challenge
 
-### Scenario
+Govern a system that is high-risk by regulatory classification (EU AI Act Annex III credit-worthiness assessment) regardless of how much autonomy it's given — unlike a system where risk is created by autonomy level, keeping autonomy low here doesn't reduce the obligations.
+Ensure the system never autonomously issues a final credit decision — a legal requirement, not a design preference, given GDPR Article 22 and ECOA/Regulation B.
+Make denial and counter-offer communications meet ECOA's specific adverse-action disclosure requirements, not just a generic "did not meet criteria."
 
-The organisation deploys `ORG-AI-012`, a three-agent pipeline supporting (not replacing) the consumer lending team's pre-approval process:
+Governance Decision
 
-- **Document Intake Agent** — reads submitted income verification, credit bureau pull, and application data
-- **Creditworthiness Assessment Agent** — scores the application against lending policy and produces a recommendation with supporting rationale
-- **Decision-Support Agent** — drafts the approval, denial, or counter-offer communication, including any legally required adverse action notice
+Evaluated whether autonomy-level tuning alone could satisfy this system's obligations before setting the operating model.
 
-Critically, this system never autonomously issues a final credit decision. It produces a fully-reasoned recommendation; a licensed loan officer makes the actual decision. This is not a design preference — it's a legal requirement this case study treats as non-negotiable.
+Rejected
 
-### How Risk Classification Differs From `ORG-AI-011`
+Treating "we'll just keep autonomy low" as sufficient risk mitigation — this system carries explainability, adverse-action-notice accuracy, and fairness-testing obligations that trigger even at the lowest (Assistive) autonomy level, because they attach to what the system does, not how autonomously it does it.
+Allowing the Decision-Support Agent's output to reach the applicant directly, with human review as a process instruction rather than an enforced gate.
 
-| | `ORG-AI-011` (Expense Reviewer) | `ORG-AI-012` (Loan Pre-Approval) |
-|---|---|---|
-| Base use-case risk tier | Low | **High — by regulatory classification (EU AI Act Annex III), independent of autonomy** |
-| What raises the risk score | The autonomy multiplier | Already high before any multiplier is applied — the multiplier is compounding, not the primary driver |
-| Oversight posture required | Determined by autonomy level (Human Oversight Framework mapping) | **Human-in-the-loop is mandatory regardless of autonomy level** — a legal floor, not a governance choice |
-| Autonomy level permitted | Up to Conditional, with defined thresholds | **Assistive only** — the system may never autonomously finalise a credit decision |
+Selected
 
-This distinction matters in practice: teams sometimes assume "we'll just keep autonomy low" is sufficient risk mitigation for any system. `ORG-AI-012` shows a case where that assumption is wrong — even at Assistive autonomy, this system carries obligations (explainability, adverse action notice accuracy, fairness testing) that a Low-tier system like `ORG-AI-011` never triggers at any autonomy level.
+Assistive autonomy only — the system may never autonomously finalize a credit decision under any configuration.
+Human-in-the-loop enforced at the architecture level: the Decision-Support Agent's output cannot reach the applicant without a loan officer's action — a hard gate a human can't bypass under time pressure, not just a process step.
 
-### Controls Specific to This System (Beyond the Standard Control Library)
+Operational Governance Controls
 
-| Requirement | Detail | Regulatory Hook |
-|---|---|---|
-| Explainability | Every recommendation includes the specific factors driving it, in terms a loan officer (and ultimately a denied applicant) can understand — not just a score | EU AI Act Art. 13 (transparency), GDPR Art. 22 |
-| Adverse action notice accuracy | Denial/counter-offer communications drafted by the Decision-Support Agent are checked against the specific reasons regulation requires be disclosed — a generic "did not meet criteria" is not sufficient | ECOA / Regulation B |
-| Fairness / disparate impact monitoring | Recommendation outcomes monitored on a recurring basis across protected-class proxies for statistically significant disparity, not just aggregate accuracy | Fair lending laws; extends the KPI Catalog's Quality section with a fairness-specific metric this project's other systems don't need |
-| Human-in-the-loop enforcement at the architecture level | The Decision-Support Agent's output cannot reach the applicant without a loan officer's action — enforced as a hard architectural gate, not a process instruction a human could bypass under time pressure | Human Oversight Framework, escalated beyond its standard mapping given the legal floor above |
-| Bureau data handling | Credit bureau data carries its own regulatory handling requirements (FCRA in the U.S.) distinct from general PII — governed as its own classification tier within Data Governance, not folded into the standard PII category | FCRA |
+Explainability — every recommendation includes the specific factors driving it, in terms a loan officer and ultimately the applicant can understand, not just a score.
+Adverse-action notice accuracy — denial and counter-offer communications checked against the specific reasons ECOA/Regulation B requires be disclosed.
+Fairness / disparate-impact monitoring — recommendation outcomes monitored on a recurring basis across protected-class proxies for statistically significant disparity, not just aggregate accuracy.
+Bureau data handling — credit bureau data governed as its own classification tier distinct from general PII, per FCRA.
+Human-in-the-loop enforcement at the architecture level, not the process level.
 
-### Illustrative Runtime Finding
+AI Validation & Testing
 
-Six weeks into operation, the fairness monitoring metric flags a statistically significant disparity in recommendation rates correlated with applicant zip code — a common proxy risk in lending models. Because this metric exists as a named, monitored KPI rather than something only discovered in a periodic fair-lending audit, it's caught and routed to the AI Risk Committee within the same monitoring cycle that produces every other runtime finding in this project, rather than requiring a separate specialised fair-lending review process bolted on afterward. The Creditworthiness Assessment Agent's feature weighting is reviewed and adjusted; the correction and its rationale are logged through Framework Change Control, the same as the `ORG-AI-011` incident lesson was.
+Fairness monitoring KPI — a named, recurring metric rather than something only caught in a periodic fair-lending audit.
+Explainability validation against EU AI Act Art. 13 transparency and GDPR Art. 22 requirements.
+Adverse-action notice review against ECOA/Regulation B disclosure requirements.
+Architectural gate testing confirming the human-in-the-loop control cannot be bypassed.
 
-### What This Case Study Demonstrates
+Framework & Regulatory Alignment
 
-That the framework built for one system generalises to a structurally different one without needing to be rebuilt — the Charter, Lifecycle, Control Library, and Assurance cycle all apply unchanged; what changes is the risk inputs and the specific compliance obligations layered on top. That's the actual test of whether a governance framework is a framework or just documentation for one system that happens to be reused.
+EU AI Act — Annex III high-risk classification for credit-worthiness assessment, independent of autonomy level; Article 13 transparency obligations.
+GDPR — Article 22, no solely automated decision with legal or similarly significant effect.
+ECOA / Regulation B — adverse action notice content and accuracy requirements.
+FCRA — credit bureau data handled as its own regulated data classification tier.
+Fair lending law — disparate impact monitoring across protected-class proxies.
 
----
+Key Trade-offs
 
-**Author:** Karun Mehta · AIGP (AI Governance Professional)
+Faster pre-approval turnaround vs. a hard architectural human-in-the-loop gate that cannot be sped past.
+System-driven recommendation confidence vs. mandatory loan-officer final decision authority.
+Standard PII handling simplicity vs. FCRA-specific bureau data governance.
+
+Decision
+
+We accepted Assistive-only autonomy and a hard architectural human-approval gate — foregoing any path to higher autonomy — because this system's risk is set by what it does (credit-worthiness assessment), not by how autonomously it does it, and no autonomy-level tuning changes that classification.
+
+Business Outcomes (Illustrative Example)
+
+Six weeks into operation, the fairness monitoring metric flagged a statistically significant disparity in recommendation rates correlated with applicant zip code — a common proxy risk in lending models.
+Because the metric was a named, monitored KPI rather than something discovered only in a periodic fair-lending audit, it was caught and routed to the AI Risk Committee within the same monitoring cycle as every other runtime finding, with no separate specialized review process needed.
+The Creditworthiness Assessment Agent's feature weighting was reviewed and adjusted, with the correction and its rationale logged through formal change control.
+
+Key Takeaway
+
+Keeping autonomy low is not, by itself, a sufficient risk-mitigation strategy for a system that is high-risk by what it's used for — credit-worthiness assessment carries explainability, adverse-action, and fairness obligations at every autonomy level, including the lowest one. This use case demonstrates that the same governance disciplines applied elsewhere in this portfolio — a defined risk tier, a named fairness KPI, and a formal change-control process — generalize cleanly to a regulation-driven high-risk system without needing to be rebuilt from scratch.
+
+Disclaimer
+
+This is an illustrative AI Governance use case created for professional learning, portfolio development, and discussion. Any scenarios, metrics, or examples are illustrative and intended to demonstrate governance design concepts rather than represent production results. This material is not legal or regulatory advice. Organizations should consult their legal, compliance, risk, and information security teams when designing or implementing AI governance programs.
