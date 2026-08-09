@@ -480,9 +480,11 @@ Every field this document's evidence traces back to, in one representative recor
 
 ## Related Documents
 
-- [AI Risk Tiering Spine](../04-risk-framework/ai-risk-tiering-spine.md)
-- [Multi-Agent Orchestration Risk Addendum](../04-risk-framework/multi-agent-orchestration-risk-addendum.md)
-- [Pre-Deployment Review & Sign-Off](../09-examples/completed-pre-deployment-review-example.md)
-- [Formal Risk Assessment with Precedent Analysis](../09-examples/formal-risk-assessment-org-ai-013.md)
-- [Remediation Close-Out & Re-Review](../09-examples/remediation-and-go-review-org-ai-013.md)
-- [Agentic AI Control Library](../05-control-library/agentic-control-library.md)
+These reference documents live in Project 12's toolkit layer, which this case study draws on but doesn't duplicate:
+
+- [AI Risk Tiering Spine](../../project-12-agentic-ai-governance/04-risk-framework/ai-risk-tiering-spine.md)
+- [Multi-Agent Orchestration Risk Addendum](../../project-12-agentic-ai-governance/04-risk-framework/multi-agent-orchestration-risk-addendum.md)
+- [Pre-Deployment Review & Sign-Off](../../project-12-agentic-ai-governance/09-examples/completed-pre-deployment-review-example.md)
+- [Formal Risk Assessment with Precedent Analysis](../../project-12-agentic-ai-governance/09-examples/formal-risk-assessment-org-ai-013.md)
+- [Remediation Close-Out & Re-Review](../../project-12-agentic-ai-governance/09-examples/remediation-and-go-review-org-ai-013.md)
+- [Agentic AI Control Library](../../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)
