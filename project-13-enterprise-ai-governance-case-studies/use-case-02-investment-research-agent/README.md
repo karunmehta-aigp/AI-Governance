@@ -1,3 +1,5 @@
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/25539ef5-b640-42e8-9394-8f54dec7b5ee" />
+
 AI Governance in Practice
 Enterprise AI Governance – Investment Research Agent
 Investment Management
