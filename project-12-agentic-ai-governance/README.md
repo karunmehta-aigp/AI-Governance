@@ -1,8 +1,8 @@
-## Project 12: Agentic AI Governance Case Study
+## Project 12: Agentic AI Governance Toolkit
 
 **Project 12 of the AI Governance Portfolio**
 **Author:** Karun Mehta · AIGP (AI Governance Professional)
-**Version:** 1 (Enterprise, Audit-Ready, Adoption-Ready)
+**Version:** 2 (Enterprise, Audit-Ready, Adoption-Ready)
 
 > ⚠️ **Disclaimer:** This project is a fictional illustrative exercise built for portfolio and educational purposes. All organisations, systems, incidents, and named individuals are invented. No real entity, product, or event is depicted. Nothing in this project constitutes legal advice.
 
@@ -12,7 +12,7 @@
 
 ### Where This Project Sits in the Portfolio
 
-Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 is intentionally both: `case-study-expense-agent-lifecycle.md`, `case-study-loan-approval-agent.md`, `Agentic-investment-management-governance-lifecycle.md`, and `case-study-investment-research-agent.md` are narrative in the Projects 1–5 sense — specific systems, specific dated incidents, connected across this project the way Projects 1–5 connect across the portfolio — while the Charter, Control Library, KPI Catalog, and `08-templates/` folder are generic and reusable in the Projects 6–11 sense, usable by any organisation regardless of which fictional scenario illustrates them. This is a deliberate structural choice, not an inconsistency: agentic governance is new enough that showing the abstract framework *and* what it looks like applied to a real incident both matter, in a way that a purely narrative or purely generic project wouldn't demonstrate on its own.
+Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 follows the Projects 6–11 model: it's a fully reusable, industry-agnostic **toolkit** for governing autonomous, tool-using agentic AI — a governance charter, a 16-control library, a compliance crosswalk, layer-specific governance instruments (identity, MCP, memory, prompts, models, data, vendors), fillable templates, and completed worked examples. The applied, narrative case studies that use this toolkit — five agentic and single-system scenarios spanning finance operations, lending, wealth management, and investment research — live in **[Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/)**, so that all of this portfolio's applied narratives sit in one place regardless of whether the system involved is agentic or not.
 
 ### Repository Structure
 
@@ -27,7 +27,6 @@ Projects 1–5 are narrative — one fictional organisation, specific dated inci
 | `07-ai-assurance/` | Continuous assurance framework |
 | `08-templates/` | Ready-to-use governance templates |
 | `09-examples/` | Completed example documents |
-| `10-case-studies/` | End-to-end agent scenarios |
 | `11-architecture/` | Reference architecture diagrams |
 | `12-implementation-guide/` | 5-week implementation roadmap |
 
@@ -39,7 +38,7 @@ This project asks the question most 2026 governance programmes are currently get
 
 ### What You'll Find — Start Here
 
-If you have five minutes, read these four in order: Charter → Control Library → Compliance Crosswalk → Executive Dashboard. That path alone demonstrates the core capability this project is built to show.
+If you have five minutes, read these four in order: Charter → Control Library → Compliance Crosswalk → Executive Dashboard. For applied worked examples of this toolkit in use, go to [Project 13](../project-13-enterprise-ai-governance-case-studies/), which now houses all five of this portfolio's agentic and single-system case studies.
 
 | Area | Purpose | Start With |
 |---|---|---|
@@ -50,19 +49,12 @@ If you have five minutes, read these four in order: Charter → Control Library 
 | Runtime Governance | Production monitoring and enforcement | [`runtime-governance.md`](./06-runtime-governance/runtime-governance.md) |
 | Assurance Framework | Continuous governance lifecycle | [`ai-assurance-framework.md`](./07-ai-assurance/ai-assurance-framework.md) |
 | Governance Automation | Automated vs. human controls | [`governance-automation.md`](./12-implementation-guide/governance-automation.md) |
-| End-to-End Case Study | One system, all 12 lifecycle stages, one real incident, told as a story | [`case-study-expense-agent-lifecycle.md`](./10-case-studies/case-study-expense-agent-lifecycle.md) |
-| Multi-Agent Case Study | Agentic Investment Management System — 15-component, 9-phase multi-agent chain with a mandatory human gate | [`case-study-Agentic-investment-management-governance-lifecycle.md`](./10-case-studies/case-study-Agentic-investment-management-governance-lifecycle.md) |
-| Finance Sector Case Study | Loan Pre-Approval Agent — a structurally different, regulation-driven high-risk system | [`case-study-loan-approval-agent.md`](./10-case-studies/case-study-loan-approval-agent.md) |
-| Research Agent Case Study | Investment Research Agent (`ORG-AI-014`) — single GenAI+RAG system, analyst-in-the-loop, tests factuality/hallucination risk and SEC/FINRA obligations rather than orchestration risk | [`case-study-investment-research-agent.md`](./10-case-studies/case-study-investment-research-agent.md) |
+| Case Studies | Five worked examples applying this toolkit — three agentic, two single-system | [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/) |
 | How to Implement | 5-week starting path for adopting this framework | [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) |
 | Templates | Fillable forms — risk assessment, exceptions, vendor review, incidents | [`08-templates/`](./08-templates/) |
 | Completed Examples | Every template filled out against a real (fictional) scenario | [`09-examples/`](./09-examples/) |
 | License & Reuse | What you can do with this content | [`license-and-reuse.md`](./license-and-reuse.md) |
 | Master Navigation | One diagram showing how every artefact connects | [`master-navigation-diagram.svg`](./11-architecture/master-navigation-diagram.svg) |
-
-### Scenario
-
-The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Expense & Reimbursement Reviewer, a three-agent pipeline (Intake → Policy-Compliance → Disbursement) that reads expense claims, checks them against policy, and — below a defined threshold — approves and disburses reimbursement without human review. A deliberately unglamorous, realistic use case, and one that models the most common real governance failure right now: agents entering the enterprise through a business workflow rather than a formal AI intake process — the "shadow agent" problem.
 
 ### What's In This Project
 
@@ -96,12 +88,15 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | `third-party-ai-governance.md` | Vendor assessment: retraining rights, residency, DPAs, subprocessors, kill-switch independence |
 
 **Case studies**
-| Artefact | Purpose |
-|---|---|
-| `case-study-expense-agent-lifecycle.md` | `ORG-AI-011` narrated end-to-end: business request through incident through lessons learned, every stage linked to the reference document that governs it |
-| `case-study-loan-approval-agent.md` | `ORG-AI-012` — Loan Pre-Approval Agent, financial services. Contrasts a regulation-driven high-risk system (EU AI Act Annex III, GDPR Art. 22, ECOA) against `ORG-AI-011`'s autonomy-driven risk, showing the framework generalises rather than being built for one system |
-| `Agentic-investment-management-governance-lifecycle.md` | `ORG-AI-013` — Agentic Investment Management System, financial services. First multi-agent case study in this project: 15 components, 9 phases, contrasts orchestrated agent-chain governance (A2A handoffs, confused-deputy risk, segregation of duties) against `ORG-AI-011`'s single-pipeline and `ORG-AI-012`'s regulation-driven risk |
-| `case-study-investment-research-agent.md` | `ORG-AI-014` — Investment Research Agent, financial services. Single GenAI+RAG system (not a multi-agent chain like `ORG-AI-011/012/013`) — tests the framework against factuality/hallucination risk and SEC/FINRA fair-and-balanced obligations rather than orchestration risk |
+
+All five of this portfolio's agentic and single-system case studies now live in [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/), so applied narratives sit in one consistent place across the whole portfolio:
+
+| Use Case | System | Purpose |
+|---|---|---|
+| [Autonomous Expense & Reimbursement Reviewer](../project-13-enterprise-ai-governance-case-studies/use-case-03-expense-reimbursement-agent/README.md) | `ORG-AI-011` | Three-agent pipeline narrated end-to-end: business request through a real incident through lessons learned |
+| [Loan Pre-Approval Agent](../project-13-enterprise-ai-governance-case-studies/use-case-04-loan-pre-approval-agent/README.md) | `ORG-AI-012` | Contrasts a regulation-driven high-risk system (EU AI Act Annex III, GDPR Art. 22, ECOA) against `ORG-AI-011`'s autonomy-driven risk |
+| [Agentic Investment Management System](../project-13-enterprise-ai-governance-case-studies/use-case-05-agentic-investment-management/README.md) | `ORG-AI-013` | This portfolio's most detailed case study: 15 components, 9 phases, first to contrast orchestrated agent-chain governance (A2A handoffs, confused-deputy risk, segregation of duties) against single-pipeline and regulation-driven risk |
+| [Investment Research Agent](../project-13-enterprise-ai-governance-case-studies/use-case-02-investment-research-agent/README.md) | `ORG-AI-014` | Single GenAI+RAG system, analyst-in-the-loop — tests factuality/hallucination risk and SEC/FINRA obligations rather than orchestration risk |
 
 **Operating model & metrics**
 | Artefact | Purpose |
@@ -125,7 +120,7 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | Artefact | Purpose |
 |---|---|
 | `master-navigation-diagram.svg`/`.png` | The single sequence — Charter → Operating Model → RACI → Lifecycle → Risk → Controls → Runtime → KPIs → Assurance → Audit — with the Improve feedback loop shown explicitly |
-| `agentic-governance-architecture.svg`/`.png` | The ORG-AI-011 pipeline, checkpoint, and decision-rights split |
+| `agentic-governance-architecture.svg`/`.png` | The `ORG-AI-011` pipeline, checkpoint, and decision-rights split — see Project 13's Use Case 03 for the full narrative |
 | `agent-governance-dashboard-v2.svg`/`.png` | Expanded executive KPI dashboard (inventory, risk, cost, vendors, trend) |
 | `enterprise-architecture.svg`/`.png` | Full layered stack, Business through Audit, each layer mapped to its governing artefact |
 | `agent-governance-dashboard.svg`/`.png` | Earlier v1 dashboard, kept for the version history this project's own Change Control document argues for |
@@ -149,13 +144,13 @@ The organisation established in Project 1 deploys `ORG-AI-011` — Autonomous Ex
 | `09-examples/completed-risk-assessment-example.md` | `ORG-AI-011`'s actual risk assessment, autonomy multiplier applied |
 | `09-examples/completed-pre-deployment-review-example.md` | `ORG-AI-013`'s Stage 7 review — Critical findings on launch, remediation plan, Conditional Go |
 | `09-examples/completed-vendor-assessment-example.md` | The foundation model provider's scored vendor assessment |
-| `09-examples/completed-incident-report-example.md` | The full incident narrated in the end-to-end case study below |
+| `09-examples/completed-incident-report-example.md` | The full incident narrated in Project 13's Use Case 03 |
 | `09-examples/completed-runtime-review-example.md` | The recovery-period review following that incident |
 | `09-examples/completed-exception-request-example.md` | A time-bound kill-switch testing exception during a platform migration |
 
 ### How This Connects to the Rest of the Portfolio
 
-Uses the same fictional organisation and `ORG-AI-0XX` numbering as Projects 1–5. Extends Project 9's risk register, Project 6's committee structure, and Project 11's principle of connecting governance to actual tooling — applied here to agent runtime and MCP tooling rather than only eval tooling.
+Uses the same fictional organisation and `ORG-AI-0XX` numbering as Projects 1–5. Extends Project 9's risk register, Project 6's committee structure, and Project 11's principle of connecting governance to actual tooling — applied here to agent runtime and MCP tooling rather than only eval tooling. Applied narratives built on this toolkit live in Project 13 alongside this portfolio's other case studies.
 
 ### What This Project Is Designed to Demonstrate
 
