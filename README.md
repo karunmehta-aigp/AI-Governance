@@ -76,8 +76,6 @@ Sitting outside all numbered projects, the **Reference Library** organises and c
 |---|---|
 | `aigp-knowledge-map.md` | Maps every artefact in this portfolio explicitly to the four domains of the IAPP AIGP Body of Knowledge (v2.1) |
 | `regulatory-standards-crosswalk.md` | A side-by-side summary crosswalk of the EU AI Act, NIST AI RMF, ISO/IEC 42001, and OECD AI Principles, tied to Projects 1–5 |
-| `regulatory-standards-crosswalk-project6-addendum.md` | The same crosswalk structure extended to Project 6's reusable templates |
-| `regulatory-standards-crosswalk-detailed.md` | Article- and clause-level detail behind the summary crosswalk, for citation in technical documentation or audit responses |
 | `ai-law-and-standards-reference.md` | A standalone reference covering the EU AI Act's structure and implementation timeline, the US/UK/global regulatory landscape, NIST AI RMF, the ISO/IEC AI standards family, and the OECD AI Principles |
 
 ---
