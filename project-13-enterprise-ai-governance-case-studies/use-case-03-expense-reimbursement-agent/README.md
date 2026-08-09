@@ -1,97 +1,77 @@
-## End-to-End Case Study: `ORG-AI-011` From Idea to Lessons Learned
+AI Governance in Practice
+Enterprise AI Governance – Autonomous Expense & Reimbursement Reviewer
+Finance Operations
 
-> Part of the Project 12 Agentic AI Governance portfolio — fictional example for educational purposes. See root README for the full disclaimer. This is the narrative thread; every stage below links to the reference document that actually governs it.
+Author:
+Karun Mehta · AIGP (AI Governance Professional)
 
----
+Business Context
 
-### Why This Document Exists
+Finance Operations needed faster expense reimbursement — manual review was taking an average of 4 business days per claim due to queue backlog.
+Deployed a three-agent pipeline (Intake → Policy-Compliance → Disbursement) that reads expense claims, checks them against policy, and — below a defined value threshold — approves and disburses reimbursement without human review.
+Objective: cut turnaround time while keeping an agent that can both decide and move money auditable, reversible, and contained if something goes wrong.
 
-Every other document in this project is a reference artefact — a policy, a control, a template. None of them, read individually, show what it actually feels like to take one system through the whole framework, including the part where something goes wrong. This document is that walkthrough: one system, all 12 lifecycle stages, one real incident, told as a story rather than a schema.
+Governance Challenge
 
----
+Set the right autonomy level for a system that doesn't just recommend — it executes financial transactions directly.
+Prevent claimant-supplied text from being treated as policy input by the agent reading it (a cross-agent prompt injection risk).
+Maintain a working kill switch and full traceability given the system can disburse funds with no human in the loop below threshold.
 
-### 1. Business Request
+Governance Decision
 
-Finance Operations raises a request: expense claims under a defined value are taking an average of 4 business days to reimburse, almost entirely due to manual review queue backlog. They propose an automated reviewer. Product frames it as an agentic system, not a simple rules engine, because the claim-matching logic (does this receipt actually support this claim category) needs judgment a fixed rule set can't cover.
+Evaluated the original engineering design against risk scoring and security testing before approving deployment.
 
-*→ Governed by: [Agent Lifecycle](../03-agent-lifecycle/agent-lifecycle.md) Stage 1, [AI Governance Operating Model](../02-operating-model/ai-governance-operating-model.md)*
+Rejected
 
-### 2. Inventory Registration & Business Approval
+One shared service credential across all three agents "for simplicity" (a single credential compromise would have exposed the whole pipeline).
+The originally proposed full-autonomy design at the initial threshold (the risk score's autonomy multiplier pushed it into Moderate territory, forcing a redesign rather than a straight approval).
 
-The request is logged, scoped as `ORG-AI-011`, and the Third-Party AI Governance vendor assessment on the foundation model provider is completed before anything else proceeds — the assessment surfaces the model vendor's 30-day upgrade notice period, which later turns out to matter (see section 11).
+Selected
 
-*→ Governed by: [Agent Inventory Register](../05-control-library/agent-inventory-register.md), [Third-Party AI Governance](../06-runtime-governance/third-party-ai-governance.md) — [completed vendor assessment example](../09-examples/completed-vendor-assessment-example.md)*
+One scoped, least-privilege identity per agent — no shared credentials.
+A Direct-decision approval with conditions: a reviewable approval threshold, mandatory 90-day kill-switch testing, and a full re-test requirement before any threshold increase.
 
-### 3. Risk Assessment
+Operational Governance Controls
 
-Base use-case risk (internal financial operations, no customer-facing decision) scores Low. The Risk Committee applies the autonomy multiplier from the initially-proposed Full-autonomy design — which pushes the score into Moderate territory and triggers a design conversation, not just a score.
+Least-privilege agent identity — one scoped credential per agent, independently revocable.
+Structural separation of trusted policy content from untrusted claim content in every prompt.
+Kill-switch capability with a defined, tested response time.
+Runtime monitoring against defined KPI thresholds, including a fabrication-rate metric.
+Model version pinning with a tested rollback path.
 
-*→ Governed by: [Risk Classification Addendum](../04-risk-framework/agentic-risk-classification-addendum.md) — [completed risk assessment example](../09-examples/completed-risk-assessment-example.md)*
+AI Validation & Testing
 
-### 4. Architecture Review
+Red-team testing against the OWASP multi-agent taxonomy — found a claimant could embed instructions inside a claim description that the Policy-Compliance Agent partially followed as if it were a policy update; prompt redesigned and re-tested.
+Vendor due-diligence assessment on the foundation model provider, completed before deployment — surfaced a contractual 30-day model-upgrade notice period that later proved essential during incident response.
+Full test suite and injection-resistance re-verification before sign-off.
 
-Engineering's initial design proposes one shared service credential across all three agents, for simplicity. The Architecture Review Board rejects it — this violates least-privilege scoping and would mean a single credential compromise affects the whole pipeline. Redesigned with one scoped identity per agent.
+Framework & Regulatory Alignment
 
-*→ Governed by: [Agent Identity Governance](../05-control-library/agent-identity-governance.md), `AI-CNTRL-A01`*
+NIST AI RMF — full Govern • Map • Measure • Manage cycle applied from intake through incident response and framework change control.
+Third-party / vendor AI governance — the upgrade-notice terms captured at intake directly enabled fast root-causing when the incident occurred.
+Internal AI control library — agent identity governance, runtime drift thresholds, and an evidence library that had already indexed where incident evidence would live before any incident happened.
 
-### 5. Security Review
+Key Trade-offs
 
-Red team testing against the OWASP multi-agent taxonomy finds that a claimant could, in the original prompt design, embed instructions inside a claim description that the Policy-Compliance Agent partially followed as if they were policy updates. Prompt redesigned to structurally separate trusted policy content from untrusted claim content.
+Full autonomy vs. a bounded, reviewable approval threshold.
+Deployment speed vs. mandatory kill-switch testing and re-test requirements before scaling autonomy.
+Vendor model flexibility vs. governance visibility into when and how the model changes underneath the agent.
 
-*→ Governed by: [Prompt Governance](../06-runtime-governance/prompt-governance.md), Compliance Crosswalk's OWASP row*
+Decision
 
-### 6. Prompt Testing & Red Team
+We accepted a capped approval threshold and mandatory 90-day kill-switch testing — rather than the originally proposed full-autonomy design — to deploy an agent that autonomously approves and disburses money without losing the ability to contain it fast if something went wrong.
 
-Full test suite run against the redesigned prompt and identity scheme; injection-resistance re-verified against the finding from Security Review. Findings closed.
+Business Outcomes (Illustrative Example)
 
-*→ Governed by: [Agent Lifecycle](../03-agent-lifecycle/agent-lifecycle.md) Stage 6, Compliance Crosswalk's OWASP row*
+The system operated within every KPI threshold for ten weeks.
+A vendor-side model upgrade — received inside the contractual 30-day notice window flagged at intake — subtly changed model behavior on ambiguous claims; the fabrication-rate KPI caught it after three claims were approved citing a policy clause that didn't exist.
+The Disbursement Agent was suspended within 6 minutes of detection; root cause was traced to the model upgrade specifically, not a prompt or credential failure, because the vendor assessment from intake had already flagged the upgrade cadence to watch for.
+The model was rolled back to the prior pinned version, the regression suite was expanded, and two permanent framework changes were logged through change control rather than fixed silently: a tightened drift threshold for policy-citation anomalies, and a standing requirement to re-run the full regression suite after any vendor model upgrade, not just a spot-check.
 
-### 7. Human Approval
+Key Takeaway
 
-Given the Moderate risk score from Stage 3, this is a Direct decision. Committee approves with the conditions in the completed risk assessment example: reviewable threshold, 90-day kill-switch testing, full re-test before any threshold increase.
+Nothing in this incident was caught by a document — it was caught by a KPI threshold that existed because it had been defined in advance, contained by a kill-switch design that existed because identity governance required scoped credentials, root-caused quickly because evidence was already indexed before the incident happened, and closed out through a change-control process that turned it into two permanent improvements rather than a near-miss nobody remembers by year end. This use case shows that governance chain applied to the highest-stakes system in this portfolio's single-pipeline tier — an agent that doesn't just recommend, but autonomously approves and disburses funds.
 
-*→ Governed by: [Agentic AI System Charter](../01-governance-charter/agentic-ai-system-charter.md) §3*
+Disclaimer
 
-### 8-9. Deployment & Post-Production Validation
-
-System goes live. Two weeks of Post-Production Validation confirm behaviour matches pre-deployment testing. Runtime Monitoring begins.
-
-*→ Governed by: [Agent Lifecycle](../03-agent-lifecycle/agent-lifecycle.md) Stages 9–10*
-
-### 10. Runtime Monitoring — Business as Usual
-
-For ten weeks, the system operates within every KPI threshold. Then, on 2026-07-14, a vendor-side model upgrade — received within the contractual 30-day notice window flagged back in Stage 2 — subtly changes the model's behaviour under a specific class of ambiguous claims.
-
-*→ Governed by: [Runtime Governance](../06-runtime-governance/runtime-governance.md), [KPI Catalog](../06-runtime-governance/ai-governance-kpi-catalog.md)*
-
-### 11. Incident Occurs, Kill Switch Considered, Root Cause Found
-
-The fabrication-rate metric crosses threshold after three claims are approved citing a policy clause that doesn't exist. The Disbursement Agent is suspended within 6 minutes of detection. Investigation traces the cause to the model upgrade, not a prompt or credential failure — the exact reason Stage 2's vendor assessment mattered.
-
-*→ Governed by: [AI Incident Response Playbook](../07-ai-assurance/ai-incident-response-playbook.md) — [full completed incident report](../09-examples/completed-incident-report-example.md)*
-
-### 12. Corrective Action & Audit Evidence
-
-Model rolled back to the prior pinned version. Regression suite expanded. The full action trace, prompt version, and model version snapshots taken during containment become the evidence base — retrievable specifically because the [Evidence Library](../07-ai-assurance/evidence-library.md) already indexed where each of those artefacts would live, before the incident happened.
-
-*→ Governed by: [Model Governance](../06-runtime-governance/model-governance.md), [Evidence Library](../07-ai-assurance/evidence-library.md)*
-
-### 13. Lessons Learned & Framework Update
-
-Two changes come out of this, and both are logged through [Framework Change Control](../07-ai-assurance/framework-change-control.md) rather than made silently:
-- `AI-CNTRL-A15`'s runtime drift threshold is tightened to flag policy-citation anomalies specifically
-- Model Governance's regression suite update becomes a standing requirement after *any* vendor upgrade, not a spot-check
-
-The next scheduled [Runtime Review](../09-examples/completed-runtime-review-example.md) confirms recovery, and the system returns to standard monitoring cadence one cycle later than usual, per the Committee's own elevated-monitoring decision.
-
-*→ Governed by: [AI Assurance Framework](../07-ai-assurance/ai-assurance-framework.md)'s Improve stage — this is the Level 5 maturity behaviour the Assurance Framework document describes in the abstract, shown here actually happening*
-
----
-
-### Why This Story Matters More Than Any Single Document
-
-Nothing in this incident was caught by a document. It was caught by a metric threshold that existed because the KPI Catalog defined it, contained by a kill-switch design that existed because Identity Governance required scoped credentials, root-caused quickly because the Evidence Library had already mapped where the evidence would be, and closed out through a change-control process that turned a bad afternoon into two permanent improvements instead of a near-miss nobody remembers by December. That chain — not any individual policy — is what "governance as an operating model" actually means.
-
----
-
-**Author:** Karun Mehta · AIGP (AI Governance Professional)
+This is an illustrative AI Governance use case created for professional learning, portfolio development, and discussion. Any scenarios, metrics, or examples are illustrative and intended to demonstrate governance design concepts rather than represent production results. This material is not legal or regulatory advice. Organizations should consult their legal, compliance, risk, and information security teams when designing or implementing AI governance programs.
