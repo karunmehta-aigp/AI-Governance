@@ -12,7 +12,7 @@
 
 ### Where This Project Sits in the Portfolio
 
-Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 follows the Projects 6–11 model: it's a fully reusable, industry-agnostic **toolkit** for governing autonomous, tool-using agentic AI — a governance charter, a 16-control library, a compliance crosswalk, layer-specific governance instruments (identity, MCP, memory, prompts, models, data, vendors), fillable templates, and completed worked examples. The applied, narrative case studies that use this toolkit — five agentic and single-system scenarios spanning finance operations, lending, wealth management, and investment research — live in **[Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/)**, so that all of this portfolio's applied narratives sit in one place regardless of whether the system involved is agentic or not.
+Projects 1–5 are narrative — one fictional organisation, specific dated incidents, connected reasoning across projects. Projects 6–11 deliberately step outside that narrative to be generic, industry-agnostic, reusable toolkits. Project 12 follows the Projects 6–11 model: it's a fully reusable, industry-agnostic **toolkit** for governing autonomous, tool-using agentic AI — a governance charter, a 16-control library, a compliance crosswalk, layer-specific governance instruments (identity, MCP, memory, prompts, models, data, vendors), fillable templates, and completed worked examples. The applied, narrative case studies that use this toolkit — four agentic and single-system scenarios spanning finance operations, lending, wealth management, and investment research — live in **[Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/)**, so that all of this portfolio's applied narratives sit in one place regardless of whether the system involved is agentic or not.
 
 ### Repository Structure
 
@@ -49,7 +49,7 @@ If you have five minutes, read these four in order: Charter → Control Library 
 | Runtime Governance | Production monitoring and enforcement | [`runtime-governance.md`](./06-runtime-governance/runtime-governance.md) |
 | Assurance Framework | Continuous governance lifecycle | [`ai-assurance-framework.md`](./07-ai-assurance/ai-assurance-framework.md) |
 | Governance Automation | Automated vs. human controls | [`governance-automation.md`](./12-implementation-guide/governance-automation.md) |
-| Case Studies | Five worked examples applying this toolkit — three agentic, two single-system | [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/) |
+| Case Studies | Four worked examples applying this toolkit — three agentic, one single-system (a fifth Project 13 use case, Wealth Management AI Financial Advisor, was built independently and doesn't draw on this toolkit) | [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/) |
 | How to Implement | 5-week starting path for adopting this framework | [`how-to-implement.md`](./12-implementation-guide/how-to-implement.md) |
 | Templates | Fillable forms — risk assessment, exceptions, vendor review, incidents | [`08-templates/`](./08-templates/) |
 | Completed Examples | Every template filled out against a real (fictional) scenario | [`09-examples/`](./09-examples/) |
@@ -89,7 +89,7 @@ If you have five minutes, read these four in order: Charter → Control Library 
 
 **Case studies**
 
-All five of this portfolio's agentic and single-system case studies now live in [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/), so applied narratives sit in one consistent place across the whole portfolio:
+Four of this portfolio's agentic and single-system case studies were built directly on this toolkit and now live in [Project 13: Enterprise AI Governance Case Studies](../project-13-enterprise-ai-governance-case-studies/), so applied narratives sit in one consistent place across the whole portfolio:
 
 | Use Case | System | Purpose |
 |---|---|---|
