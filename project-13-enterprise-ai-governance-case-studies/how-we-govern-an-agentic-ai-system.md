@@ -1,5 +1,9 @@
 # How We Govern an Agentic AI System, End to End
 
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7c3dadb6-17d9-4a2f-b291-e0a9fc036dfe" />
+
+
 *An AI Governance Assurance Methodology — the domain structure a control set is organised around, how an engagement is phased, how much gets tested, who decides, how a gap gets written up, how maturity is scored, what keeps the review itself honest, how it reaches a board — and, in one place, all of that applied to a real deployment decision on the Dispute Resolution Agent.*
 
 > Part of the Project 13 Enterprise AI Governance Case Studies portfolio, drawing on the Project 12 Agentic AI Governance control set and, for three domains below, the broader enterprise toolkits in Projects 3, 6, 8, and 9. Fictional example for educational purposes, built for a fictional financial-services organisation. Does not represent any real company's policies or systems. See root README for the full disclaimer.
