@@ -6,7 +6,7 @@
 >
 > This document follows a standard independent-assurance methodology shape — numbered control domains, a phased engagement, a repeatable testing engine, risk-tiered sampling, structured findings, severity ratings, maturity scoring, review-quality controls, and a two-part reporting structure — the same architecture used across bank internal audit, SOC 2, and ISO management-system assessments. Every domain, phase, tier, control, and finding below is original to this project's own 16-control library, risk-tiering scale, and Agent Lifecycle; none of the specific content is copied from any external source.
 >
-> **Scope note:** the 12 domains below are the Agentic AI control universe this methodology tests against. They supplement, not replace, this portfolio's enterprise-wide AI control universe. Depending on the system under review, an assurance engagement may additionally bring model validation, fairness, explainability, privacy, cybersecurity, data quality, or regulatory-conformity controls into scope from that broader universe — this document covers what's unique to agentic systems, not the full enterprise catalogue.
+> **Scope note:** the 12 domains below are the Agentic AI control universe this methodology tests against. They supplement, not replace, this portfolio's enterprise-wide AI control universe. Depending on the system under review, an assurance engagement may additionally bring model validation, fairness, explainability, privacy, cybersecurity, data quality, or regulatory-conformity controls into scope from that broader universe. Section 14 maps all 20 domains of that broader enterprise universe against this document's 12, so nothing is silently uncovered — it's either directly owned here, distributed across several of these 12, or explicitly out of scope with a pointer to where it lives instead.
 
 ---
 
@@ -19,14 +19,15 @@
 | How is each domain actually tested? | A repeatable 7-step testing engine (Section 3) |
 | Who decides what? | RACI with one named contested cell, plus a second-line/third-line split (Section 4) |
 | How much gets tested? | Risk-tiered sampling — Tier 1 full coverage down to Tier 3 inventory-only (Section 5) |
-| What keeps a review honest? | Independence, evidence-gating, no-surprises validation (Section 6) |
+| What keeps a review honest? | Independence, evidence-gating, no-surprises validation, tiered quality review (Section 6) |
 | How is a gap written up? | The 5C-plus format — Condition through Framework Tags (Section 7) |
 | How is severity assigned? | A defined Critical/High/Medium/Low rating matrix (Section 8) |
 | How is maturity scored? | 1–5 scale, evidence-gated, risk-weighted at the system level (Section 9) |
-| How does it reach a board? | Deployment decision *and* a separate assurance opinion (Section 10) |
+| How does it reach a board? | Deployment decision, second-line effectiveness assessment, and a separate third-line assurance opinion (Section 10) |
 | What's the reusable toolkit? | Six-part kit across Planning, Testing, Assessment, Reporting (Section 11) |
 | How does remediation get sequenced? | A three-horizon roadmap — Stabilise, Build, Embed (Section 12) |
-| Does this actually work? | Full worked example on the Dispute Resolution Agent — 5 real findings, Conditional Go / Partially Effective (Section 13) |
+| Does this actually work? | Full worked example on the Dispute Resolution Agent — 5 real findings, Conditional Go (Section 13) |
+| Does this cover the full enterprise domain set? | Yes — all 20 domains reconciled against these 12 (Section 14) |
 
 ---
 
@@ -51,7 +52,21 @@ Sixteen controls (full library in Project 12: [Agentic Control Library](../proje
 
 **Honest gaps:** Domain 7 doesn't yet include the standalone vendor due-diligence questionnaire scored against a rubric (exists elsewhere in this portfolio, not yet re-tagged here). Domain 11 is a single scan control (A07) with no inventory entry showing a *found* shadow agent — the capability exists, it hasn't yet been demonstrated catching one.
 
-**One evidence base, multiple assurance views.** Every control here is tested once and reported against several frameworks from the same evidence, rather than re-tested per framework: NIST AI RMF and EU AI Act and ISO/IEC 42001 above, plus OWASP LLM/Agentic Top 10, MITRE ATLAS, AIUC-1, GDPR, and SOC 2/NIST 800-53 in the full [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md) — eight frameworks total from one testing pass.
+**One evidence base, multiple assurance views.** Every control here is tested once and reported against multiple regulatory, risk, security, privacy, and assurance frameworks or control baselines from the same evidence, rather than re-tested per framework — see Section 1a for what each framework's view actually looks like, and the full tagging in the [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md).
+
+### 1a. Evidence Base → Reporting View
+
+The same underlying evidence produces a different lens depending on which framework is reading it — this is what "one evidence base, multiple views" actually means in practice, not just a list of framework names:
+
+| Evidence Base Feeds | Reporting View Produced |
+|---|---|
+| EU AI Act | Regulatory readiness / obligations view — what's required, by when |
+| ISO/IEC 42001 | Management-system gap assessment — certification-style Statement of Applicability logic |
+| NIST AI RMF | Govern / Map / Measure / Manage functional profile |
+| OECD AI Principles | Responsible-AI values alignment narrative — human-centred values, transparency, robustness, accountability, responsible stewardship. This is a narrative, board-facing lens rather than a control checklist, which is exactly why it sits alongside the others rather than replacing any of them. |
+| OWASP LLM/Agentic Top 10, MITRE ATLAS | Agentic security exposure view |
+| GDPR | Privacy and data protection view |
+| SOC 2 / NIST 800-53 | Enterprise control assurance view |
 
 ---
 
@@ -76,7 +91,7 @@ Draft findings in 5C-plus format (Section 7) per gap found; assign severity (Sec
 **Exit deliverable:** Draft findings register; maturity scorecard; validation confirmation from system owner.
 
 ### Phase 5 — Report & Close
-Issue final review record with both a deployment decision and an assurance opinion (Section 10), remediation owners and dates sequenced onto the three-horizon roadmap (Section 12), and next scheduled re-review.
+Issue final review record with a deployment decision and a second-line effectiveness assessment (Section 10), remediation owners and dates sequenced onto the three-horizon roadmap (Section 12), and next scheduled re-review.
 **Exit deliverable:** Signed review record; remediation tracker.
 
 **Design note:** this mirrors the shape of a formal audit engagement, but scaled to what a single reviewer can actually run against one agentic system in days, not the multi-week, multi-person engagement a full enterprise audit requires — the five phases are the same discipline at a size that fits how this portfolio's Pre-Deployment Review actually gets executed.
@@ -121,15 +136,15 @@ Security holds sole Accountability for the *decision to contain*, because contai
 
 ### Second-Line vs. Third-Line Assurance
 
-The RACI above describes **second-line governance review**: the AI Governance Committee runs the review, challenges the implementation, and issues the deployment decision (Go / Conditional Go / No-Go). That is who this document's worked example (Section 13) describes.
+The RACI above describes **second-line governance review**: the AI Governance Committee runs the review, challenges the implementation, and issues two things — a deployment decision (Go / Conditional Go / No-Go) and a **Second-Line Control Effectiveness Assessment**. That is who this document's worked example (Section 13) describes, and neither of its outputs is a formal Assurance Opinion.
 
 That is a distinct function from **third-line independent assurance** — an Internal Audit or independent assurance function that:
 
 - Is independent of both Engineering *and* the AI Governance Committee, not just of Engineering
-- Does not issue a deployment decision — it issues an **assurance opinion** on whether the control environment as a whole is working (Section 10)
-- Applies enhanced review to any Critical finding: a second reviewer signs off before the finding is finalised, so no single reviewer's judgment alone closes out the highest-severity issues
+- Issues the formal **Assurance Opinion** on whether the control environment as a whole is working (Section 10) — this is a third-line output only; second-line review does not issue it
+- Applies the full tiered quality-review model to any Critical finding (Section 6), not the lighter two-reviewer model second-line review uses
 
-A second-line Conditional Go on a specific deployment and a third-line Partially Effective opinion on the broader control environment can both be true at once, and often are — the deployment gate answers "can this system launch," the assurance opinion answers "is the governance program actually working." Section 10 keeps these two outputs separate rather than collapsing them into one number.
+Keeping these separate matters beyond terminology: a governance function that labels its own output an "Assurance Opinion" is effectively grading its own homework as if it were independent of itself. This document's worked example in Section 13 is careful to issue a deployment decision and a second-line effectiveness assessment — never a third-line opinion — because the AI Governance Committee that ran that review is not independent of itself.
 
 ---
 
@@ -157,7 +172,22 @@ The review itself needs guardrails, or a governance programme just produces docu
 - **No-surprises validation.** Draft findings go back to the system owner and technical owner for factual accuracy *before* the review is finalised (Phase 4). A finding can be argued with on the facts, but not disputed for the first time after it's already been signed off.
 - **Evidence-or-it-didn't-happen.** Every finding cites the specific artefact that produced it (a config screenshot, a test transaction, a signed memo). An assertion with no attached evidence isn't a finding, it's an opinion, and this methodology treats the two differently on purpose (see Section 9's evidence-gating rule).
 - **Escalation authority.** The stop-and-widen rule (Section 5) and the Committee's Direct-decision requirement for Full-autonomy systems (Section 4) exist so a reviewer who finds something serious mid-review has a defined path to escalate scope or authority immediately, rather than finishing the originally scoped review and noting the concern for later.
-- **Enhanced review for Critical findings.** Any finding rated Critical (Section 8) gets a second reviewer's sign-off before it's finalised — one person's judgment alone doesn't close out the highest-severity issues.
+
+### Tiered Quality Review
+
+Review rigor scales to which assurance line is running it — a lightweight single-system governance review doesn't need the same review depth as a formal third-line engagement, but both need *some* defined chain, not an unstated assumption that one person's sign-off is enough.
+
+**Second-line review (this document's default — used in Section 13's worked example):**
+Preparer → single Reviewer sign-off. For any Critical finding, a second reviewer signs off before it's finalised — this is the "enhanced review" referenced above, and it's a lighter two-reviewer model appropriate to a single-system governance review.
+
+**Third-line review (formal Internal Audit / independent assurance engagements):**
+
+| Finding Severity | Review Chain |
+|---|---|
+| Standard (High, Medium, Low) | Preparer → Reviewer / In-Charge → Engagement Lead |
+| Critical | Preparer → Reviewer → Engagement Lead → Independent Quality Review (EQCR-equivalent) |
+
+The portfolio's single-system second-line reviews use the lighter two-reviewer model described above; a formal third-line engagement — the kind that would issue an Assurance Opinion under Section 10 — uses this full tiered structure instead.
 
 ---
 
@@ -176,7 +206,7 @@ Every gap identified against a domain control is written in ten parts — the or
 | **Owner** | The named individual accountable for closing it |
 | **Target Date** | When it closes, tied to the remediation roadmap horizon (Section 12) |
 | **Verification Evidence** | The specific artefact that will confirm closure — a screenshot, a test result, a signed memo |
-| **Framework Tags** | Which of the eight frameworks (Section 1) this finding maps to, so one finding read closes the gap across every applicable framework at once |
+| **Framework Tags** | Which frameworks or control baselines (Section 1) this finding maps to, so one finding read closes the gap across every applicable framework at once |
 
 ---
 
@@ -218,11 +248,11 @@ This is a judgment call made explicit at scoping time, not a hidden default — 
 
 ---
 
-## 10. Reporting — Deployment Decision and Assurance Opinion
+## 10. Reporting — Three Distinct Outputs
 
-These answer two different questions, and this methodology keeps them separate rather than collapsing them into one number.
+These answer three different questions, at two different assurance lines, and this methodology keeps them separate rather than collapsing them into one number.
 
-### Deployment Decision — "Can this system deploy?"
+### Deployment Decision — "Can this system deploy?" (second-line)
 
 | Decision | Meaning |
 |---|---|
@@ -230,18 +260,20 @@ These answer two different questions, and this methodology keeps them separate r
 | **Conditional Go** | Findings exist, but risk is acceptable *if* named, dated, verifiable conditions are met before or shortly after go-live — this is not a soft "yes with an asterisk," it's a binding gate with named owners |
 | **No-Go** | A Critical finding with no viable compensating control exists; system does not proceed until redesigned, not just patched |
 
-### Assurance Opinion — "How effective is the control environment?"
+### Second-Line Control Effectiveness Assessment — "How effective did this review find the controls?" (second-line)
 
-| Opinion | Meaning |
+| Assessment | Meaning |
 |---|---|
 | **Effective** | Controls are consistently designed and operating as intended across in-scope domains |
 | **Generally Effective** | Controls are largely sound with isolated gaps, none of which are Critical |
 | **Partially Effective** | Multiple significant gaps exist, including at least one Critical or several High findings — the environment works in places but cannot be relied on as a whole yet |
 | **Ineffective** | Pervasive or fundamental control failures; the environment cannot be relied on |
 
-A system can carry a Conditional Go deployment decision and a Partially Effective assurance opinion at the same time — the first says this specific launch is acceptable under binding conditions, the second says the broader control environment still has real work ahead of it. Collapsing these into one label would hide that distinction.
+### Assurance Opinion — "Is the broader control environment reliable?" (third-line only)
 
-**Board-level summary format:** one page — both outputs above, system maturity score, count of findings by severity, top 3 conditions, and next scheduled re-review date. Everything else in this document is the working detail behind that one page.
+Uses the same four-point scale as the effectiveness assessment above, but is issued only by an independent third-line function — Internal Audit or an equivalent independent assurance team — following the tiered quality review in Section 6. A second-line review, however rigorous, does not issue this. Where this document's worked example (Section 13) needs a broader, independence-backed opinion on the control environment, it is explicit that a formal third-line engagement would need to be commissioned separately to produce one.
+
+**Board-level summary format:** one page — the deployment decision, the second-line effectiveness assessment (and third-line opinion where one exists), system maturity score, count of findings by severity, top 3 conditions, and next scheduled re-review date. Everything else in this document is the working detail behind that one page.
 
 ---
 
@@ -252,9 +284,11 @@ The reusable artefacts this methodology produces, grouped by when in the engagem
 | Stage | Toolkit Component |
 |---|---|
 | **Planning** | Scoping memo · RACI reference · Document request list |
-| **Testing** | Evidence register · Interview guide · Test log |
+| **Testing** | Evidence register · Interview guide · Test log · Control working paper |
 | **Assessment** | 5C-plus finding sheet · Maturity scorecard · Validation log |
 | **Reporting** | Executive summary · Remediation tracker · Board pack |
+
+**Control working paper structure:** Control ID → Objective → Criteria → Evidence → Test Procedure → Observation → Result → Reviewer → Conclusion. This is the artefact that sits behind every line of the test log (Section 3, steps 4–5) — the test log records that a control was tested and what the result was; the working paper is what a reviewer or auditor could open later to see exactly how that conclusion was reached.
 
 ---
 
@@ -280,7 +314,7 @@ Every section above, applied to one real deployment decision in this portfolio.
 **System:** Customer-facing agent that investigates transaction disputes against records and issues account credits without human approval below a threshold.
 
 ### Phase 1 — Plan & Scope
-Financial action, customer-facing, fed by untrusted input (customer email) — three automatic escalators under the risk classification addendum. Classified **Full autonomy**. Sampling tier: **Tier 1 — full coverage, live re-performance required**. Domains in scope: 1 (Governance & Oversight), 3 (Identity & Credential Governance), 4 (Runtime Policy Enforcement), 10 (Containment & Kill Switch), 12 (Audit & Record-Keeping). Decision rights: AI Governance Committee Direct-decision approval required under Charter §3 — this is a second-line governance review (Section 4), not a third-line assurance opinion.
+Financial action, customer-facing, fed by untrusted input (customer email) — three automatic escalators under the risk classification addendum. Classified **Full autonomy**. Sampling tier: **Tier 1 — full coverage, live re-performance required**. Domains in scope: 1 (Governance & Oversight), 3 (Identity & Credential Governance), 4 (Runtime Policy Enforcement), 10 (Containment & Kill Switch), 12 (Audit & Record-Keeping). Decision rights: AI Governance Committee Direct-decision approval required under Charter §3 — this is a **second-line governance review** (Section 4). It will produce a deployment decision and a second-line effectiveness assessment; it does not produce a third-line Assurance Opinion, since the AI Governance Committee running it is not independent of itself.
 
 **Maturity weighting for this system:** Domain 4 (Runtime Policy Enforcement) and Domain 10 (Containment & Kill Switch) are weighted highest — a financial-action agent's biggest exposure is an enforcement gap or an unverified containment mechanism, not a documentation gap. Domain 12 (Audit & Record-Keeping) is weighted lowest of the five in scope.
 
@@ -291,10 +325,10 @@ Walkthrough with the technical owner (T. Osei) and business owner (R. Delacroix)
 The domain testing engine (Section 3) run against each in-scope domain. Live re-performance per Tier 1 requirement — a crafted "policy override" email was submitted against the actual system, not described hypothetically. It succeeded (F-02 below). Threshold-boundary transaction tested at $76 post-remediation to confirm escalation behaviour.
 
 ### Phase 4 — Assess & Validate
-Draft findings shared with R. Delacroix and T. Osei before finalisation; all five findings confirmed accurate, no factual disputes raised. F-01 and F-02, both Critical, received enhanced review per Section 6.
+Draft findings shared with R. Delacroix and T. Osei before finalisation; all five findings confirmed accurate, no factual disputes raised. F-01 and F-02, both Critical, received the second-line enhanced review — a second reviewer's sign-off — per Section 6's lighter model.
 
 ### Phase 5 — Report & Close
-Review Date 2026-08-11. **Deployment Decision: Conditional Go**, five binding conditions. **Assurance Opinion: Partially Effective** — two Critical findings with viable compensating controls keep this above No-Go/Ineffective, but the breadth of gaps across identity, runtime enforcement, and containment means the control environment cannot yet be called Generally Effective. Next scheduled re-review: 2026-09-18.
+Review Date 2026-08-11. **Deployment Decision: Conditional Go**, five binding conditions. **Second-Line Control Effectiveness Assessment: Partially Effective** — two Critical findings with viable compensating controls keep this above Ineffective, but the breadth of gaps across identity, runtime enforcement, and containment means the control environment cannot yet be called Generally Effective. A formal third-line Assurance Opinion has not been issued for this system; one would require a separate engagement commissioned to Internal Audit or an equivalent independent function, run under the full tiered quality review in Section 6. Next scheduled re-review: 2026-09-18.
 
 ### Findings, in 5C-Plus Format
 
@@ -374,11 +408,42 @@ Review Date 2026-08-11. **Deployment Decision: Conditional Go**, five binding co
 
 **Deployment Decision: Conditional Go.** Risk Owner M. Farrow (AI Governance Committee) and Accountable Executive J. Whitcombe (VP Customer Operations) signed off with five binding conditions, each tied directly to a finding above: the $75 cap holds until monthly review, the injection suite must show a 100% block rate before the credit tool is re-enabled, the least-privilege identity must be live before go-live, full-argument logging must be live before go-live, and — critically — a human reviewer stays in the approval path for every credit until the kill switch test is complete, because the credit cap alone (F-01's fix) is not treated as sufficient compensating control for an untested containment mechanism (F-05).
 
-**Assurance Opinion: Partially Effective.** Two Critical findings, both with viable compensating controls once conditions are met, keep this above Ineffective — but the concentration of gaps in the two highest-weighted domains means the control environment as a whole is not yet Generally Effective.
+**Second-Line Control Effectiveness Assessment: Partially Effective.** Two Critical findings, both with viable compensating controls once conditions are met, keep this above Ineffective — but the concentration of gaps in the two highest-weighted domains means the control environment as a whole is not yet Generally Effective. *No third-line Assurance Opinion has been issued; this assessment is second-line only.*
 
 **2 Critical, 2 High, 1 Medium finding. System Assurance Maturity: 1.5/5. Next re-review: 2026-09-18.**
 
 **Why this matters:** a maturity table this low, on a system that was one sprint from shipping, is the point — this document doesn't exist to show a clean portfolio, it exists to show the gate that caught F-02 before it became an actual unauthorised credit in production. That conversion — from "ship and hope" to five findings with owners, dates, evidence, and framework tags attached, sequenced onto a Stabilise-first remediation roadmap — is what independent AI governance assurance is for.
+
+---
+
+## 14. Reconciliation Against the Enterprise 20-Domain Control Universe
+
+This document's 12 Agentic AI domains (Section 1) are a subset of a broader enterprise AI control universe. The table below shows where each of the 20 enterprise domains lives relative to this document — directly, distributed across several of these 12, or explicitly out of scope with a pointer to where it's owned instead. Nothing here is silently uncovered.
+
+| # | Enterprise Domain | Where It Lives in This Methodology | Status |
+|---|---|---|---|
+| 1 | Governance & Accountability | Domain 1 — Governance & Oversight | Direct |
+| 2 | Inventory & Classification | Domain 2 — Inventory & Risk Classification | Direct |
+| 3 | Risk Management | Domain 2, plus the Risk Classification Addendum (Section 5) | Direct |
+| 4 | Data Governance | Domain 8 — Data & Memory Governance | Partial — memory-specific controls are agentic extensions beyond generic data governance |
+| 5 | Bias & Fairness | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe — see scope note above |
+| 6 | Model Development & Documentation | Domain 7 — Model & Vendor Governance, partial | Distributed — full model-documentation depth sits in the broader enterprise universe |
+| 7 | Model Validation | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe |
+| 8 | Explainability & Transparency | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe |
+| 9 | GenAI Output Reliability | Distributed across Domain 5 (Prompt), Domain 4 (Runtime), Domain 9 (Monitoring) | Distributed |
+| 10 | Drift & Monitoring | Domain 9 — Monitoring, Drift & Observability | Direct |
+| 11 | Privacy & Data Protection | Domain 8, plus GDPR tagging in the Compliance Crosswalk | Partial |
+| 12 | Cybersecurity & Robustness | Distributed across Domain 3 (Identity), Domain 4 (Runtime), Domain 6 (Tool/MCP), Domain 9 (Monitoring), Domain 10 (Containment) | Distributed |
+| 13 | Human Oversight | Domain 1, controls A03/A08 | Direct |
+| 14 | Third-Party & Vendor AI | Domain 7 — Model & Vendor Governance | Direct |
+| 15 | GenAI & Agentic Governance | The full 12-domain framework in this document | Direct — this is this methodology's core subject, and materially deeper here than a generic enterprise treatment would be |
+| 16 | Record-Keeping & Logging | Domain 12 — Audit, Evidence & Record-Keeping | Direct |
+| 17 | Incident Management | Domain 10, plus the [Incident Response Playbook](../project-12-agentic-ai-governance/07-ai-assurance/ai-incident-response-playbook.md) | Direct |
+| 18 | Compliance & Conformity | The [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md) | Direct |
+| 19 | Internal Audit & Assurance | Sections 4, 6, and 10 of this document | Direct — this document *is* the assurance methodology for this domain |
+| 20 | Continual Improvement | Section 9's maturity model, Section 12's roadmap, and the re-review cadence in Section 13 | Direct |
+
+**Reading this table honestly:** domains 5, 7, and 8 (Bias & Fairness, Model Validation, Explainability & Transparency) are genuinely absent from this document's 12 domains, on purpose — they're not distributed, they're not partial, they're not here. That's the right design for a methodology purpose-built to test what's unique about *agentic* systems (identity, runtime enforcement, tool/MCP governance, memory, kill switches, autonomy-as-risk-escalator), rather than re-deriving a generic enterprise AI audit that already exists elsewhere in this portfolio. An assurance engagement on a system where fairness or explainability is a material risk driver — a lending or hiring agent, for instance — would need to pull those domains in from the broader enterprise universe at Phase 1 scoping, the same way any other out-of-default-scope domain gets added when the system in front of the reviewer actually needs it.
 
 ---
 
