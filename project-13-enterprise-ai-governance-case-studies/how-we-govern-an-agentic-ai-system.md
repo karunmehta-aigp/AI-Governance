@@ -2,11 +2,11 @@
 
 *An AI Governance Assurance Methodology — the domain structure a control set is organised around, how an engagement is phased, how much gets tested, who decides, how a gap gets written up, how maturity is scored, what keeps the review itself honest, how it reaches a board — and, in one place, all of that applied to a real deployment decision on the Dispute Resolution Agent.*
 
-> Part of the Project 13 Enterprise AI Governance Case Studies portfolio, drawing on the Project 12 Agentic AI Governance control set. Fictional example for educational purposes, built for a fictional financial-services organisation. Does not represent any real company's policies or systems. See root README for the full disclaimer.
+> Part of the Project 13 Enterprise AI Governance Case Studies portfolio, drawing on the Project 12 Agentic AI Governance control set and, for three domains below, the broader enterprise toolkits in Projects 3, 6, 8, and 9. Fictional example for educational purposes, built for a fictional financial-services organisation. Does not represent any real company's policies or systems. See root README for the full disclaimer.
 >
-> This document follows a standard independent-assurance methodology shape — numbered control domains, a phased engagement, a repeatable testing engine, risk-tiered sampling, structured findings, severity ratings, maturity scoring, review-quality controls, and a two-part reporting structure — the same architecture used across bank internal audit, SOC 2, and ISO management-system assessments. Every domain, phase, tier, control, and finding below is original to this project's own 16-control library, risk-tiering scale, and Agent Lifecycle; none of the specific content is copied from any external source.
+> This document follows a standard independent-assurance methodology shape — numbered control domains, a phased engagement, a repeatable testing engine, risk-tiered sampling, structured findings, severity ratings, maturity scoring, review-quality controls, and a two-part reporting structure — the same architecture used across bank internal audit, SOC 2, and ISO management-system assessments. Every domain, phase, tier, control, and finding below is original to this project's own 16-control library, risk-tiering scale, and Agent Lifecycle, except where Section 1 explicitly notes a domain is inherited from an enterprise-level toolkit elsewhere in this portfolio rather than having a dedicated agentic-specific control.
 >
-> **Scope note:** the 12 domains below are the Agentic AI control universe this methodology tests against. They supplement, not replace, this portfolio's enterprise-wide AI control universe. Depending on the system under review, an assurance engagement may additionally bring model validation, fairness, explainability, privacy, cybersecurity, data quality, or regulatory-conformity controls into scope from that broader universe. Section 14 maps all 20 domains of that broader enterprise universe against this document's 12, so nothing is silently uncovered — it's either directly owned here, distributed across several of these 12, or explicitly out of scope with a pointer to where it lives instead.
+> **Scope note:** Domains 1–12 are this portfolio's agentic-specific control universe — purpose-built for what's unique to autonomous, tool-using systems. Domains 13–15 extend this document to full coverage of the enterprise 20-domain AI audit universe (Section 14) by pulling in Bias & Fairness, Model Validation, and Explainability & Transparency from where they're already treated elsewhere in this portfolio. They're included here so an assurance review can scope them in when the system under review actually needs them — not because every agentic system automatically requires them at Tier 1 depth.
 
 ---
 
@@ -14,7 +14,7 @@
 
 | Question | Answer |
 |---|---|
-| What gets governed? | 16 controls, grouped into 12 numbered domains (Section 1) |
+| What gets governed? | 16 agentic controls plus 3 enterprise-inherited domains, 15 numbered domains total (Section 1) |
 | How does a review run? | 5 phases, Plan through Report (Section 2) |
 | How is each domain actually tested? | A repeatable 7-step testing engine (Section 3) |
 | Who decides what? | RACI with one named contested cell, plus a second-line/third-line split (Section 4) |
@@ -27,13 +27,13 @@
 | What's the reusable toolkit? | Six-part kit across Planning, Testing, Assessment, Reporting (Section 11) |
 | How does remediation get sequenced? | A three-horizon roadmap — Stabilise, Build, Embed (Section 12) |
 | Does this actually work? | Full worked example on the Dispute Resolution Agent — 5 real findings, Conditional Go (Section 13) |
-| Does this cover the full enterprise domain set? | Yes — all 20 domains reconciled against these 12 (Section 14) |
+| Does this cover the full enterprise domain set? | Yes — all 20 domains reconciled, 20 of 20 with coverage (Section 14) |
 
 ---
 
 ## 1. Governance Domain Universe
 
-Sixteen controls (full library in Project 12: [Agentic Control Library](../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)), consolidated into 12 named domains and cross-tagged to the frameworks a hiring manager or auditor would check against.
+Sixteen agentic-specific controls (full library in Project 12: [Agentic Control Library](../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)), consolidated into 12 named domains and cross-tagged to the frameworks a hiring manager or auditor would check against — plus 3 additional domains that extend this methodology to full enterprise-domain coverage.
 
 | # | Domain | Controls in Scope | NIST AI RMF | EU AI Act | ISO/IEC 42001 |
 |---|---|---|---|---|---|
@@ -49,8 +49,19 @@ Sixteen controls (full library in Project 12: [Agentic Control Library](../proje
 | 10 | Containment & Kill Switch | A04, A10 | MANAGE 2.4, 4.3 | Art. 14(4) | Cl. 10.1 |
 | 11 | Shadow AI Discovery | A07 | MAP 1.1, GOVERN 1.1 | Art. 16 | Cl. 4.1 |
 | 12 | Audit, Evidence & Record-Keeping | A05 | MANAGE 4.1, 4.2 | Arts. 12, 19 | Cl. 7.5, 9.1 |
+| 13 | Bias & Fairness | None dedicated — inherited from enterprise toolkit | MAP 2.3, MEASURE 2.11 | Art. 10, Art. 15 | Cl. 8.2 |
+| 14 | Model Validation | None dedicated — no agentic-specific or enterprise control exists yet | MEASURE 2.7 | Art. 15 | Cl. 8.2, 9.1 |
+| 15 | Explainability & Transparency | None dedicated — inherited from enterprise toolkit | MAP 1.1, GOVERN 1.1 | Arts. 13, 50 | Cl. 7.4, 8 |
 
 **Honest gaps:** Domain 7 doesn't yet include the standalone vendor due-diligence questionnaire scored against a rubric (exists elsewhere in this portfolio, not yet re-tagged here). Domain 11 is a single scan control (A07) with no inventory entry showing a *found* shadow agent — the capability exists, it hasn't yet been demonstrated catching one.
+
+**Domains 13–15, specifically, are the most honest gaps in this document.** They exist here as placeholders that point to real content, not as fully built agentic controls:
+
+- **Domain 13 (Bias & Fairness)** has coverage at the enterprise level in `project-06-ai-governance-toolkit` (AI Governance Framework, AI Use-Case Assessment Form, Quarterly Governance Review Template) and `project-08-iso-42001-toolkit` (AIMS Policy Template) — but none of that content addresses bias arising specifically from *autonomous, multi-step agent decisioning*, which is a materially different failure mode than a single-inference classifier producing a biased output. An agentic-specific fairness control (auditing decision chains across tool calls, not just final outputs) does not yet exist anywhere in this portfolio.
+- **Domain 14 (Model Validation)** has no coverage anywhere in this portfolio yet, agentic or enterprise. This is a genuine, unaddressed gap, not a distributed one.
+- **Domain 15 (Explainability & Transparency)** has coverage at the enterprise level in `project-03-responsible-ai-policy` and the `reference-library` regulatory crosswalk, plus system-specific treatment in two Project 13 case studies (`use-case-01`, `use-case-04`) — but again, none of it addresses explaining an *agent's* multi-step reasoning and tool-selection chain, which is a different explainability problem than explaining a single model's output.
+
+Domains 13–15 should be treated as scoped in *when a specific system's risk profile calls for them* (a lending or hiring agent, for instance), not as domains this methodology tests with the same rigor as Domains 1–12 by default — see the sampling and scope discussion in Section 5, and the full reconciliation in Section 14.
 
 **One evidence base, multiple assurance views.** Every control here is tested once and reported against multiple regulatory, risk, security, privacy, and assurance frameworks or control baselines from the same evidence, rather than re-tested per framework — see Section 1a for what each framework's view actually looks like, and the full tagging in the [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md).
 
@@ -75,7 +86,7 @@ The same underlying evidence produces a different lens depending on which framew
 An assurance review doesn't happen once at launch and never again — it's an overlay that can run at any point across the [Agent Lifecycle](../project-12-agentic-ai-governance/03-agent-lifecycle/agent-lifecycle.md)'s 12 stages: at Stage 7 (pre-deployment gate), triggered by a Stage 9 material change, or as a scheduled Stage 11 periodic review. The five phases below are the same discipline regardless of which lifecycle moment triggers them.
 
 ### Phase 1 — Plan & Scope
-Confirm the system's risk tier and autonomy level (Section 5 decides sampling depth from this); define which of the 12 domains are in scope; identify the trigger (new system, material change, scheduled review).
+Confirm the system's risk tier and autonomy level (Section 5 decides sampling depth from this); define which of the 15 domains are in scope, including whether the system's risk profile pulls in Domains 13–15; identify the trigger (new system, material change, scheduled review).
 **Exit deliverable:** Scoping note naming domains in scope, risk tier, and sampling tier.
 
 ### Phase 2 — Understand & Collect
@@ -113,6 +124,8 @@ Every domain in scope is evaluated through the same seven-step procedure, so "we
 | **7. Conclude** | Write the finding in 5C-plus format (Section 7) if there's a gap, or record the control as effective with its supporting evidence if there isn't |
 
 **Design effectiveness vs. operating effectiveness, worked:** F-01 (Section 13) is a design gap — no threshold control was ever built into the credit-issuance path, so there's nothing to test operating. F-02 is an operating-effectiveness gap — the design assumption (prompt-level instruction is sufficient enforcement) existed, but step 5's live re-performance proved it doesn't actually hold under adversarial input. The distinction matters because the fix is different: F-01 needs a control built, F-02 needs an existing control redesigned.
+
+**Applying this engine to Domain 14 (Model Validation), which has no control at all:** step 1 (Understand) would immediately surface that there's nothing to evidence, interview against, or test — the engine doesn't break on an empty domain, it just concludes at step 1 with a Critical finding that the control itself doesn't exist yet, rather than a finding about the control's design or operation.
 
 ---
 
@@ -159,6 +172,8 @@ Not every domain gets the same depth of testing for every system — depth scale
 | **Tier 3 — Inventory-level** | Risk tier **Low/Minimal**, or autonomy level **Assistive/Supervised** | Confirm the system is correctly classified and inventoried; no domain-level control testing required unless classification itself is disputed |
 
 **Stop-and-widen rule:** if a Tier 2 or Tier 3 system fails a test that would normally only run under Tier 1 rigor (for example, an ad hoc prompt-injection attempt during a Tier 2 review succeeds), the review escalates to full Tier 1 coverage for that system on the spot — a failed assumption about a system's actual risk is itself evidence the tier assignment was wrong, not a reason to note the failure and move on at the original depth.
+
+**Domains 13–15 and sampling:** these three are not automatically in scope the way Domains 1–12 are. They enter scope at Phase 1 when the system under review carries a fairness-, validation-, or explainability-relevant risk driver — a lending, hiring, or eligibility-decisioning agent, for example. For a system like the Dispute Resolution Agent in Section 13, where the material risks are financial-action authorization and containment rather than differential treatment of protected classes, Domains 13–15 correctly stay out of scope for that specific review, even though this document now covers them at the methodology level.
 
 **This system:** the Dispute Resolution Agent (Section 13) is classified **Full autonomy**, which places it in Tier 1 regardless of its underlying use-case risk score — full coverage, live re-performance required. F-02 (Section 7) is exactly the kind of finding Tier 3-level document review would never have caught; it only surfaced because Tier 1 rigor requires testing the actual system, not the design intent.
 
@@ -221,13 +236,13 @@ Every finding gets one of four severities, assigned against a fixed definition r
 | **Medium** | Control exists but is incomplete, inconsistent, inadequately evidenced, or only partially effective |
 | **Low** | Documentation, governance hygiene, or leading-practice improvement with limited immediate exposure |
 
-Critical findings trigger the enhanced review requirement in Section 6.
+Critical findings trigger the enhanced review requirement in Section 6. A domain with no control at all — as Domain 14 (Model Validation) currently is — defaults to Critical on that basis alone, since "the control doesn't exist" is definitionally an exposure with no compensating control.
 
 ---
 
 ## 9. Maturity Scoring
 
-1–5 scale, evidence-gated: **a domain cannot score 3 or higher without a cited artefact** — a self-assessment with no evidence caps at 2, regardless of how confident the narrative sounds.
+1–5 scale, evidence-gated: **a domain cannot score 3 or higher without a cited artefact** — a self-assessment with no evidence caps at 2, regardless of how confident the narrative sounds. A domain with no control at all scores 1 by definition — there is nothing to evidence above Initial.
 
 | Score | Label | Definition |
 |---|---|---|
@@ -241,7 +256,7 @@ Critical findings trigger the enhanced review requirement in Section 6.
 
 A system's overall maturity score is **not** an unweighted average of its in-scope domain scores — that would let a strong score in a low-stakes domain (documentation hygiene) mask a weak score in a high-stakes one (runtime enforcement). Instead, domains are weighted by how much exposure they actually carry for that specific system, decided during Phase 1 scoping, not applied as a fixed formula across every system:
 
-- **Higher weight:** domains tied to the system's specific risk drivers — for a financial-action agent, that's Runtime Policy Enforcement and Containment & Kill Switch before anything else
+- **Higher weight:** domains tied to the system's specific risk drivers — for a financial-action agent, that's Runtime Policy Enforcement and Containment & Kill Switch before anything else; for a lending or hiring agent, Domains 13–15 would carry high weight instead
 - **Lower weight:** domains that matter but carry less immediate exposure if imperfect — record-keeping completeness matters, but an incomplete log is a different order of risk than an unenforced credit cap
 
 This is a judgment call made explicit at scoping time, not a hidden default — see Section 13 for how it plays out on a real system.
@@ -300,7 +315,7 @@ Remediation from any review doesn't land on a flat single deadline — it sequen
 Stop critical exposures immediately: enforce the kill switch, move to least-privilege identity, put a hard policy gateway in the execution path, restore the human checkpoint. This horizon closes Critical and most High findings.
 
 ### Build — 3–6 Months
-Extend monitoring coverage, formalise MCP/tool governance, harden memory controls, stand up evaluation suites, automate evidence collection instead of gathering it manually each review. This horizon closes remaining High and Medium findings.
+Extend monitoring coverage, formalise MCP/tool governance, harden memory controls, stand up evaluation suites, automate evidence collection instead of gathering it manually each review. For systems where Domains 13–15 are in scope, this horizon is also where a fairness or explainability evaluation suite would be stood up if one doesn't yet exist.
 
 ### Embed — 6–12 Months
 Move from reactive fixes to continuous assurance: automated control testing running on a schedule rather than triggered by a review, periodic audit built into the calendar rather than ad hoc, maturity improvement tracked as an ongoing metric, full framework compliance demonstrable at any point rather than reconstructed for each review.
@@ -314,7 +329,7 @@ Every section above, applied to one real deployment decision in this portfolio.
 **System:** Customer-facing agent that investigates transaction disputes against records and issues account credits without human approval below a threshold.
 
 ### Phase 1 — Plan & Scope
-Financial action, customer-facing, fed by untrusted input (customer email) — three automatic escalators under the risk classification addendum. Classified **Full autonomy**. Sampling tier: **Tier 1 — full coverage, live re-performance required**. Domains in scope: 1 (Governance & Oversight), 3 (Identity & Credential Governance), 4 (Runtime Policy Enforcement), 10 (Containment & Kill Switch), 12 (Audit & Record-Keeping). Decision rights: AI Governance Committee Direct-decision approval required under Charter §3 — this is a **second-line governance review** (Section 4). It will produce a deployment decision and a second-line effectiveness assessment; it does not produce a third-line Assurance Opinion, since the AI Governance Committee running it is not independent of itself.
+Financial action, customer-facing, fed by untrusted input (customer email) — three automatic escalators under the risk classification addendum. Classified **Full autonomy**. Sampling tier: **Tier 1 — full coverage, live re-performance required**. Domains in scope: 1 (Governance & Oversight), 3 (Identity & Credential Governance), 4 (Runtime Policy Enforcement), 10 (Containment & Kill Switch), 12 (Audit & Record-Keeping). Domains 13–15 were considered at scoping and correctly excluded — this system's risk drivers are financial-action authorization and containment, not differential treatment or model-output explainability. Decision rights: AI Governance Committee Direct-decision approval required under Charter §3 — this is a **second-line governance review** (Section 4). It will produce a deployment decision and a second-line effectiveness assessment; it does not produce a third-line Assurance Opinion, since the AI Governance Committee running it is not independent of itself.
 
 **Maturity weighting for this system:** Domain 4 (Runtime Policy Enforcement) and Domain 10 (Containment & Kill Switch) are weighted highest — a financial-action agent's biggest exposure is an enforcement gap or an unverified containment mechanism, not a documentation gap. Domain 12 (Audit & Record-Keeping) is weighted lowest of the five in scope.
 
@@ -418,7 +433,7 @@ Review Date 2026-08-11. **Deployment Decision: Conditional Go**, five binding co
 
 ## 14. Reconciliation Against the Enterprise 20-Domain Control Universe
 
-This document's 12 Agentic AI domains (Section 1) are a subset of a broader enterprise AI control universe. The table below shows where each of the 20 enterprise domains lives relative to this document — directly, distributed across several of these 12, or explicitly out of scope with a pointer to where it's owned instead. Nothing here is silently uncovered.
+This document's 15 domains (Section 1) map against the full enterprise AI control universe below. With Domains 13–15 added, all 20 enterprise domains now have some form of coverage — though "coverage" here means different things for different rows, and that distinction is spelled out honestly rather than flattened into a single checkmark.
 
 | # | Enterprise Domain | Where It Lives in This Methodology | Status |
 |---|---|---|---|
@@ -426,24 +441,24 @@ This document's 12 Agentic AI domains (Section 1) are a subset of a broader ente
 | 2 | Inventory & Classification | Domain 2 — Inventory & Risk Classification | Direct |
 | 3 | Risk Management | Domain 2, plus the Risk Classification Addendum (Section 5) | Direct |
 | 4 | Data Governance | Domain 8 — Data & Memory Governance | Partial — memory-specific controls are agentic extensions beyond generic data governance |
-| 5 | Bias & Fairness | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe — see scope note above |
+| 5 | Bias & Fairness | Domain 13 — Bias & Fairness | Direct, but no dedicated control exists yet (see Section 1's honest-gaps note) |
 | 6 | Model Development & Documentation | Domain 7 — Model & Vendor Governance, partial | Distributed — full model-documentation depth sits in the broader enterprise universe |
-| 7 | Model Validation | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe |
-| 8 | Explainability & Transparency | Out of scope of this methodology's 12 domains | Belongs to the broader enterprise control universe |
+| 7 | Model Validation | Domain 14 — Model Validation | Direct, but this is the one domain in this entire document with zero control coverage anywhere — agentic or enterprise |
+| 8 | Explainability & Transparency | Domain 15 — Explainability & Transparency | Direct, but no agentic-specific control exists yet (see Section 1's honest-gaps note) |
 | 9 | GenAI Output Reliability | Distributed across Domain 5 (Prompt), Domain 4 (Runtime), Domain 9 (Monitoring) | Distributed |
 | 10 | Drift & Monitoring | Domain 9 — Monitoring, Drift & Observability | Direct |
 | 11 | Privacy & Data Protection | Domain 8, plus GDPR tagging in the Compliance Crosswalk | Partial |
 | 12 | Cybersecurity & Robustness | Distributed across Domain 3 (Identity), Domain 4 (Runtime), Domain 6 (Tool/MCP), Domain 9 (Monitoring), Domain 10 (Containment) | Distributed |
 | 13 | Human Oversight | Domain 1, controls A03/A08 | Direct |
 | 14 | Third-Party & Vendor AI | Domain 7 — Model & Vendor Governance | Direct |
-| 15 | GenAI & Agentic Governance | The full 12-domain framework in this document | Direct — this is this methodology's core subject, and materially deeper here than a generic enterprise treatment would be |
+| 15 | GenAI & Agentic Governance | The full 15-domain framework in this document | Direct — this is this methodology's core subject, and materially deeper here than a generic enterprise treatment would give it |
 | 16 | Record-Keeping & Logging | Domain 12 — Audit, Evidence & Record-Keeping | Direct |
 | 17 | Incident Management | Domain 10, plus the [Incident Response Playbook](../project-12-agentic-ai-governance/07-ai-assurance/ai-incident-response-playbook.md) | Direct |
 | 18 | Compliance & Conformity | The [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md) | Direct |
 | 19 | Internal Audit & Assurance | Sections 4, 6, and 10 of this document | Direct — this document *is* the assurance methodology for this domain |
 | 20 | Continual Improvement | Section 9's maturity model, Section 12's roadmap, and the re-review cadence in Section 13 | Direct |
 
-**Reading this table honestly:** domains 5, 7, and 8 (Bias & Fairness, Model Validation, Explainability & Transparency) are genuinely absent from this document's 12 domains, on purpose — they're not distributed, they're not partial, they're not here. That's the right design for a methodology purpose-built to test what's unique about *agentic* systems (identity, runtime enforcement, tool/MCP governance, memory, kill switches, autonomy-as-risk-escalator), rather than re-deriving a generic enterprise AI audit that already exists elsewhere in this portfolio. An assurance engagement on a system where fairness or explainability is a material risk driver — a lending or hiring agent, for instance — would need to pull those domains in from the broader enterprise universe at Phase 1 scoping, the same way any other out-of-default-scope domain gets added when the system in front of the reviewer actually needs it.
+**Reading this table honestly:** 20 of 20 rows now have a "Direct," "Partial," or "Distributed" status — nothing is marked out of scope any more. But three of those rows (5, 7, 8) are "Direct" only in the sense that this document *names* the domain and points to where it's meant to live; the actual control depth behind Domains 13 and 15 is enterprise-level and not agentic-specific, and Domain 14 has genuinely no control behind it at all yet, anywhere in this portfolio. That's a materially different claim than "this domain is fully built and tested the way Domain 4 is." An assurance engagement scoping in Domains 13–15 for a system that actually needs them — a lending or hiring agent, for instance — would need to treat control-building for those three as its own workstream before a Tier 1 review could run against them with the same rigor this document applies to Domains 1–12.
 
 ---
 
@@ -458,6 +473,11 @@ Project 12 (source of the underlying controls, RACI, and worked-example review):
 - [Pre-Deployment Review Record (template)](../project-12-agentic-ai-governance/08-templates/pre-deployment-review-record.md)
 - [Completed Pre-Deployment Review — Dispute Resolution Agent](../project-12-agentic-ai-governance/09-examples/completed-pre-deployment-review-example.md)
 - [AI Incident Response Playbook](../project-12-agentic-ai-governance/07-ai-assurance/ai-incident-response-playbook.md)
+
+Enterprise-level sources for Domains 13–15 (inherited content, not agentic-specific):
+- Bias & Fairness — `project-06-ai-governance-toolkit` (AI Governance Framework, AI Use-Case Assessment Form), `project-08-iso-42001-toolkit` (AIMS Policy Template)
+- Explainability & Transparency — `project-03-responsible-ai-policy`, `reference-library` regulatory-standards crosswalk, Project 13 `use-case-01` and `use-case-04`
+- Model Validation — no source exists anywhere in this portfolio yet; this is a tracked backlog item, not a document reference
 
 ---
 
