@@ -1,6 +1,6 @@
 # How We Govern an Agentic AI System, End to End
 
-*An AI Governance Assurance Methodology — the domain structure a control set is organised around, how an engagement is phased, how much gets tested, who decides, how a gap gets written up, how maturity is scored, what keeps the review itself honest, how it reaches a board — and, in one place, all of that applied to a real deployment decision on `ORG-AI-013`.*
+*An AI Governance Assurance Methodology — the domain structure a control set is organised around, how an engagement is phased, how much gets tested, who decides, how a gap gets written up, how maturity is scored, what keeps the review itself honest, how it reaches a board — and, in one place, all of that applied to a real deployment decision on the Dispute Resolution Agent.*
 
 > Part of the Project 13 Enterprise AI Governance Case Studies portfolio, drawing on the Project 12 Agentic AI Governance control set. Fictional example for educational purposes, built for a fictional financial-services organisation. Does not represent any real company's policies or systems. See root README for the full disclaimer.
 >
@@ -20,13 +20,13 @@
 | How is a gap written up? | The 5C format — Condition, Criteria, Cause, Consequence, Corrective Action (Section 6) |
 | How is maturity scored? | 1–5 scale, evidence required for any score of 3+ (Section 7) |
 | How does it reach a board? | One-page summary: decision, maturity, findings, next review date (Section 8) |
-| Does this actually work? | Full worked example on `ORG-AI-013` — 5 real findings, Conditional Go decision (Section 9) |
+| Does this actually work? | Full worked example on the Dispute Resolution Agent — 5 real findings, Conditional Go decision (Section 9) |
 
 ---
 
 ## 1. Governance Domain Universe
 
-Sixteen controls (full library in Project 12: `agentic-control-library.md`), consolidated into 12 named domains and cross-tagged to the frameworks a hiring manager or auditor would check against.
+Sixteen controls (full library in Project 12: [Agentic Control Library](../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)), consolidated into 12 named domains and cross-tagged to the frameworks a hiring manager or auditor would check against.
 
 | # | Domain | Controls in Scope | NIST AI RMF | EU AI Act | ISO/IEC 42001 |
 |---|---|---|---|---|---|
@@ -45,13 +45,13 @@ Sixteen controls (full library in Project 12: `agentic-control-library.md`), con
 
 **Honest gaps:** Domain 7 doesn't yet include the standalone vendor due-diligence questionnaire scored against a rubric (exists elsewhere in this portfolio, not yet re-tagged here). Domain 11 is a single scan control (A07) with no inventory entry showing a *found* shadow agent — the capability exists, it hasn't yet been demonstrated catching one.
 
-*Full OWASP / MITRE ATLAS / AIUC-1 / GDPR / SOC 2 tagging per control lives in the Project 12 compliance crosswalk (`agentic-compliance-crosswalk.md`).*
+*Full OWASP / MITRE ATLAS / AIUC-1 / GDPR / SOC 2 tagging per control lives in the [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md).*
 
 ---
 
 ## 2. Engagement Methodology — Five Phases
 
-An assurance review doesn't happen once at launch and never again — it's an overlay that can run at any point across the Project 12 Agent Lifecycle's 11 stages: at Stage 7 (pre-deployment gate), triggered by a Stage 9 material change, or as a scheduled Stage 11 periodic review. The five phases below are the same discipline regardless of which lifecycle moment triggers them.
+An assurance review doesn't happen once at launch and never again — it's an overlay that can run at any point across the [Agent Lifecycle](../project-12-agentic-ai-governance/03-agent-lifecycle/agent-lifecycle.md)'s 11 stages: at Stage 7 (pre-deployment gate), triggered by a Stage 9 material change, or as a scheduled Stage 11 periodic review. The five phases below are the same discipline regardless of which lifecycle moment triggers them.
 
 ### Phase 1 — Plan & Scope
 Confirm the system's risk tier and autonomy level (Section 4 decides sampling depth from this); define which of the 12 domains are in scope; identify the trigger (new system, material change, scheduled review).
@@ -79,7 +79,7 @@ Issue final review record with decision (Go / Conditional Go / No-Go — Section
 
 ## 3. Decision Rights (RACI)
 
-Full table in Project 12: `agentic-ai-governance-raci.md`. Summarised here for the domains this document's worked example touches:
+Full table in Project 12: [Governance RACI](../project-12-agentic-ai-governance/02-operating-model/agentic-ai-governance-raci.md). Summarised here for the domains this document's worked example touches:
 
 | Activity | Accountable | Responsible | Consulted |
 |---|---|---|---|
@@ -99,7 +99,7 @@ Security holds sole Accountability for the *decision to contain*, because contai
 
 ## 4. Risk-Tiered Sampling & Test Rigor
 
-Not every domain gets the same depth of testing for every system — depth scales to the system's existing risk tier and autonomy level (Project 12: `agentic-risk-classification-addendum.md`), so review effort is spent where exposure actually sits rather than spread evenly.
+Not every domain gets the same depth of testing for every system — depth scales to the system's existing risk tier and autonomy level (Project 12: [Risk Classification Addendum](../project-12-agentic-ai-governance/04-risk-framework/agentic-risk-classification-addendum.md)), so review effort is spent where exposure actually sits rather than spread evenly.
 
 | Sampling Tier | Trigger | Coverage Rule |
 |---|---|---|
@@ -109,7 +109,7 @@ Not every domain gets the same depth of testing for every system — depth scale
 
 **Stop-and-widen rule:** if a Tier 2 or Tier 3 system fails a test that would normally only run under Tier 1 rigor (for example, an ad hoc prompt-injection attempt during a Tier 2 review succeeds), the review escalates to full Tier 1 coverage for that system on the spot — a failed assumption about a system's actual risk is itself evidence the tier assignment was wrong, not a reason to note the failure and move on at the original depth.
 
-**This system:** `ORG-AI-013` is classified **Full autonomy** (Section 9), which places it in Tier 1 regardless of its underlying use-case risk score — full coverage, live re-performance required. F-02 (Section 6) is exactly the kind of finding Tier 3-level document review would never have caught; it only surfaced because Tier 1 rigor requires testing the actual system, not the design intent.
+**This system:** the Dispute Resolution Agent (Section 9) is classified **Full autonomy**, which places it in Tier 1 regardless of its underlying use-case risk score — full coverage, live re-performance required. F-02 (Section 6) is exactly the kind of finding Tier 3-level document review would never have caught; it only surfaced because Tier 1 rigor requires testing the actual system, not the design intent.
 
 ---
 
@@ -166,7 +166,7 @@ Every review resolves to one of three decisions:
 
 ---
 
-## 9. Worked Example — `ORG-AI-013` (Dispute Resolution Agent)
+## 9. Worked Example — Dispute Resolution Agent
 
 Every section above, applied to one real deployment decision in this portfolio.
 
@@ -245,14 +245,14 @@ Review Date 2026-08-11. Decision: **Conditional Go**, five binding conditions, n
 ## Related Documents
 
 Project 12 (source of the underlying controls, RACI, and worked-example review):
-- Agentic Control Library — `agentic-control-library.md`
-- Compliance Crosswalk — `agentic-compliance-crosswalk.md`
-- Governance RACI — `agentic-ai-governance-raci.md`
-- Agent Lifecycle — `agent-lifecycle.md`
-- Risk Classification Addendum — `agentic-risk-classification-addendum.md`
-- Pre-Deployment Review Record (template) — `pre-deployment-review-record.md`
-- Completed Pre-Deployment Review — ORG-AI-013 — `completed-pre-deployment-review-example.md`
-- AI Incident Response Playbook — `ai-incident-response-playbook.md`
+- [Agentic Control Library](../project-12-agentic-ai-governance/05-control-library/agentic-control-library.md)
+- [Compliance Crosswalk](../project-12-agentic-ai-governance/05-control-library/agentic-compliance-crosswalk.md)
+- [Governance RACI](../project-12-agentic-ai-governance/02-operating-model/agentic-ai-governance-raci.md)
+- [Agent Lifecycle](../project-12-agentic-ai-governance/03-agent-lifecycle/agent-lifecycle.md)
+- [Risk Classification Addendum](../project-12-agentic-ai-governance/04-risk-framework/agentic-risk-classification-addendum.md)
+- [Pre-Deployment Review Record (template)](../project-12-agentic-ai-governance/08-templates/pre-deployment-review-record.md)
+- [Completed Pre-Deployment Review — Dispute Resolution Agent](../project-12-agentic-ai-governance/09-examples/completed-pre-deployment-review-example.md)
+- [AI Incident Response Playbook](../project-12-agentic-ai-governance/07-ai-assurance/ai-incident-response-playbook.md)
 
 ---
 
