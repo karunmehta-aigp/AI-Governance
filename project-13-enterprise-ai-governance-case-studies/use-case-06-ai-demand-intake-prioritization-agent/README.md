@@ -1,5 +1,7 @@
-<!-- Drop the poster image here once uploaded, then delete this comment line:
-![ORG-AI-016 Poster](replace-with-the-github-user-attachments-URL) -->
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/f60b7a4b-3ddf-47ad-a6c9-820bb1a95352" />
+
+<img width="1548" height="2487" alt="image" src="https://github.com/user-attachments/assets/cab90030-30c6-4c77-8cfd-b45183a70e5d" />
 
 # AI-Assisted Enterprise Demand Intake, Prioritization & Capacity Planning
 ### From 100+ Competing Demands to a Capacity-Aware Portfolio — with AI Assistance and Human Decision Authority
