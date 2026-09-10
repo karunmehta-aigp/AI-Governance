@@ -8,6 +8,9 @@
 
 **What this is (precisely):** three connected assessment activities, not three interchangeable "frameworks" — an AI system inventory (a governance capability, not a standard), an assessment against the NIST AI Risk Management Framework, and an evidence review against the ISO/IEC 42001:2023 standard.
 
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3b93591f-2607-42f9-9e3f-11583384d957" />
+
 ```
               PUBLIC AI PRODUCT
              (Microsoft 365 Copilot)
