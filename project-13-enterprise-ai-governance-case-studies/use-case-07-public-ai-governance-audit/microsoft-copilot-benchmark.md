@@ -1,4 +1,4 @@
-# Use Case 07: Public AI Governance Assessment — Microsoft 365 Copilot
+# Use Case 07: Public-Evidence AI Governance Assessment — Microsoft 365 Copilot
 
 **System reference:** `EXT-BENCHMARK-01` | **Type:** Independent public-evidence review (not a formal audit or compliance opinion) | **Subject:** Real, named product — not affiliated with, commissioned by, or reviewed by Microsoft
 
@@ -8,7 +8,8 @@
 INVENTORY  →  NIST AI RMF  →  ISO/IEC 42001  →  FINDINGS & ACTIONS
 
 ```
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5d29f45c-17ba-4591-b18e-097107315dc6" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2fc7d885-ff03-4176-b1aa-18223ec64b96" />
+
 
 ---
 
