@@ -17,7 +17,7 @@ New use cases are added over time as practical, portfolio-ready examples of appl
 | 4 | [Loan Pre-Approval Agent](./use-case-04-loan-pre-approval-agent/README.md) | Consumer Lending | Fictional org | Yes — three-agent pipeline, human-in-the-loop by regulatory requirement | EU AI Act, GDPR, ECOA/Regulation B, FCRA |
 | 5 | [Agentic Investment Management System](./use-case-05-agentic-investment-management/README.md) | Wealth Management | Fictional org | Yes — 15-component, 9-phase multi-agent orchestration, Critical risk tier | NIST AI RMF, EU AI Act, ISO/IEC 42001, GDPR, SEC/FINRA |
 | 6 | [AI Demand Intake, Prioritization & Capacity Orchestration Agent](./use-case-06-ai-demand-intake-prioritization-agent/README.md) | Enterprise AI Portfolio Management | Fictional org | Yes — 4-agent + 2 deterministic-engine pipeline, human-in-the-loop governance gate, Moderate risk tier | NIST AI RMF, EU AI Act, ISO/IEC 42001, GDPR, internal AI control library (A01–A16) |
-| 7 | [Public AI Governance Assessment — Microsoft 365 Copilot](./use-case-07-public-ai-governance-assessment/microsoft-copilot-benchmark.md) | Enterprise Productivity / Cross-Sector | **Real, named product** — independent public-evidence review, not affiliated with or reviewed by Microsoft | No — single external product assessment | NIST AI RMF, EU AI Act, ISO/IEC 42001 |
+| 7 | [Public AI Governance Assessment — Microsoft 365 Copilot](./use-case-07-public-ai-governance-audit/microsoft-copilot-benchmark.md) | Enterprise Productivity / Cross-Sector | **Real, named product** — independent public-evidence review, not affiliated with or reviewed by Microsoft | No — single external product assessment | NIST AI RMF, EU AI Act, ISO/IEC 42001 |
 
 ---
 
