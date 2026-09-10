@@ -5,7 +5,8 @@
 > This is the one real-subject case study in this portfolio (see Use Cases 01–06 for fictional-organisation examples). All claims are sourced from Microsoft's own public materials — Responsible AI Standard, Transparency Notes, ISO/IEC 42001 certification announcements. "Limited" below means *not publicly evidenced*, not a confirmed gap in Microsoft's actual practice.
 
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2fc7d885-ff03-4176-b1aa-18223ec64b96" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/14dd11c2-344a-4a58-bb9f-8d6be1368bf7" />
+
 
 
 ---
