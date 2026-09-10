@@ -1,9 +1,13 @@
 # Use Case 07: AI Governance Assessment — Microsoft 365 Copilot
 
+
 **Type:** Independent public-evidence review (not a formal audit or compliance opinion)  
 **Subject:** Microsoft 365 Copilot — not affiliated with, commissioned by, or reviewed by Microsoft
 
 > This is the one real-subject case study in this portfolio (see Use Cases 01–06 for fictional-organisation examples). The assessment uses publicly available information to demonstrate third-party AI governance evaluation. Areas marked **Review Further** indicate where a deploying organisation should perform additional due diligence; they do not represent confirmed gaps in Microsoft's practices.
+>
+> <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0ed68657-6c51-467c-9595-4fa5b21033a7" />
+
 
 **INVENTORY → NIST AI RMF → ISO/IEC 42001 → DEPLOYER CONSIDERATIONS & ACTIONS**
 
