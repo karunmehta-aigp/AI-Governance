@@ -6,7 +6,9 @@
 
 ```
 INVENTORY  →  NIST AI RMF  →  ISO/IEC 42001  →  FINDINGS & ACTIONS
+
 ```
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5d29f45c-17ba-4591-b18e-097107315dc6" />
 
 ---
 
