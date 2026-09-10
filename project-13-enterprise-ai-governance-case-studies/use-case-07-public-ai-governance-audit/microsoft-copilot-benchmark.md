@@ -1,11 +1,12 @@
-# Use Case 07: Public-Evidence AI Governance Assessment — Microsoft 365 Copilot
+# Use Case 07: AI Governance Assessment — Microsoft 365 Copilot
 
 **System reference:** `EXT-BENCHMARK-01` | **Type:** Independent public-evidence review (not a formal audit or compliance opinion) | **Subject:** Real, named product — not affiliated with, commissioned by, or reviewed by Microsoft
 
 > This is the one real-subject case study in this portfolio (see Use Cases 01–06 for fictional-organisation examples). All claims are sourced from Microsoft's own public materials — Responsible AI Standard, Transparency Notes, ISO/IEC 42001 certification announcements. "Limited" below means *not publicly evidenced*, not a confirmed gap in Microsoft's actual practice.
 
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/14dd11c2-344a-4a58-bb9f-8d6be1368bf7" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/8c53330e-6321-4035-93b1-b6e3e94feede" />
+
 
 
 
