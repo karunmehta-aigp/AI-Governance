@@ -1,6 +1,7 @@
 # Use Case 08: AI Governance Assessment — Salesforce Agentforce
 
-**System reference:** `EXT-BENCHMARK-02` | **Type:** Independent AI Governance Assessment (not a formal audit or compliance opinion) | **Subject:** Salesforce Agentforce, Einstein Platform, and related Trust Layer — not affiliated with, commissioned by, or reviewed by Salesforce
+**Type:** Independent AI Governance Assessment (not a formal audit or compliance opinion) 
+**Subject:** Salesforce Agentforce, Einstein Platform, and related Trust Layer — not affiliated with, commissioned by, or reviewed by Salesforce
 
 > Second real-subject case study in this portfolio, alongside Use Case 07 (Microsoft 365 Copilot). Together they show a maturity progression: Copilot is generative/productivity AI; Agentforce is agentic AI that plans and executes actions. Areas marked **Review Further** are deployer due-diligence considerations, not confirmed gaps in Salesforce's practices.
 
