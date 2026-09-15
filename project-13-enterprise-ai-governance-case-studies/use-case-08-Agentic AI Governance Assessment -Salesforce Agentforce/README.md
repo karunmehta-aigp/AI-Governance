@@ -115,13 +115,13 @@ This is the operating layer that turns a one-time framework assessment into ongo
 
 ## 8. Key Considerations for Deployers
 
-| Consideration | Priority (for the deploying organisation) | Suggested Action |
-|---|---|---|
-| Data and integration governance across the agent ecosystem | High | Map the data, systems, APIs, and tools each agent can access, and verify governance coverage across those boundaries |
-| Higher governance complexity from action-taking capability | High | Classify each deployed agent by the specific action it's authorised to take, not just by platform |
-| Product-specific impact assessment not public | Medium | Request assurance documentation during procurement |
-| Audit report detail (ISO/SOC 2) not public | Medium | Treat certification as a starting point for due diligence, not a substitute for it |
-| Model-provider contract terms undisclosed | Low | Standard vendor confidentiality; revisit at contract renewal |
+| Consideration | Priority (for the deploying organisation) | Suggested Action | Owner |
+|---|---|---|---|
+| Data and integration governance across the agent ecosystem | High | Map the data, systems, APIs, and tools each agent can access, and verify governance coverage across those boundaries | AI Governance + Data Governance |
+| Higher governance complexity from action-taking capability | High | Classify each deployed agent by the specific action it's authorised to take, not just by platform | AI Governance |
+| Product-specific impact assessment not public | Medium | Request assurance documentation during procurement | Procurement + AI Governance |
+| Audit report detail (ISO/SOC 2) not public | Medium | Treat certification as a starting point for due diligence, not a substitute for it | Procurement + AI Governance |
+| Model-provider contract terms undisclosed | Low | Standard vendor confidentiality; revisit at contract renewal | Procurement |
 
 ## 9. Overall Assessment
 
