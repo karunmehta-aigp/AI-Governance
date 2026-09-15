@@ -1,4 +1,4 @@
-# Use Case 08: AI Governance Assessment — Salesforce Agentforce
+# Use Case 08: Agentic AI Governance Assessment — Salesforce Agentforce
 
 **Type:** Independent AI Governance Assessment (not a formal audit or compliance opinion) 
 
