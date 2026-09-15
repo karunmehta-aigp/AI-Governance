@@ -115,7 +115,7 @@ This is the operating layer that turns a one-time framework assessment into ongo
 
 ## 8. Key Considerations for Deployers
 
-| Consideration | Priority (for the deploying organisation) | Suggested Action | Owner |
+| Consideration | Priority (for the deploying organisation) | Recommended  Action | Owner |
 |---|---|---|---|
 | Data and integration governance across the agent ecosystem | High | Map the data, systems, APIs, and tools each agent can access, and verify governance coverage across those boundaries | AI Governance + Data Governance |
 | Higher governance complexity from action-taking capability | High | Classify each deployed agent by the specific action it's authorised to take, not just by platform | AI Governance |
