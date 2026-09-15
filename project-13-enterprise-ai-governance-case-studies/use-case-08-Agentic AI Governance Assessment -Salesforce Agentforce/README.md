@@ -126,8 +126,11 @@ This is the operating layer that turns a one-time framework assessment into ongo
 ## 9. Overall Assessment
 
 **Posture:** Strong public governance evidence at the platform level — named accountable executive, public AI use policy, independently certified/audited controls.
+
 **Key consideration:** action-taking capability changes what "governed" needs to mean — output oversight is no longer sufficient on its own.
+
 **Assessment outcome:** Public certification, the Trust Layer, and supporting documentation provide useful inputs to vendor due diligence, while action-level governance — permissions, boundaries, human oversight, and monitoring — remains the deploying organisation's responsibility.
+
 **Practical implication:** certification and the Trust Layer are a credible foundation; they don't replace the deploying organisation's own action-level risk classification and oversight of each agent.
 
 ## 10. Practitioner Takeaway
