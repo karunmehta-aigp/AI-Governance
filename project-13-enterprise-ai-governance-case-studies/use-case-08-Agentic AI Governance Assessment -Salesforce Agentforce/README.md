@@ -52,16 +52,22 @@ Agentic AI governance is a shared-responsibility model. This assessment distingu
 
 ## 4. ISO/IEC 42001 Evidence Review
 
-*Focused sample of six governance areas. Not a complete ISO/IEC 42001 conformity assessment.*
+This is a **focused public-evidence review of six governance areas** relevant to Salesforce Agentforce. It is not a complete ISO/IEC 42001 conformity assessment.
 
-| Area | Public Evidence | Review Further |
+| Governance Area | Public Evidence Reviewed | Assessment |
 |---|---|---|
-| AI Policy & Leadership | Trusted AI Principles, AI Acceptable Use Policy, named accountable executive | Board-level AI risk reporting cadence |
-| Risk Assessment | AI AUP restricts high-risk uses (biometric ID, legal/medical decisions) | Product-specific impact assessment for Agentforce |
-| Data Governance | Einstein Trust Layer (masking, zero data retention), Data 360 Policy-Based Governance | Governance coverage across the full agent ecosystem — data, systems, APIs, and tools an agent can reach — worth independent verification as part of deployer due diligence |
-| Supplier Oversight | Multi-model architecture disclosed, incl. Google Gemini integration for the reasoning engine | Underlying model-provider contract terms |
-| Independent Audit | ISO/IEC 42001 certification (BDO); separate SOC 2 report | Full audit report detail |
-| Continual Improvement | AI AUP updated since 2023 as capabilities expanded | Granular before/after improvement metrics |
+| **AI Policy & Leadership** | Trusted AI Principles, AI Acceptable Use Policy, and a named accountable executive | **Public Evidence** |
+| **Risk Assessment** | AI Acceptable Use Policy and high-risk-use restrictions | **Review Further** |
+| **Data Governance** | Einstein Trust Layer and Data 360 Policy-Based Governance documentation | **Public Evidence** |
+| **Supplier Oversight** | Multi-model architecture and subprocessor disclosures | **Review Further** |
+| **Independent Audit** | Public ISO/IEC 42001 certification and SOC 2 report information | **Review Further** |
+| **Continual Improvement** | AI Acceptable Use Policy updates and Trust/Transparency reporting | **Review Further** |
+
+**Interpretation:**
+**Public Evidence** means relevant governance information was observable in the public materials reviewed.
+**Review Further** means a deploying organisation should obtain additional assurance evidence or perform its own due diligence before relying on that area for its specific deployment.
+
+> A certification provides useful assurance that an assessed management system exists and has undergone independent review. It does not replace governance of an individual organisation's tenant configuration, data access, integrations, or custom agents.
 
 ## 5. What Changes With Agentic AI
 
