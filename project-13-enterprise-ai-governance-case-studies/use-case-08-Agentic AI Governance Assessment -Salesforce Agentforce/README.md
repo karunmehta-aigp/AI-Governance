@@ -69,6 +69,8 @@ This is a **focused public-evidence review of six governance areas** relevant to
 
 > A certification provides useful assurance that an assessed management system exists and has undergone independent review. It does not replace governance of an individual organisation's tenant configuration, data access, integrations, or custom agents.
 
+**Agentic AI consideration:** Platform-level governance evidence provides an important foundation, but the deploying organisation should verify governance across the specific agents, data, systems, APIs, tools, permissions, and actions configured in its deployment.
+
 ## 5. What Changes With Agentic AI
 
 Agentic AI introduces additional governance dimensions because the system can take actions, not just generate content.
@@ -115,7 +117,7 @@ This is the operating layer that turns a one-time framework assessment into ongo
 
 ## 8. Key Considerations for Deployers
 
-| Consideration | Priority (for the deploying organisation) | Recommended  Action | Owner |
+| Consideration | Priority (for the deploying organisation) | Recommended Action | Owner |
 |---|---|---|---|
 | Data and integration governance across the agent ecosystem | High | Map the data, systems, APIs, and tools each agent can access, and verify governance coverage across those boundaries | AI Governance + Data Governance |
 | Higher governance complexity from action-taking capability | High | Classify each deployed agent by the specific action it's authorised to take, not just by platform | AI Governance |
