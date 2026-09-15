@@ -139,7 +139,7 @@ This is the operating layer that turns a one-time framework assessment into ongo
 
 When AI moves from generating content to taking actions, governance must move from output oversight to action oversight.
 
-For AI Program Managers, this means translating autonomy and risk into clear owners, approval gates, action boundaries, controls, monitoring, evidence, and escalation paths — not just extending a content-review checklist.
+For AI Program Managers, this means translating autonomy and risk into clear ownership, approval gates, action boundaries, controls, monitoring, evidence, and escalation paths, while integrating governance into the delivery lifecycle, release gates, dependency management, operational readiness, and ongoing assurance.
 
 ## 11. Sources & Limitations
 
