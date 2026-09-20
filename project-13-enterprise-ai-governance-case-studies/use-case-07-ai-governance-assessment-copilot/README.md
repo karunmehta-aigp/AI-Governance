@@ -99,10 +99,11 @@ Priority represents the **importance of the deployer's governance action**, not 
 ## 6. Overall Assessment
 
 **Governance posture:** Based on the public evidence reviewed, Microsoft 365 Copilot demonstrates a strong governance foundation at the platform level.
+Overall, there is strong public governance evidence at the platform level.
 
 **Primary governance consideration:** Enterprise adopters remain responsible for governing their own configuration, data access, integrations, intended uses, and custom agents.
 
-**Assessment outcome:** Public certification, governance standards and supporting documentation provide useful inputs to vendor due diligence, while deployment-specific governance and assurance remain necessary.
+**Assessment outcome:** From the deployer perspective - Public certification, governance standards and supporting documentation provide useful inputs to vendor due diligence, while deployment-specific governance and assurance remain necessary.
 
 **Practical implication:** Use platform assurance as a starting point, then **inventory → classify → configure → monitor** the organisation's own deployment.
 
