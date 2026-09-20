@@ -1,4 +1,4 @@
-# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code
+# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code  - In-progress
 
 > **Type:** Independent public-evidence AI Governance Assessment  
 > **Subject:** Anthropic Claude Enterprise and Claude Code  
