@@ -349,13 +349,13 @@ Effective AI governance extends beyond AI Governance or Program Management alone
 
 ## 20. Overall Assessment
 
-**Posture:** Anthropic's public materials provide meaningful provider-level assurance inputs, including enterprise administration/security controls, Claude Code permissions and sandboxing, model/safety practices, compliance capabilities, and ISO/IEC 42001 certification of its AI management system - Strong public governance evidence at the platform level 
+**Posture:** Anthropic's public materials provide meaningful provider-level assurance inputs, including enterprise administration and security controls, Claude Code permissions and sandboxing, model and safety practices, compliance capabilities, and ISO/IEC 42001 certification of its AI management system. Overall, there is **strong public governance evidence at the platform level**.
 
-**Key consideration:** Provider assurance does not establish that every enterprise Claude deployment is adequately governed. Enterprise assurance depends on the specific **purpose, data, identity, permissions, tools/MCP, integrations, autonomy, actions, human oversight, runtime controls, and evidence**.
+**Key consideration:** Provider assurance provides an important foundation, but it does not by itself establish that a specific enterprise deployment of Claude is adequately governed. From the **deployer perspective**, assurance depends on how Claude is configured and used, including the specific **purpose, data, identities, permissions, tools/MCP, integrations, autonomy, actions, human oversight, runtime controls, and supporting evidence**.
 
-**Assessment outcome:**Assessment outcome: From the deployer perspective, the more Claude is enabled to access enterprise systems and take actions, the more governance must move beyond reviewing documented controls toward testing operating effectiveness and demonstrating that the appropriate controls held at consequential action boundaries.**.
+**Assessment outcome:** From the **deployer perspective**, the more Claude is enabled to access enterprise systems and take actions, the more governance must move beyond reviewing documented controls toward **testing operating effectiveness and demonstrating that the appropriate controls held at consequential action boundaries**.
 
-**Practical implication:** Use provider assurance as an input. Make the enterprise assurance decision using current deployment and operational evidence.
+**Practical implication:** Use provider assurance as an input. Make the enterprise assurance decision using **current deployment-specific and operational evidence**.
 
 ---
 
