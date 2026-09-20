@@ -384,8 +384,8 @@ It becomes:
 | Case Study | Governance Progression |
 |---|---|
 | **Use Case 07 — Microsoft 365 Copilot** | Govern the enterprise AI **use case** |
-| **Use Case 08 — Salesforce Agentforce** | Govern the **agent, autonomy, permissions, and actions** |
-| **Use Case 09 — Anthropic Claude Enterprise + Claude Code** | Test **control effectiveness** and demonstrate that controls held at the **action boundary** |
+| **Use Case 08 — Salesforce Agentforce** | Agentic AI & Govern the **agent, autonomy, permissions, and actions** |
+| **Use Case 09 — Anthropic Claude Enterprise + Claude Code** | Agentic AI  & Test **control effectiveness** and demonstrate that controls held at the **action boundary** |
 
 `FRAMEWORK ALIGNMENT → OPERATIONAL GOVERNANCE → CONTROL EFFECTIVENESS → EVIDENCE-BASED ASSURANCE`
 
