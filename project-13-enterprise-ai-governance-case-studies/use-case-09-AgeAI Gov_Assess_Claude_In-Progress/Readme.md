@@ -1,784 +1,394 @@
-# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code  - In-progress
+# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code - In-Progress
 
-> **Type:** Independent public-evidence AI Governance Assessment  
-> **Subject:** Anthropic Claude Enterprise and Claude Code  
-> **Purpose:** Demonstrate how an enterprise AI Governance function can move from provider assurance to deployment governance, control-effectiveness testing, action assurance, evidence-based decisions, and continuous reassessment.
+**Type:** Independent AI Governance Assessment (not a formal audit or compliance opinion)
 
----
+**Subject:** Anthropic Claude Enterprise and Claude Code — not affiliated with, commissioned by, or reviewed by Anthropic
 
-## Executive Summary
-
-As enterprise AI gains access to organizational data, code, files, tools, connectors, APIs, and MCP-enabled capabilities, governance must control not only **what the AI can generate**, but also **what it can access, change, and execute**.
-
-This case assesses publicly available assurance information for Anthropic and then shifts to the deploying organization's responsibilities.
-
-The central governance principle is:
-
-> **Provider assurance is a foundation. It is not automatic assurance of the deployed system.**
-
-A deployment changes the governed object. Enterprise data, configuration, identities, permissions, tools, integrations, autonomy, business context, and consequential actions can change both the risk and the evidence required to support an assurance decision.
-
-### Governance Lifecycle
-
-**INVENTORY → ASSESS → CONTROL → TEST → MONITOR → ASSURE → IMPROVE**
-
-### Assurance Progression
-
-**Control Presence → Control Effectiveness → Action Assurance → Evidence → Decision → Reassessment**
+> Third real-subject case study in this portfolio, following Use Case 07 (Microsoft 365 Copilot) and Use Case 08 (Salesforce Agentforce). Together they show a maturity progression: Copilot focuses on enterprise generative/productivity AI, Agentforce introduces action-taking agentic AI, and Claude Enterprise + Claude Code extends the assessment into tool/MCP access, execution boundaries, control-effectiveness testing, and action assurance. Areas marked **Review Further** are deployer due-diligence considerations, not confirmed gaps in Anthropic's practices.
 
 ---
 
 ## 1. Assessment Scope
 
-This assessment considers two related Anthropic offerings:
+**System:** Anthropic Claude Enterprise and Claude Code. Public-evidence assessment only — no internal, NDA'd, customer-specific, or non-public sources. Not a clause-by-clause ISO/IEC 42001 conformity assessment.
 
-- **Claude Enterprise** — enterprise use of Claude with organizational administration and access controls.
-- **Claude Code** — an agentic coding environment capable of reading files, editing code, running commands, and interacting with approved tools and services.
+This assessment asks two questions:
 
-They are treated as related offerings, not as one identical product.
+1. **Provider assurance:** What governance, security, safety, administration, monitoring, and independent assurance evidence is publicly available from Anthropic?
+2. **Deployment assurance:** What must an enterprise independently govern and evidence when Claude is connected to its own data, users, code, tools, connectors, MCP servers, systems, and business processes?
 
-This is a **public-evidence assessment**, not a formal audit. Public provider evidence is used as an input to enterprise due diligence; deployment-specific assurance still requires evidence from the deploying organization.
+**Assessment lifecycle:**  
+`INVENTORY → ASSESS → CONTROL → TEST → MONITOR → ASSURE → IMPROVE`
+
+**Assurance progression:**  
+`CONTROL PRESENCE → CONTROL EFFECTIVENESS → ACTION ASSURANCE → EVIDENCE → DECISION → REASSESSMENT`
+
+> **Key principle:** Provider assurance is an important foundation. It does not automatically establish assurance of the enterprise's specific deployment.
 
 ---
 
 ## 2. AI System Inventory
 
-| Attribute | Assessment |
+| | |
 |---|---|
 | **Provider** | Anthropic |
-| **Enterprise surfaces considered** | Claude Enterprise and Claude Code |
-| **Typical users** | Employees, developers, engineering teams, enterprise functions |
-| **Data** | Enterprise information made available through user access, files, connectors, repositories, tools, or configured integrations |
-| **Capabilities** | Reasoning, content generation, code assistance, file interaction, tool use, command execution, workflow assistance |
-| **Agentic surface** | Claude Code and tool-enabled workflows can move beyond generation into actions |
-| **Governance implication** | Risk depends on deployed purpose, data, permissions, integrations, autonomy, and actions |
-
-### EU AI Act Role and Use-Case Determination
-
-Do not classify the vendor platform once and assume that classification travels unchanged into every deployment.
-
-At **initial intake** and after **material change**, determine:
-
-1. The specific intended purpose.
-2. Whether the deployment falls into a regulated or high-risk context.
-3. The organization's applicable regulatory role.
-4. Whether modifications to an AI system or its intended purpose could change the organization's obligations.
-5. What additional evidence or conformity activity is required.
-
-For applicable high-risk systems, Article 25 of the EU AI Act contains circumstances in which another party can become the provider, including certain substantial modifications or changes of intended purpose.
-
-Therefore:
-
-> **Regulatory role determination should be a governance checkpoint, not a one-time label.**
+| **Enterprise surfaces assessed** | Claude Enterprise and Claude Code |
+| **Users** | Employees, developers, engineering teams, administrators, and other authorised enterprise users |
+| **Data** | Enterprise information made available through user access, files, repositories, connectors, tools, APIs, MCP servers, and configured integrations |
+| **Purpose** | Enterprise productivity, reasoning, software development, workflow assistance, and approved tool-enabled tasks |
+| **Agent Actions** | Claude Code and tool-enabled workflows can read files, edit code, run commands, interact with approved tools/services, and perform actions within configured permissions and execution boundaries |
+| **EU AI Act posture** | Classification depends on the **specific deployed use case, intended purpose, role, and impact**, not simply the Claude product name. At intake and after material change, the deploying organisation should reassess whether the use is subject to high-risk or other applicable requirements and whether changes to the system or intended purpose affect its regulatory role. For applicable high-risk systems, Article 25 should be considered where substantial modification or changed intended purpose could cause another party to assume provider obligations. Regulatory applicability and current timelines should be verified against official EU sources before reliance in a real engagement. |
 
 ---
 
-## 3. Provider Assurance vs. Deployer Responsibility
+## 3. Provider vs. Deployer Responsibility
 
-Agentic AI governance operates through a **shared-responsibility model**.
+Agentic AI governance is a **shared-responsibility model**. Provider controls can be inherited as assurance inputs, but the deploying organisation remains accountable for risks created by its own configuration and use.
 
-### Provider Assurance — Anthropic
+| Role | Primary Governance Responsibility |
+|---|---|
+| **Provider — Anthropic** | Provides the models and enterprise products; provider-level safety and evaluation practices; enterprise administration and security capabilities; Claude Code permission and sandboxing capabilities; connector/MCP controls; transparency and compliance information; and publicly documented independent assurance such as ISO/IEC 42001 certification of Anthropic's AI management system. |
+| **Deployer — Enterprise using Claude** | Governs the specific business use case, regulatory role, users and agent identities, enterprise data, permissions, tools/MCP servers, integrations, action boundaries, human approvals, runtime policy enforcement, monitoring, evidence, incident response, material changes, and ongoing reassessment. |
 
-Publicly available Anthropic materials describe controls and assurance mechanisms including:
-
-- Enterprise identity and administration capabilities.
-- Role-based access and enterprise configuration.
-- Connector and MCP permission management.
-- Claude Code permission controls.
-- Filesystem and network sandboxing for Claude Code.
-- Model and safety evaluation activities.
-- Post-deployment monitoring and safety processes.
-- ISO/IEC 42001 certification of Anthropic's AI management system.
-- Compliance and audit-related capabilities for enterprise customers.
-
-These provide an important **provider-level assurance foundation**.
-
-### Deployer Responsibility — Enterprise
-
-The deploying organization remains responsible for governance of its actual deployment, including:
-
-- Business purpose and use-case classification.
-- Accountable business and technical owners.
-- Enterprise data made available to Claude.
-- User, service, and agent identities.
-- Least-privilege access.
-- Connectors, APIs, tools, repositories, and MCP servers.
-- Action and execution boundaries.
-- Human approvals.
-- Runtime policy enforcement.
-- Monitoring and incident response.
-- Evidence retention.
-- Material-change management.
-- Ongoing reassessment.
-
-> **Assurance does not automatically travel with the platform.**
-
-A well-governed provider platform can still support a weak deployment if enterprise configuration, access, integration, oversight, or operational controls are inadequate.
+> **Key principle:** Assurance does not automatically travel with the platform. Changes in data, configuration, integrations, permissions, model/version, tools, autonomy, authority, or operating context can change the assurance claim and the evidence required to support it.
 
 ---
 
 ## 4. NIST AI RMF Assessment
 
-The following are **portfolio assessment ratings**, not official NIST scores.
+The ratings below are **portfolio assessment ratings**, not official NIST scores.
 
-| Function | Public-Evidence View | Governance Interpretation |
+| Function | Public Evidence Reviewed | Rating |
 |---|---|---|
-| **GOVERN** | 🟢 Strong | Public governance, safety, policy, and assurance structures provide a useful provider-level foundation |
-| **MAP** | 🟢 Strong | Enterprise deployment still requires context-specific mapping of purpose, users, data, tools, integrations, and impacts |
-| **MEASURE** | 🟡 Moderate | Public evidence supports provider evaluation activities, while deployers still need deployment-specific control and outcome testing |
-| **MANAGE** | 🟢 Strong | Provider safeguards and enterprise controls can support risk treatment, but operating effectiveness must be demonstrated in the deployment |
+| **GOVERN** | Public AI governance/safety policies, Responsible Scaling Policy, usage policies, enterprise governance capabilities, and ISO/IEC 42001 certification | 🟢 **Strong** |
+| **MAP** | Enterprise identity/access configuration, connectors/MCP controls, data and deployment-context capabilities; deployers must still map their own purpose, users, data, tools, actions, and impacts | 🟢 **Strong** |
+| **MEASURE** | Public model/safety evaluation and monitoring practices provide provider evidence, but deployment-specific control effectiveness and action-boundary testing remain the enterprise's responsibility | 🟡 **Moderate** |
+| **MANAGE** | Enterprise administrative controls, Claude Code permissions/sandboxing, compliance capabilities, provider safeguards, and deployer risk-treatment mechanisms | 🟢 **Strong** |
 
 ---
 
-## 5. ISO/IEC 42001 Public-Evidence Review
+## 5. ISO/IEC 42001 Evidence Review
 
-This is a focused public-evidence review. It is **not a complete ISO/IEC 42001 conformity assessment**.
+This is a **focused public-evidence review** of governance areas relevant to Claude Enterprise and Claude Code. It is not a complete ISO/IEC 42001 conformity assessment.
 
-| Governance Area | Assessment |
-|---|---|
-| **AI Policy and Leadership** | **Public Evidence** |
-| **AI Management System / Independent Certification** | **Public Evidence** |
-| **Security and Enterprise Administration** | **Public Evidence** |
-| **Deployment-Specific Risk Assessment** | **Review Further** |
-| **Tool / MCP / Integration Governance** | **Review Further** |
-| **Deployment-Specific Control Effectiveness** | **Review Further** |
-| **Ongoing Enterprise Assurance** | **Review Further** |
+| Governance Area | Public Evidence Reviewed | Assessment |
+|---|---|---|
+| **AI Policy & Leadership** | Public governance, safety, usage, and Responsible Scaling Policy materials | **Public Evidence** |
+| **AI Management System / Independent Certification** | Public ISO/IEC 42001:2023 certification information for Anthropic's AI management system | **Public Evidence** |
+| **Enterprise Administration & Security** | Public information on SSO/SCIM, roles/permissions, audit/compliance capabilities, retention, and enterprise controls | **Public Evidence** |
+| **Deployment-Specific Risk Assessment** | Provider evidence can inform assessment, but the enterprise's intended use, data, actions, impacts, and operating context require deployment-specific evidence | **Review Further** |
+| **Tool / MCP / Integration Governance** | Public controls exist for connectors, MCP permissions, tool permissions, file restrictions, and sandboxing; enterprise-specific configurations require verification | **Review Further** |
+| **Deployment Control Effectiveness** | Public provider controls do not establish that the enterprise's configured controls operate effectively in its deployment | **Review Further** |
+| **Ongoing Enterprise Assurance** | Provider monitoring/compliance capabilities can support assurance; deployers must establish their own monitoring, evidence, incidents, change triggers, and reassessment | **Review Further** |
 
-### Interpretation
+**Interpretation:** **Public Evidence** means relevant governance information was observable in the public materials reviewed. **Review Further** means the deploying organisation should obtain additional assurance evidence or perform deployment-specific due diligence before relying on that area.
 
-**Public Evidence** means relevant information was observable in the public materials reviewed.
-
-**Review Further** means the deploying organization should obtain additional evidence or perform deployment-specific due diligence.
-
-> **Review Further does not indicate a confirmed deficiency in Anthropic's controls or practices.**
+> Certification and provider controls provide useful assurance inputs. They do not replace governance of the enterprise's specific data, identities, permissions, integrations, tools/MCP servers, actions, and operating environment.
 
 ---
 
 ## 6. What Changes With Agentic AI
 
-Traditional Generative AI governance often concentrates on:
+As AI moves from generating content toward using tools and executing actions, the governance surface expands.
 
-- Output quality.
-- Privacy.
-- Bias and fairness.
-- Hallucination.
-- Appropriate use.
-- Security.
+`IDENTITY & ACCESS → DATA BOUNDARIES → TOOL/MCP PERMISSIONS → EXECUTION BOUNDARIES → HUMAN APPROVAL → CONTAINMENT → LOGGING → CONTINUOUS ASSURANCE`
 
-Agentic capability expands the governance surface because AI may now interact with enterprise systems and take actions.
-
-### Agentic Governance Surface
-
-**Identity & Access → Data Boundaries → Tool/MCP Permissions → Execution Boundaries → Human Approval → Sandboxing/Containment → Logging → Continuous Assurance**
-
-The governance question therefore becomes:
-
-> **What is this AI authorized to do, under whose authority, within what boundaries, and what evidence demonstrates that those boundaries actually held?**
-
----
-
-## 7. Deployer Agentic AI Control Set
-
-The following are representative controls for governance illustration. They are not an exhaustive conformity checklist.
-
-| Control | Expected Enterprise Control |
+| Governance Dimension | Governance Question |
 |---|---|
-| **Agent / System Inventory** | Owner, purpose, users, autonomy, data, integrations, tools, actions, and risk documented |
-| **Identity & Least Privilege** | Human, service, and agent identities are explicit; permissions are limited to approved need |
-| **Data Boundaries** | Sensitive data access follows classification, purpose, retention, and access requirements |
-| **Tool & MCP Governance** | Approved tools, MCP servers, and connectors are allow-listed and governed |
-| **Action Boundaries** | Permitted and prohibited actions are technically and procedurally defined |
-| **Human Oversight** | Consequential actions have appropriate approval, override, or escalation |
-| **Runtime Enforcement** | Critical policies are enforced in the execution path rather than relying only on prompts |
-| **Sandboxing / Containment** | File, network, execution, and environment boundaries limit blast radius where appropriate |
-| **Logging & Traceability** | Authorization, decision, action, result, approval, and exception evidence can be reconstructed |
-| **Runtime Monitoring** | Policy violations, unusual behavior, failed actions, permission changes, security events, and drift are monitored |
-| **Incident / Kill Capability** | Unsafe or unauthorized behavior can be contained, disabled, and investigated |
-| **Material Change Review** | Changes in model, data, configuration, integrations, permissions, tools/MCP, autonomy, or operating context trigger reassessment |
+| **Identity & Authority** | Who or what is acting, and under whose authority? |
+| **Permissions** | What data, systems, files, repositories, tools, and services can the agent access? |
+| **Tools / MCP** | Which connectors, APIs, tools, and MCP servers are approved? |
+| **Execution Boundaries** | What actions can the agent execute, and what is prohibited? |
+| **Human Oversight** | Which consequential actions require approval, override, or escalation? |
+| **Containment** | How is the blast radius limited if the agent behaves unexpectedly or is compromised? |
+| **Monitoring** | Can abnormal behaviour, policy violations, failed actions, and changes be detected? |
+| **Auditability** | Can the enterprise reconstruct authorization, decision, action, approval, and outcome? |
 
 ---
 
-## 8. Agent Identity and Prompt-Injection Assurance
+## 7. Deployer Agentic AI Controls
 
-Least privilege is meaningful only when the organization knows **which principal is acting**.
+*Representative controls shown for illustration; not an exhaustive control catalogue or conformity checklist.*
 
-For each agentic deployment, document:
-
-- Invoking human identity.
-- Service or workload identity.
-- Agent identity where applicable.
-- Inherited and delegated permissions.
-- Credentials available to tools.
-- Accessible systems and data.
-- Permitted actions.
-- Approval authority.
-
-### Prompt-Injection Assurance
-
-Testing should include untrusted content entering through:
-
-- Files and documents.
-- Repositories and code.
-- Inbound email or messages.
-- Web content.
-- Tool responses.
-- Connectors.
-- APIs.
-- MCP servers.
-
-The assurance question is not merely whether prompt-injection protections exist.
-
-The stronger question is:
-
-> **Can malicious or untrusted content cause the agent to cross a permission, data, tool, or action boundary?**
+| Control | What We Expect | Assurance Focus |
+|---|---|---|
+| **System / Agent Inventory** | Owner, purpose, risk, autonomy, data, integrations, tools, actions, and regulatory role documented | Governance & accountability |
+| **Identity & Least Privilege** | Human, service, workload, and agent identities identified; permissions limited to approved need | Authority & access |
+| **Data Boundaries** | Sensitive data access follows classification, purpose, retention, and access requirements | Data governance |
+| **Tool / MCP Governance** | Approved tools, connectors, APIs, and MCP servers are explicitly governed | Tool authority |
+| **Action Boundaries** | Permitted/prohibited actions and parameters are defined and enforced | Execution control |
+| **Human Oversight** | Consequential actions have appropriate approval, override, or escalation | Human authority |
+| **Runtime Enforcement** | Critical policy is enforced in the execution path, not solely through prompts | Preventive control |
+| **Sandboxing / Containment** | Filesystem, network, execution, credential, and environment boundaries limit blast radius where appropriate | Containment |
+| **Logging & Traceability** | Authorization, decision, approval, action, result, and exceptions can be reconstructed | Evidence |
+| **Runtime Monitoring** | Policy violations, unusual behaviour, failed actions, permission changes, security events, and drift are monitored | Detective control |
+| **Incident / Kill Capability** | Unsafe or unauthorised behaviour can be contained, disabled, investigated, and remediated | Response |
+| **Material Change Review** | Model, data, prompt, configuration, integration, permission, tool/MCP, autonomy, and purpose changes trigger reassessment where material | Change assurance |
 
 ---
 
-## 9. Control Presence Is Not Control Effectiveness
+## 8. Key Considerations for Provider and Deployer
 
-A documented control answers:
+| Consideration | Provider Assurance Input | Deployer Governance Requirement | Priority |
+|---|---|---|---|
+| **Enterprise Identity & Access** | Enterprise identity/admin capabilities | Map users, service/agent identities, delegated authority, credentials, and least privilege | **High** |
+| **Tools / MCP / Integrations** | Connector, MCP, permission, and sandboxing capabilities | Approve specific tools/MCP servers, validate scope, and test unauthorized paths | **High** |
+| **Consequential Actions** | Platform capabilities can support controlled execution | Define action thresholds, boundaries, approval requirements, and evidence | **High** |
+| **Prompt Injection / Untrusted Content** | Provider safeguards and containment capabilities | Test files, repositories, email/messages, web content, tool responses, APIs, connectors, and MCP against permission/action boundaries | **High** |
+| **Control Effectiveness** | Provider controls establish a foundation | Demonstrate design, operating, and action-boundary effectiveness in the enterprise deployment | **High** |
+| **Runtime Monitoring & Incidents** | Compliance/observability capabilities can provide inputs | Establish monitoring, alerts, containment, investigation, remediation, and reassessment | **High** |
+| **Regulatory Role Determination** | Provider documentation can inform classification | Reassess intended use and regulatory role at intake and material change | **High where applicable** |
+| **Provider / Model Changes** | Provider releases and documentation | Assess materiality; perform targeted regression/control testing and reapproval where needed | **Medium** |
+| **Evidence Freshness** | Provider assurance can be inherited as an input | Determine whether current evidence still supports the enterprise's assurance decision | **Medium** |
 
-> **Does the control exist?**
-
-Assurance must also answer:
-
-> **Does the control operate as intended?**
-
-For example:
-
-- A permission boundary may exist but be overly broad.
-- Human approval may exist but be bypassable.
-- A kill switch may exist but fail to contain credentials or active sessions.
-- Logging may exist but omit authorization or action outcome.
-- A tool allow-list may exist while an MCP server exposes broader capabilities than expected.
-
-Therefore, this case distinguishes three levels of control assurance.
-
-### 1. Design Effectiveness
-
-**Is the control appropriately designed for the risk?**
-
-### 2. Operating Effectiveness
-
-**Does the control consistently operate as designed?**
-
-### 3. Action-Boundary Effectiveness
-
-**Did the control actually hold when the consequential action was attempted or executed?**
+**Priority** means deployer governance action priority, not a risk rating assigned to Anthropic.
 
 ---
 
-## 10. Consequential Actions
+## 9. Control Presence vs. Control Effectiveness
 
-A **consequential action** is an AI-enabled action that could materially affect:
+A control being documented or configured does not demonstrate that it works when needed.
 
-- A person or customer.
-- A financial transaction.
-- An enterprise system.
-- Sensitive data.
-- Security posture.
-- A regulatory obligation.
-- An important business process.
-
-Examples include:
-
-- Deploying code to production.
-- Changing production configuration.
-- Sending external communications.
-- Updating customer or account records.
-- Granting or changing access.
-- Executing financial actions.
-- Deleting or moving sensitive data.
-- Invoking privileged tools.
-
-> **Higher consequence should produce stronger authorization, testing, evidence, monitoring, and human oversight.**
-
----
-
-## 11. Two Assurance Loops
-
-Agentic AI requires assurance at both the **system level** and the **individual action level**.
-
-### Deployment Assurance — System Level
-
-**MONITOR → DETECT → RESPOND → REMEDIATE → REASSESS**
-
-This loop asks whether the deployed system remains governed as conditions change.
-
-Monitor:
-
-- Model and version changes.
-- Data and configuration.
-- Integrations.
-- Permissions.
-- Tools and MCP servers.
-- Autonomy.
-- Incidents.
-- Policy violations.
-- Security events.
-- Performance and behavioral drift.
-- Operating context.
-
-### Action Assurance — Action Level
-
-**AUTHORITY → PERMISSIONS → CONDITIONS → BOUNDARIES → APPROVAL → EXECUTE / BLOCK → EVIDENCE**
-
-This loop asks whether the specific action should be allowed **at the point of execution**.
-
-For a consequential action, determine:
-
-1. Who or what requested the action?
-2. Does that principal have authority?
-3. Are current permissions sufficient and appropriate?
-4. Are relevant conditions still satisfied?
-5. Is the action inside approved boundaries?
-6. Is human approval required?
-7. Was the action executed exactly as authorized?
-8. Was sufficient evidence captured?
-
----
-
-## 12. Evidence at the Action Boundary
-
-For consequential actions, the evidence trail should allow an independent reviewer to reconstruct:
-
-**Authorization → Context → Decision → Approval → Action → Outcome → Exception / Override**
-
-Useful evidence may include:
-
-- Identity and role.
-- Timestamp.
-- Policy version.
-- Model/version.
-- Prompt or instruction context where appropriate.
-- Tool or MCP invocation.
-- Permission decision.
-- Relevant parameters.
-- Approval identity.
-- Execution result.
-- System response.
-- Exception or override.
-- Incident reference.
-- Remediation or reassessment outcome.
+| Assurance Level | Question | Example Evidence |
+|---|---|---|
+| **Control Presence** | Does the required control exist? | Approval workflow, tool allow-list, sandbox, logging configuration |
+| **Design Effectiveness** | Is the control appropriately designed for the identified risk? | Defined thresholds, appropriate approver, scoped permissions, enforced boundaries |
+| **Operating Effectiveness** | Does the control consistently operate as designed? | Test results, sampled events, blocked attempts, monitoring records |
+| **Action-Boundary Effectiveness** | Did the control actually hold when the consequential action was attempted or executed? | Authorization decision, permission check, approval, execution result, audit evidence |
 
 > **For Agentic AI, control presence is not enough. Assurance requires evidence that the control actually held at the action boundary.**
 
 ---
 
-## 13. Example Control-Effectiveness Test
+## 10. Agent Identity & Prompt-Injection Assurance
 
-### Scenario
+Least privilege is meaningful only when the organisation knows **which principal is acting and what authority it carries**.
 
-A Claude Code-enabled engineering workflow may prepare code changes but requires authorized human approval before a production deployment.
-
-### Control Objective
-
-**Prevent unauthorized AI-assisted production deployment.**
-
-### Test Procedure
-
-1. Attempt production deployment without approval.  
-   **Expected:** Blocked.
-
-2. Attempt approval using an unauthorized identity.  
-   **Expected:** Rejected.
-
-3. Obtain approval from an authorized approver.  
-   **Expected:** Accepted.
-
-4. Verify the deployed artifact or action matches what was approved.
-
-5. Verify identity, approval, execution, outcome, and exceptions are logged.
-
-6. Verify a prompt-injection attempt cannot bypass the deployment boundary.
-
-7. Verify containment or rollback can be initiated if the action produces an unsafe result.
-
-### Assurance Evidence
-
-The control is not considered effective merely because an approval feature exists.
-
-Evidence should demonstrate that:
-
-- Unauthorized paths were blocked.
-- Unauthorized approvers were rejected.
-- The authorized path operated correctly.
-- The executed action matched the approved action.
-- Required evidence was captured.
+| Assurance Area | What to Verify |
+|---|---|
+| **Human Identity** | Who initiated or authorised the task? |
+| **Service / Workload Identity** | Which technical identity executes the workflow? |
+| **Agent Identity** | Is the agent distinguishable and attributable where applicable? |
+| **Delegated Authority** | What authority has been delegated and by whom? |
+| **Credentials** | What credentials/tokens are available to the workflow and tools? |
+| **Permissions** | What systems, data, repositories, tools, APIs, and MCP servers can be reached? |
+| **Prompt-Injection Testing** | Can untrusted content from files, code, messages, web content, tools, connectors, APIs, or MCP cause the agent to cross a permission, data, tool, or action boundary? |
+| **Evidence** | Can identity, authorization, attempted action, control decision, and outcome be reconstructed? |
 
 ---
 
-## 14. Material Change and Vendor-Side Change Triggers
+## 11. Consequential Actions & Action Assurance
 
-A previously favorable assurance conclusion should **not** be treated as permanent.
+A **consequential action** is an AI-enabled action that could materially affect a person/customer, financial transaction, enterprise system, sensitive data, security posture, regulatory obligation, or important business process.
 
-Trigger reassessment when there is a material change in:
+Examples include production code deployment, privileged configuration changes, external communications, customer/account updates, access changes, financial actions, sensitive-data movement, or privileged tool execution.
 
-- Provider model or model version.
-- Model behavior or capability.
-- Enterprise data.
-- System prompt or instructions.
-- Configuration.
-- Connector or integration.
-- Tool or MCP server.
-- Permissions or identity model.
-- Autonomy level.
-- Action scope.
-- Human-approval design.
-- Regulatory classification.
-- Business purpose.
-- Operating environment.
-- Significant incident or failure pattern.
+| Action Assurance Check | Question |
+|---|---|
+| **Authority** | Is the agent or requesting principal authorised to perform this class of action? |
+| **Permissions** | Are the current permissions valid and appropriately scoped? |
+| **Conditions** | Are relevant risk, policy, data, business, and operational conditions satisfied? |
+| **Boundaries** | Is the requested action within approved tools, parameters, systems, and thresholds? |
+| **Approval** | Is human approval required, and was it obtained from an authorised approver? |
+| **Execute / Block** | Did the system execute only the authorised action, or block the prohibited path? |
+| **Evidence** | Can the authorization, decision, approval, action, outcome, and exception be reconstructed? |
 
-### Vendor-Side Model Change
+---
 
-A provider-side model update should be evaluated for deployment impact.
+## 12. Two Assurance Loops
 
-Where material:
+| Deployment Assurance — System Level | Action Assurance — Action Level |
+|---|---|
+| **MONITOR → DETECT → RESPOND → REMEDIATE → REASSESS** | **AUTHORITY → PERMISSIONS → CONDITIONS → BOUNDARIES → APPROVAL → EXECUTE / BLOCK → EVIDENCE** |
+| Determines whether the deployed system remains governed as models, data, configuration, integrations, permissions, tools, autonomy, incidents, and operating conditions change. | Determines whether a specific consequential action remains authorised and controlled at the point of execution. |
 
-**Provider Change → Impact Assessment → Targeted Regression / Control-Effectiveness Testing → Approval → Release / Continued Use → Monitoring**
+These loops work together: **deployment assurance evaluates the system over time; action assurance evaluates whether the control held for the specific action.**
 
-Provider assurance evidence remains useful, but the enterprise should determine whether its **own assurance claim remains valid** after the change.
+---
+
+## 13. Evidence at the Action Boundary
+
+For consequential actions, evidence should allow an independent reviewer to reconstruct what happened.
+
+| Evidence Element | Example |
+|---|---|
+| **Authorization** | Identity, role, delegated authority |
+| **Context** | Relevant system state, policy version, model/version, data/tool context |
+| **Decision** | Permission/policy decision and applicable parameters |
+| **Approval** | Approver identity, timestamp, scope, conditions |
+| **Action** | Tool/API/MCP invocation or execution performed |
+| **Outcome** | Success, failure, blocked action, resulting change |
+| **Exception / Override** | Override authority, reason, incident/escalation reference |
+| **Follow-Up** | Remediation, control change, reassessment outcome |
+
+**Evidence chain:**  
+`AUTHORIZATION → CONTEXT → DECISION → APPROVAL → ACTION → OUTCOME → EXCEPTION / OVERRIDE → REASSESSMENT`
+
+---
+
+## 14. Material Change & Vendor-Side Change Review
+
+A favorable assurance conclusion should not be treated as permanent.
+
+| Change Trigger | Governance Response |
+|---|---|
+| **Provider Model / Version Change** | Assess materiality and deployment impact |
+| **Capability / Behaviour Change** | Reassess affected risks and controls |
+| **Enterprise Data Change** | Revalidate classification, access, privacy, and data boundaries |
+| **Prompt / Instruction Change** | Version, test, approve, and monitor where material |
+| **Configuration Change** | Revalidate control design and permissions |
+| **New Connector / API / MCP / Tool** | Perform due diligence, approve scope, and test boundaries |
+| **Permission / Identity Change** | Reassess least privilege and delegated authority |
+| **Autonomy / Action-Scope Increase** | Reassess risk tier, oversight, action controls, and evidence |
+| **Business-Purpose / Regulatory-Role Change** | Reclassify use case and applicable obligations |
+| **Significant Incident / Failure Pattern** | Contain, investigate, remediate, retest, and reassess |
+
+**Vendor/model change path:**  
+`PROVIDER CHANGE → IMPACT ASSESSMENT → TARGETED REGRESSION / CONTROL TESTING → APPROVAL → CONTINUED USE / RELEASE → MONITORING`
 
 ---
 
 ## 15. Evidence-Sensitive Assurance Decision
 
-Governance should produce a decision based on **current evidence at the relevant decision point**.
-
-### Recommended Decision States
+Governance should make decisions using **current evidence at the relevant decision point**.
 
 | Decision | Meaning |
 |---|---|
-| **PROCEED** | Evidence supports deployment or continued operation |
-| **PROCEED WITH CONDITIONS** | Operation is permitted subject to defined controls, remediation, monitoring, or time-bound conditions |
-| **CHANGE** | Design, configuration, or control changes are required before the assurance claim can be supported |
-| **STOP** | Risk or evidence is insufficient for the proposed or continued activity |
+| **PROCEED** | Current evidence supports deployment or continued operation |
+| **PROCEED WITH CONDITIONS** | Operation is permitted subject to defined remediation, controls, monitoring, or time-bound conditions |
+| **CHANGE** | Design, configuration, permission, integration, or control changes are required before the assurance claim can be supported |
+| **STOP** | Risk is unacceptable or evidence is insufficient to support the proposed or continued activity |
 
-A previously favorable decision can be **downgraded** when:
+A previously favorable assessment can be downgraded when monitoring, incidents, provider changes, configuration, integrations, permissions, autonomy, business purpose, or operating conditions change.
 
-- Monitoring identifies new risks.
-- Incidents occur.
-- Provider capabilities change.
-- Models or versions change.
-- Configuration changes.
-- New integrations are introduced.
-- Permissions expand.
-- Autonomy increases.
-- Operating conditions change.
-
-> **Governance must remain evidence-sensitive and revisable rather than becoming a one-time framework exercise.**
+> **Governance is operational and revisable. The question is not whether the system passed governance once, but whether current evidence still supports the current decision.**
 
 ---
 
-## 16. Provider and Deployer Assurance Model
+## 16. Example Control-Effectiveness Test
 
-### Provider Evidence Can Support
+**Scenario:** Claude Code assists an engineering workflow that can prepare code changes, but production deployment requires authorised human approval.
 
-- Vendor due diligence.
-- Baseline security and governance assessment.
-- Certification review.
-- Understanding available platform controls.
-- Procurement decisions.
-- Inherited-control analysis.
+| Test Step | Expected Result |
+|---|---|
+| Attempt production deployment without required approval | **Blocked** |
+| Attempt approval using an unauthorised identity | **Rejected** |
+| Obtain approval from an authorised approver | **Accepted** |
+| Compare approved artifact/action with executed artifact/action | **Exact authorised scope maintained** |
+| Attempt prompt-injection/bypass path | **Permission/action boundary remains enforced** |
+| Review logs | **Identity, authorization, approval, execution, outcome, and exceptions reconstructable** |
+| Test containment/rollback | **Unsafe result can be contained and remediated** |
 
-### Deployer Evidence Must Support
-
-- Deployment approval.
-- Use-case risk classification.
-- Identity and permission design.
-- Data and integration governance.
-- Tool/MCP authorization.
-- Action boundaries.
-- Control effectiveness.
-- Human oversight.
-- Runtime monitoring.
-- Incident response.
-- Continued operation.
-
-> **Inherited evidence should be explicitly identified. Deployment-specific evidence should be separately demonstrated.**
+The control is not considered effective merely because an approval feature exists. Evidence must demonstrate that **unauthorised paths were blocked and the authorised path operated as designed**.
 
 ---
 
-## 17. Key Deployer Considerations
+## 17. Governance Operating Model
 
-| Consideration | Priority | Governance Response |
-|---|---|---|
-| **Tool/MCP and Enterprise-Data Governance** | High | Inventory and approve tools, connectors, MCP servers, data access, and permissions |
-| **Consequential Action Controls** | High | Establish explicit action boundaries, authorization, approval, and evidence requirements |
-| **Control-Effectiveness Testing** | High | Test blocked paths, authorized paths, bypass scenarios, and operating effectiveness |
-| **Agent Identity and Prompt Injection** | High | Establish principal identity, least privilege, trust boundaries, and adversarial tests |
-| **Runtime Monitoring and Incident Response** | High | Monitor behavior and control events; maintain containment and escalation |
-| **Regulatory Role Determination** | High where applicable | Reassess role and use-case classification at intake and material change |
-| **Provider / Model Changes** | Medium | Assess materiality and trigger targeted re-testing and reapproval |
-| **Assurance Evidence Freshness** | Medium | Define evidence validity, review cadence, and event-driven reassessment |
+Effective AI governance extends beyond AI Governance or Program Management alone.
 
-> **Priority refers to deployer governance action priority, not a risk rating assigned to Anthropic.**
-
----
-
-## 18. Governance Operating Model
-
-Effective AI governance is **not owned by Program Management alone**.
-
-| Function | Example Responsibility |
+| Function | Primary Responsibility |
 |---|---|
 | **Business / Product Owner** | Purpose, value, business accountability, acceptable use |
-| **AI Governance** | Classification, governance requirements, decision gates, evidence expectations |
-| **Engineering** | Technical design, integration, execution boundaries, remediation |
+| **AI Governance** | Classification, governance requirements, controls, decision gates, evidence expectations |
+| **Engineering** | Architecture, integration, execution boundaries, technical remediation |
 | **Security / IAM** | Identity, least privilege, credentials, threat controls, containment |
 | **Data Governance** | Data classification, access, lineage, retention |
 | **Privacy / Legal / Compliance** | Privacy, contractual, regulatory, and legal requirements |
 | **Operations** | Runtime procedures, monitoring, support, incident handling |
 | **Risk / Assurance** | Independent challenge, control testing, assurance conclusions |
 | **Internal Audit** | Independent assurance according to audit mandate |
-| **Program / Delivery Management** | Owners, milestones, dependencies, decision forums, release readiness, evidence coordination, escalation |
-
-Governance requirements become operational only when these functions work through a common lifecycle.
+| **Program / Delivery Management** | Owners, milestones, dependencies, governance forums, release readiness, evidence coordination, escalation |
 
 ---
 
-## 19. Delivery and Governance Gates
+## 18. Delivery & Governance Gates
 
-### Gate 1 — Intake
-
-Evaluate:
-
-- Purpose.
-- Owner.
-- Users.
-- Data.
-- Regulatory role.
-- Risk.
-- Provider.
-- Agentic capability.
-
-### Gate 2 — Design
-
-Evaluate:
-
-- Architecture.
-- Identities.
-- Permissions.
-- Tools and MCP.
-- Data boundaries.
-- Action boundaries.
-- Human oversight.
-
-### Gate 3 — Pre-Production Validation
-
-Evaluate:
-
-- Control design.
-- Control-effectiveness testing.
-- Prompt-injection and adversarial scenarios.
-- Unauthorized paths.
-- Human approval.
-- Evidence completeness.
-
-### Gate 4 — Production Readiness
-
-Evaluate:
-
-- Residual risk.
-- Approvals.
-- Monitoring.
-- Incident response.
-- Rollback and kill capability.
-- Ownership.
-- Operational readiness.
-
-### Gate 5 — Ongoing Assurance
-
-Evaluate:
-
-- Monitoring evidence.
-- Incidents.
-- Material changes.
-- Vendor/model updates.
-- Control re-testing.
-- Evidence freshness.
-- Reassessment.
-
-At each relevant gate, current evidence should support a:
-
-**PROCEED / PROCEED WITH CONDITIONS / CHANGE / STOP**
-
-decision.
+| Gate | Governance Focus | Decision Evidence |
+|---|---|---|
+| **1 — Intake** | Purpose, owner, users, data, provider, regulatory role, risk, agentic capability | Initial classification and ownership |
+| **2 — Design** | Architecture, identities, permissions, data, tools/MCP, action boundaries, oversight | Control design and accountability |
+| **3 — Pre-Production Validation** | Control effectiveness, adversarial/prompt-injection testing, blocked paths, evidence | Validation results and residual risk |
+| **4 — Production Readiness** | Approvals, monitoring, incidents, rollback/kill capability, operations | Release-readiness evidence |
+| **5 — Ongoing Assurance** | Monitoring, incidents, material changes, vendor/model updates, evidence freshness, retesting | Continue / condition / change / stop |
 
 ---
 
-## 20. Overall Assessment
+## 19. Overall Assessment
 
-Anthropic's public materials provide meaningful provider-level assurance inputs, including:
+**Posture:** Anthropic's public materials provide meaningful provider-level assurance inputs, including enterprise administration/security controls, Claude Code permissions and sandboxing, model/safety practices, compliance capabilities, and ISO/IEC 42001 certification of its AI management system.
 
-- Enterprise administration and security controls.
-- Claude Code permissions and sandboxing.
-- Safety and evaluation practices.
-- Public governance documentation.
-- ISO/IEC 42001 certification of its AI management system.
+**Key consideration:** Provider assurance does not establish that every enterprise Claude deployment is adequately governed. Enterprise assurance depends on the specific **purpose, data, identity, permissions, tools/MCP, integrations, autonomy, actions, human oversight, runtime controls, and evidence**.
 
-However:
+**Assessment outcome:** The more Claude is enabled to access enterprise systems and take actions, the more governance must move from reviewing documented controls toward **testing operating effectiveness and demonstrating that the right control held at the consequential action boundary**.
 
-> **Provider assurance does not establish that every enterprise Claude deployment is adequately governed.**
-
-Enterprise assurance depends on the specific deployment:
-
-**Purpose + Data + Identity + Permissions + Tools/MCP + Integrations + Autonomy + Actions + Human Oversight + Runtime Controls + Evidence**
-
-The more Claude is enabled to **act**, the more governance must move from reviewing capabilities and documented controls toward **testing operating effectiveness and proving what happened at the action boundary**.
+**Practical implication:** Use provider assurance as an input. Make the enterprise assurance decision using current deployment and operational evidence.
 
 ---
 
-## 21. Program and Delivery Management Perspective
+## 20. Practitioner Takeaway
 
-For AI Program and Delivery Management, execution means translating governance requirements into delivery:
+As enterprise AI gains access to data, code, tools, connectors, MCP servers, and external systems, governance must control not only **what the AI can generate**, but also **what it can access, change, and execute**.
 
-**Governance Requirement → Control Owner → Delivery Requirement → Dependencies → Implementation → Testing → Evidence → Approval → Release Readiness → Production Monitoring → Remediation / Reassessment**
+For AI Governance leaders, the progression is:
 
-Program Management coordinates the operating model.
+**Provider Assurance → Deployment Governance → Control Effectiveness → Action Assurance → Evidence → Decision → Reassessment**
 
-It does **not** replace the accountability of:
+For AI Program and Delivery Managers, this means translating governance requirements into **clear ownership, control owners, milestones, dependencies, validation activities, approval gates, release readiness, evidence, escalation paths, and ongoing assurance**, while coordinating with Engineering, Security, Data, Privacy, Legal/Compliance, Risk, Operations, and Internal Audit.
 
-- Engineering.
-- Security.
-- Privacy.
-- Legal and Compliance.
-- Risk.
-- Data Governance.
-- Operations.
-- AI Governance.
+The practical test is no longer simply:
 
-This makes governance part of **delivery and operations**, rather than a separate documentation exercise.
+> **“What controls exist?”**
+
+It becomes:
+
+> **“What current evidence shows the control worked at the decision or action boundary, and is that evidence sufficient to proceed, proceed with conditions, change, or stop?”**
 
 ---
 
-## 22. Practitioner Takeaway
+## 21. Portfolio Progression
 
-Three principles summarize this case:
+| Case Study | Governance Progression |
+|---|---|
+| **Use Case 07 — Microsoft 365 Copilot** | Govern the enterprise AI **use case** |
+| **Use Case 08 — Salesforce Agentforce** | Govern the **agent, autonomy, permissions, and actions** |
+| **Use Case 09 — Anthropic Claude Enterprise + Claude Code** | Test **control effectiveness** and demonstrate that controls held at the **action boundary** |
 
-> **1. Provider assurance is the foundation, not the final deployment assurance claim.**
-
-> **2. Control presence is not control effectiveness.**
-
-> **3. The strongest assurance evidence shows that the right control held for the right action at the right decision point.**
-
-The governance objective is therefore not simply to ask:
-
-> **“Do we have controls?”**
-
-It is to determine:
-
-> **“Do we have enough current evidence to proceed, proceed with conditions, change, or stop?”**
+`FRAMEWORK ALIGNMENT → OPERATIONAL GOVERNANCE → CONTROL EFFECTIVENESS → EVIDENCE-BASED ASSURANCE`
 
 ---
 
-## 23. Portfolio Progression
+## 22. Public Sources
 
-This case intentionally extends the earlier assessment series.
+**Primary Anthropic sources:**
 
-### Use Case 07 — Microsoft 365 Copilot
+- [Claude Code Sandboxing](https://www.anthropic.com/engineering/claude-code-sandboxing)
+- [Claude Code and Admin Controls for Business Plans](https://www.anthropic.com/news/claude-code-on-team-and-enterprise)
+- [Anthropic ISO/IEC 42001 Certification](https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai)
+- [Anthropic Transparency Hub](https://www.anthropic.com/transparency/voluntary-commitments)
+- [Anthropic Privacy Center — Certifications](https://privacy.anthropic.com/en/articles/10015870-what-certifications-has-anthropic-obtained)
+- [Anthropic — Framework for Safe and Trustworthy Agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents)
 
-**Govern the enterprise AI use case.**
+**Regulatory and governance sources:**
 
-Platform assurance must be translated into governance of the enterprise's specific deployment and use case.
-
-↓
-
-### Use Case 08 — Salesforce Agentforce
-
-**Govern the agent, autonomy, permissions, and actions.**
-
-Action-taking capability requires governance to move from output oversight toward action oversight.
-
-↓
-
-### Use Case 09 — Anthropic Claude Enterprise + Claude Code
-
-**Test control effectiveness and demonstrate that controls held at the action boundary.**
-
-This moves the portfolio from:
-
-**Framework Alignment → Operational Governance → Control Effectiveness → Evidence-Based Assurance**
+- [European Union — Regulation (EU) 2024/1689 (AI Act)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [ISO/IEC 42001:2023 — AI Management Systems](https://www.iso.org/standard/81230.html)
 
 ---
 
-## 24. Public Sources
+## 23. Sources & Limitations
 
-Primary public sources reviewed include:
+**Primary:** Anthropic public documentation covering Claude Enterprise, Claude Code, permissions and sandboxing, enterprise administration, safety/evaluation practices, transparency, and ISO/IEC 42001 certification · European Union AI Act · NIST AI RMF · ISO/IEC 42001 public information.
 
-### Anthropic
+Sources are prioritised in this order: **(1) Anthropic official/public materials, (2) European Commission/EUR-Lex, (3) NIST official sources, and (4) ISO public information where appropriate.** Conclusions about Anthropic are not drawn from competitor or third-party commercial analysis.
 
-- **Claude Code Sandboxing**  
-  https://www.anthropic.com/engineering/claude-code-sandboxing
+This assessment relies solely on publicly available information. It does not include confidential Anthropic documentation, customer-specific architecture or configuration, private audit reports, deployment-specific logs, interviews with control owners, operating-effectiveness samples from a real enterprise deployment, or independent technical testing of a specific customer implementation.
 
-- **Claude Code on Team and Enterprise**  
-  https://www.anthropic.com/news/claude-code-on-team-and-enterprise
+**Independent educational portfolio assessment** based solely on publicly available information. Not affiliated with, commissioned by, or reviewed by Anthropic. This is not a formal audit, certification, legal opinion, or compliance determination. **Review Further** identifies areas where additional deployer due diligence or non-public evidence may be appropriate; it does not indicate a confirmed deficiency in Anthropic's controls or practices.
 
-- **Anthropic ISO/IEC 42001 Certification**  
-  https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai
-
-- **Anthropic Transparency / Voluntary Commitments**  
-  https://www.anthropic.com/transparency/voluntary-commitments
-
-- **Anthropic Privacy Center — Certifications**  
-  https://privacy.anthropic.com/en/articles/10015870-what-certifications-has-anthropic-obtained
-
-### Regulatory and Governance Frameworks
-
-- **European Union — Regulation (EU) 2024/1689, Artificial Intelligence Act**  
-  https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-
-- **NIST AI Risk Management Framework**  
-  https://www.nist.gov/itl/ai-risk-management-framework
-
-- **ISO/IEC 42001:2023 — Artificial Intelligence Management Systems**  
-  https://www.iso.org/standard/81230.html
+*Time-sensitive facts, including certification status, product capabilities, model integrations, and regulatory requirements, should be independently re-verified before reliance in a real advisory, procurement, compliance, or deployment decision.*
 
 ---
-
-## 25. Sources and Limitations
-
-Sources are prioritized in the following order:
-
-1. Anthropic official/public materials.
-2. European Commission and EUR-Lex.
-3. NIST official sources.
-4. ISO public information where appropriate.
-
-This case relies solely on publicly available information.
-
-It does **not** include:
-
-- Confidential Anthropic documentation.
-- Customer-specific architecture.
-- Enterprise tenant configuration.
-- Private audit reports.
-- Deployment-specific logs.
-- Interviews with control owners.
-- Operating-effectiveness samples from a real deployment.
-- Independent technical testing of an actual enterprise Claude implementation.
-
-Accordingly, the assessment distinguishes between:
-
-**Public Provider Evidence**
-
-and
-
-**Deployment Evidence That an Enterprise Must Establish Independently**
-
-Time-sensitive facts, including certification status, product capabilities, model integrations, and regulatory requirements, should be independently re-verified before reliance in a real advisory, procurement, compliance, or deployment decision.
-
----
-
-## Disclaimer
-
-> **Independent educational portfolio assessment based solely on publicly available information. Not affiliated with, commissioned by, or reviewed by Anthropic. This is not a formal audit, certification, legal opinion, or compliance determination. “Review Further” identifies areas where additional deployer due diligence or non-public evidence may be appropriate; it does not indicate a confirmed deficiency in Anthropic's controls or practices.**
-
----
-
-## Final Governance Principle
-
-### **Govern AI. Control Actions. Test Effectiveness. Prove Assurance.**
 
 *Karun Mehta · AIGP (AI Governance Professional)*
