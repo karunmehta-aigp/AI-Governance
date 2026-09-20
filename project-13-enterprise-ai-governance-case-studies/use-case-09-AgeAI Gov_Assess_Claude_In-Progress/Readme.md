@@ -1,4 +1,4 @@
-# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code - In-Progress
+# Use Case 09: Agentic AI Governance Assessment — Anthropic Claude Enterprise + Claude Code ** In-Progress
 
 **Type:** Independent AI Governance Assessment (not a formal audit or compliance opinion)
 
@@ -75,7 +75,7 @@ This is a **focused public-evidence review** of governance areas relevant to Cla
 |---|---|---|
 | **AI Policy & Leadership** | Public governance, safety, usage, and Responsible Scaling Policy materials | **Public Evidence** |
 | **AI Management System / Independent Certification** | Public ISO/IEC 42001:2023 certification information for Anthropic's AI management system | **Public Evidence** |
-| **Enterprise Administration & Security** | Public information on SSO/SCIM, roles/permissions, audit/compliance capabilities, retention, and enterprise controls | **Public Evidence** |
+| **Enterprise Administration & Security** | Public information on identity, roles/permissions, audit/compliance capabilities, retention, and enterprise controls | **Public Evidence** |
 | **Deployment-Specific Risk Assessment** | Provider evidence can inform assessment, but the enterprise's intended use, data, actions, impacts, and operating context require deployment-specific evidence | **Review Further** |
 | **Tool / MCP / Integration Governance** | Public controls exist for connectors, MCP permissions, tool permissions, file restrictions, and sandboxing; enterprise-specific configurations require verification | **Review Further** |
 | **Deployment Control Effectiveness** | Public provider controls do not establish that the enterprise's configured controls operate effectively in its deployment | **Review Further** |
@@ -106,24 +106,26 @@ As AI moves from generating content toward using tools and executing actions, th
 
 ---
 
-## 7. Deployer Agentic AI Controls
+## 7. Deployer Agentic AI Controls & Framework Mapping
 
-*Representative controls shown for illustration; not an exhaustive control catalogue or conformity checklist.*
+*Representative controls shown for illustration. The mappings below are practical portfolio crosswalks, not official equivalence determinations or a complete regulatory/conformity mapping.*
 
-| Control | What We Expect | Assurance Focus |
-|---|---|---|
-| **System / Agent Inventory** | Owner, purpose, risk, autonomy, data, integrations, tools, actions, and regulatory role documented | Governance & accountability |
-| **Identity & Least Privilege** | Human, service, workload, and agent identities identified; permissions limited to approved need | Authority & access |
-| **Data Boundaries** | Sensitive data access follows classification, purpose, retention, and access requirements | Data governance |
-| **Tool / MCP Governance** | Approved tools, connectors, APIs, and MCP servers are explicitly governed | Tool authority |
-| **Action Boundaries** | Permitted/prohibited actions and parameters are defined and enforced | Execution control |
-| **Human Oversight** | Consequential actions have appropriate approval, override, or escalation | Human authority |
-| **Runtime Enforcement** | Critical policy is enforced in the execution path, not solely through prompts | Preventive control |
-| **Sandboxing / Containment** | Filesystem, network, execution, credential, and environment boundaries limit blast radius where appropriate | Containment |
-| **Logging & Traceability** | Authorization, decision, approval, action, result, and exceptions can be reconstructed | Evidence |
-| **Runtime Monitoring** | Policy violations, unusual behaviour, failed actions, permission changes, security events, and drift are monitored | Detective control |
-| **Incident / Kill Capability** | Unsafe or unauthorised behaviour can be contained, disabled, investigated, and remediated | Response |
-| **Material Change Review** | Model, data, prompt, configuration, integration, permission, tool/MCP, autonomy, and purpose changes trigger reassessment where material | Change assurance |
+| Control | What We Expect | NIST AI RMF | ISO/IEC 42001 | EU AI Act — Where Applicable |
+|---|---|---|---|---|
+| **System / Agent Inventory** | Owner, purpose, risk, autonomy, data, integrations, tools, actions, and regulatory role documented | **GOVERN / MAP** | **Clauses 4, 6 & 8** — context, planning, operation | **Arts. 6, 9, 26** — classification, risk management and deployer responsibilities for applicable high-risk use |
+| **Identity & Least Privilege** | Human, service, workload, and agent identities identified; permissions limited to approved need | **GOVERN / MAP / MANAGE** | **Clauses 7 & 8** — support and operational controls | **Arts. 14, 15, 26** — oversight, robustness/security and deployer controls where applicable |
+| **Data Boundaries** | Sensitive data access follows classification, purpose, retention, quality, and access requirements | **MAP / MEASURE / MANAGE** | **Clauses 6 & 8 + Annex A data controls** | **Art. 10** for applicable high-risk AI data/data-governance requirements; other privacy law may separately apply |
+| **Tool / MCP Governance** | Approved tools, connectors, APIs, and MCP servers are explicitly governed | **GOVERN / MAP / MANAGE** | **Clauses 6 & 8** — risk planning and operational control | **Arts. 9, 15, 26** where the integration affects an applicable high-risk deployment |
+| **Action Boundaries** | Permitted/prohibited actions and parameters are defined and technically enforced | **GOVERN / MAP / MANAGE** | **Clauses 6 & 8** | **Arts. 9, 14, 15, 26** where applicable |
+| **Human Oversight** | Consequential actions have appropriate approval, override, or escalation | **GOVERN / MAP / MANAGE** | **Clauses 5, 6 & 8** | **Art. 14** and relevant **Art. 26** deployer obligations for applicable high-risk systems |
+| **Runtime Enforcement** | Critical policy is enforced in the execution path, not solely through prompts | **MEASURE / MANAGE** | **Clauses 8 & 9** — operation and performance evaluation | **Arts. 9, 15, 26** where applicable |
+| **Sandboxing / Containment** | Filesystem, network, execution, credential, and environment boundaries limit blast radius where appropriate | **MAP / MEASURE / MANAGE** | **Clauses 6, 8 & 9** | **Art. 15** robustness, accuracy and cybersecurity requirements for applicable high-risk systems |
+| **Logging & Traceability** | Authorization, decision, approval, action, result, and exceptions can be reconstructed | **GOVERN / MEASURE / MANAGE** | **Clauses 7, 8 & 9** — documented information, operation and evaluation | **Arts. 12 & 26** where logging/deployer obligations apply |
+| **Runtime Monitoring** | Policy violations, unusual behaviour, failed actions, permission changes, security events, and drift are monitored | **MEASURE / MANAGE** | **Clauses 9 & 10** — performance evaluation and improvement | **Arts. 9, 26 and 72** where applicable |
+| **Incident / Kill Capability** | Unsafe or unauthorised behaviour can be contained, disabled, investigated, and remediated | **MANAGE** | **Clauses 8, 9 & 10** | **Arts. 26, 72 and 73** where applicable |
+| **Material Change Review** | Model, data, prompt, configuration, integration, permission, tool/MCP, autonomy, or purpose changes trigger reassessment where material | **GOVERN / MAP / MEASURE / MANAGE** | **Clauses 6, 8, 9 & 10** | **Art. 25** role implications in specified circumstances; reassess classification and obligations when system or intended purpose materially changes |
+
+> **Crosswalk principle:** Framework alignment does not itself demonstrate control effectiveness. The enterprise still needs evidence that the mapped control is appropriately designed, operating effectively, and holding at the relevant decision or action boundary.
 
 ---
 
@@ -134,7 +136,7 @@ As AI moves from generating content toward using tools and executing actions, th
 | **Enterprise Identity & Access** | Enterprise identity/admin capabilities | Map users, service/agent identities, delegated authority, credentials, and least privilege | **High** |
 | **Tools / MCP / Integrations** | Connector, MCP, permission, and sandboxing capabilities | Approve specific tools/MCP servers, validate scope, and test unauthorized paths | **High** |
 | **Consequential Actions** | Platform capabilities can support controlled execution | Define action thresholds, boundaries, approval requirements, and evidence | **High** |
-| **Prompt Injection / Untrusted Content** | Provider safeguards and containment capabilities | Test files, repositories, email/messages, web content, tool responses, APIs, connectors, and MCP against permission/action boundaries | **High** |
+| **Prompt Injection / Untrusted Content** | Provider safeguards and containment capabilities | Test files, repositories, messages, web content, tool responses, APIs, connectors, and MCP against permission/action boundaries | **High** |
 | **Control Effectiveness** | Provider controls establish a foundation | Demonstrate design, operating, and action-boundary effectiveness in the enterprise deployment | **High** |
 | **Runtime Monitoring & Incidents** | Compliance/observability capabilities can provide inputs | Establish monitoring, alerts, containment, investigation, remediation, and reassessment | **High** |
 | **Regulatory Role Determination** | Provider documentation can inform classification | Reassess intended use and regulatory role at intake and material change | **High where applicable** |
@@ -283,7 +285,38 @@ The control is not considered effective merely because an approval feature exist
 
 ---
 
-## 17. Governance Operating Model
+## 17. Framework & Regulatory Traceability
+
+This section provides a consolidated governance view. It is intended as a **practical crosswalk**, not a legal determination or official mapping issued by NIST, ISO, or the European Union.
+
+| Governance Objective | NIST AI RMF | ISO/IEC 42001 | EU AI Act — Where Applicable |
+|---|---|---|---|
+| **Governance & Accountability** | GOVERN | Clauses 4–5 | Arts. 16, 26 |
+| **Use-Case Context & Classification** | MAP | Clauses 4 & 6 | Arts. 6, 9, 25, 26 |
+| **Risk Assessment** | MAP / MEASURE | Clauses 6 & 8 | Art. 9 |
+| **Data Governance** | MAP / MEASURE / MANAGE | Clauses 6 & 8 + Annex A controls | Art. 10 |
+| **Human Oversight** | GOVERN / MANAGE | Clauses 5, 6 & 8 | Art. 14 |
+| **Accuracy / Robustness / Cybersecurity** | MEASURE / MANAGE | Clauses 8 & 9 | Art. 15 |
+| **Logging / Traceability** | GOVERN / MEASURE | Clauses 7–9 | Arts. 12, 26 |
+| **Control Testing** | MEASURE | Clauses 8 & 9 | Supports applicable risk/control obligations |
+| **Monitoring** | MEASURE / MANAGE | Clause 9 | Arts. 26 & 72 where applicable |
+| **Incident Response** | MANAGE | Clauses 8–10 | Arts. 26, 72 & 73 where applicable |
+| **Material Change** | GOVERN / MAP / MEASURE / MANAGE | Clauses 6, 8, 9 & 10 | Art. 25 and related classification obligations where applicable |
+| **Continual Improvement** | GOVERN / MEASURE / MANAGE | Clause 10 | Supports ongoing risk-management and post-market obligations where applicable |
+
+### How to Read This Crosswalk
+
+- **NIST AI RMF** provides the risk-management operating structure: **GOVERN → MAP → MEASURE → MANAGE**.
+- **ISO/IEC 42001** provides an AI management-system structure for establishing, operating, evaluating, and continually improving AI governance.
+- **EU AI Act** establishes legal obligations where its provisions apply to the organisation, role, system, and use case.
+- A single enterprise control may support **multiple frameworks simultaneously**.
+- Framework mapping does **not** demonstrate that a control is effective.
+
+> **One control can support multiple governance obligations, but one evidence set should only be relied upon where it actually demonstrates the required control outcome.**
+
+---
+
+## 18. Governance Operating Model
 
 Effective AI governance extends beyond AI Governance or Program Management alone.
 
@@ -302,7 +335,7 @@ Effective AI governance extends beyond AI Governance or Program Management alone
 
 ---
 
-## 18. Delivery & Governance Gates
+## 19. Delivery & Governance Gates
 
 | Gate | Governance Focus | Decision Evidence |
 |---|---|---|
@@ -314,7 +347,7 @@ Effective AI governance extends beyond AI Governance or Program Management alone
 
 ---
 
-## 19. Overall Assessment
+## 20. Overall Assessment
 
 **Posture:** Anthropic's public materials provide meaningful provider-level assurance inputs, including enterprise administration/security controls, Claude Code permissions and sandboxing, model/safety practices, compliance capabilities, and ISO/IEC 42001 certification of its AI management system.
 
@@ -326,7 +359,7 @@ Effective AI governance extends beyond AI Governance or Program Management alone
 
 ---
 
-## 20. Practitioner Takeaway
+## 21. Practitioner Takeaway
 
 As enterprise AI gains access to data, code, tools, connectors, MCP servers, and external systems, governance must control not only **what the AI can generate**, but also **what it can access, change, and execute**.
 
@@ -346,7 +379,7 @@ It becomes:
 
 ---
 
-## 21. Portfolio Progression
+## 22. Portfolio Progression
 
 | Case Study | Governance Progression |
 |---|---|
@@ -358,7 +391,7 @@ It becomes:
 
 ---
 
-## 22. Public Sources
+## 23. Public Sources
 
 **Primary Anthropic sources:**
 
@@ -367,17 +400,17 @@ It becomes:
 - [Anthropic ISO/IEC 42001 Certification](https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai)
 - [Anthropic Transparency Hub](https://www.anthropic.com/transparency/voluntary-commitments)
 - [Anthropic Privacy Center — Certifications](https://privacy.anthropic.com/en/articles/10015870-what-certifications-has-anthropic-obtained)
-- [Anthropic — Framework for Safe and Trustworthy Agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents)
 
 **Regulatory and governance sources:**
 
 - [European Union — Regulation (EU) 2024/1689 (AI Act)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST AI RMF Playbook](https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook)
 - [ISO/IEC 42001:2023 — AI Management Systems](https://www.iso.org/standard/81230.html)
 
 ---
 
-## 23. Sources & Limitations
+## 24. Sources & Limitations
 
 **Primary:** Anthropic public documentation covering Claude Enterprise, Claude Code, permissions and sandboxing, enterprise administration, safety/evaluation practices, transparency, and ISO/IEC 42001 certification · European Union AI Act · NIST AI RMF · ISO/IEC 42001 public information.
 
