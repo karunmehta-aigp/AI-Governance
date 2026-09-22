@@ -251,20 +251,20 @@ A favorable assurance conclusion should not be treated as permanent.
 
 ## 14. Material Change & Vendor-Side Change Review
 
-A favorable assurance conclusion should not be treated as permanent.
+A favorable assurance conclusion should not be treated as permanent. Changes originating from either the provider or the enterprise deployment can affect the risk profile, classification, controls, evidence, and assurance decision.
 
 ### Provider-Side vs. Deployer-Side Change
 
 Material change should trigger reassessment regardless of where the change originates, but the governance and regulatory implications may differ depending on who made the change.
 
-| Change Origin | Example | Governance Response |
+| **Change Origin** | **Example** | **Governance Response** |
 |---|---|---|
 | **Provider-Side Change** | Anthropic changes the model, version, capability, safeguard, or platform behaviour | Assess deployment impact; reassess affected risks, classification, controls, testing, evidence, and continued-use approval. A provider-side change does not by itself make the enterprise deployer the provider under Article 25. |
-| **Deployer-Side Change** | The enterprise changes the intended purpose, configuration, autonomy, integrations, permissions, tools, or action scope | Reassess the use-case classification, risk, controls, and regulatory role. Where Article 25 conditions apply, a deployer or other third party may be treated as the provider of the specific high-risk AI system and become subject to applicable provider obligations. |
+| **Deployer-Side Change** | The enterprise changes the intended purpose, configuration, autonomy, integrations, permissions, tools, or action scope | Reassess the use-case classification, risk, controls, and regulatory role. Where Article 25 conditions apply, the enterprise may be treated as the provider of that specific high-risk AI system and become subject to applicable provider obligations. |
 
-> **Role-reassessment principle:** Do not treat AI classification or regulatory role as a one-time intake decision. Material changes should trigger reassessment of the **use case, risk classification, regulatory role, control effectiveness, and supporting evidence**.
+> **Role-reassessment principle:** AI classification and regulatory role should not be treated as one-time intake decisions. Material changes should trigger reassessment of the **use case, risk classification, regulatory role, control effectiveness, and supporting evidence**.
 
-**Practical distinction:**
+### Practical Distinction
 
 `PROVIDER CHANGE → DEPLOYMENT IMPACT ASSESSMENT → REVALIDATE CLASSIFICATION / CONTROLS → TEST → APPROVE / CONDITION / STOP`
 
@@ -272,7 +272,24 @@ Material change should trigger reassessment regardless of where the change origi
 
 For applicable high-risk AI systems, Article 25 should be considered where changes such as substantial modification or a change in intended purpose may affect which party is treated as the provider. Regulatory applicability should be confirmed against the current EU AI Act and the facts of the specific deployment.
 
+### Material Change Triggers
+
 | **Change Trigger** | **Governance Response** |
+|---|---|
+| **Provider Model / Version Change** | Assess materiality and deployment impact |
+| **Capability / Behaviour Change** | Reassess affected risks and controls |
+| **Enterprise Data Change** | Revalidate classification, access, privacy, and data boundaries |
+| **Prompt / Instruction Change** | Version, test, approve, and monitor where material |
+| **Configuration Change** | Revalidate control design and permissions |
+| **New Connector / API / MCP / Tool** | Perform due diligence, approve scope, and test boundaries |
+| **Permission / Identity Change** | Reassess least privilege and delegated authority |
+| **Autonomy / Action-Scope Increase** | Reassess risk tier, oversight, action controls, and evidence |
+| **Business-Purpose / Regulatory-Role Change** | Reclassify the use case and reassess applicable obligations, including Article 25 role implications where relevant |
+| **Significant Incident / Failure Pattern** | Contain, investigate, remediate, retest, and reassess |
+
+### Vendor / Model Change Path
+
+`PROVIDER CHANGE → IMPACT ASSESSMENT → TARGETED REGRESSION / CONTROL TESTING → APPROVAL → CONTINUED USE / RELEASE → MONITORING`
 
 
 
