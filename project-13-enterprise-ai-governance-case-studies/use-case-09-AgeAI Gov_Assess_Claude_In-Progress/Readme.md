@@ -248,6 +248,35 @@ A favorable assurance conclusion should not be treated as permanent.
 **Vendor/model change path:**  
 `PROVIDER CHANGE → IMPACT ASSESSMENT → TARGETED REGRESSION / CONTROL TESTING → APPROVAL → CONTINUED USE / RELEASE → MONITORING`
 
+
+## 14. Material Change & Vendor-Side Change Review
+
+A favorable assurance conclusion should not be treated as permanent.
+
+### Provider-Side vs. Deployer-Side Change
+
+Material change should trigger reassessment regardless of where the change originates, but the governance and regulatory implications may differ depending on who made the change.
+
+| Change Origin | Example | Governance Response |
+|---|---|---|
+| **Provider-Side Change** | Anthropic changes the model, version, capability, safeguard, or platform behaviour | Assess deployment impact; reassess affected risks, classification, controls, testing, evidence, and continued-use approval. A provider-side change does not by itself make the enterprise deployer the provider under Article 25. |
+| **Deployer-Side Change** | The enterprise changes the intended purpose, configuration, autonomy, integrations, permissions, tools, or action scope | Reassess the use-case classification, risk, controls, and regulatory role. Where Article 25 conditions apply, a deployer or other third party may be treated as the provider of the specific high-risk AI system and become subject to applicable provider obligations. |
+
+> **Role-reassessment principle:** Do not treat AI classification or regulatory role as a one-time intake decision. Material changes should trigger reassessment of the **use case, risk classification, regulatory role, control effectiveness, and supporting evidence**.
+
+**Practical distinction:**
+
+`PROVIDER CHANGE → DEPLOYMENT IMPACT ASSESSMENT → REVALIDATE CLASSIFICATION / CONTROLS → TEST → APPROVE / CONDITION / STOP`
+
+`DEPLOYER CHANGE → REASSESS INTENDED PURPOSE → RECLASSIFY WHERE NEEDED → CHECK REGULATORY ROLE → REVALIDATE CONTROLS → APPROVE / CONDITION / STOP`
+
+For applicable high-risk AI systems, Article 25 should be considered where changes such as substantial modification or a change in intended purpose may affect which party is treated as the provider. Regulatory applicability should be confirmed against the current EU AI Act and the facts of the specific deployment.
+
+| **Change Trigger** | **Governance Response** |
+
+
+
+
 ---
 
 ## 15. Evidence-Sensitive Assurance Decision
