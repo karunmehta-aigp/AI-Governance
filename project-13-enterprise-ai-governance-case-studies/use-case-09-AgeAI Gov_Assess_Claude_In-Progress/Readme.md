@@ -227,28 +227,6 @@ For consequential actions, evidence should allow an independent reviewer to reco
 `AUTHORIZATION → CONTEXT → DECISION → APPROVAL → ACTION → OUTCOME → EXCEPTION / OVERRIDE → REASSESSMENT`
 
 ---
-
-## 14. Material Change & Vendor-Side Change Review
-
-A favorable assurance conclusion should not be treated as permanent.
-
-| Change Trigger | Governance Response |
-|---|---|
-| **Provider Model / Version Change** | Assess materiality and deployment impact |
-| **Capability / Behaviour Change** | Reassess affected risks and controls |
-| **Enterprise Data Change** | Revalidate classification, access, privacy, and data boundaries |
-| **Prompt / Instruction Change** | Version, test, approve, and monitor where material |
-| **Configuration Change** | Revalidate control design and permissions |
-| **New Connector / API / MCP / Tool** | Perform due diligence, approve scope, and test boundaries |
-| **Permission / Identity Change** | Reassess least privilege and delegated authority |
-| **Autonomy / Action-Scope Increase** | Reassess risk tier, oversight, action controls, and evidence |
-| **Business-Purpose / Regulatory-Role Change** | Reclassify use case and applicable obligations |
-| **Significant Incident / Failure Pattern** | Contain, investigate, remediate, retest, and reassess |
-
-**Vendor/model change path:**  
-`PROVIDER CHANGE → IMPACT ASSESSMENT → TARGETED REGRESSION / CONTROL TESTING → APPROVAL → CONTINUED USE / RELEASE → MONITORING`
-
-
 ## 14. Material Change & Vendor-Side Change Review
 
 A favorable assurance conclusion should not be treated as permanent. Changes originating from either the provider or the enterprise deployment can affect the risk profile, classification, controls, evidence, and assurance decision.
@@ -290,8 +268,6 @@ For applicable high-risk AI systems, Article 25 should be considered where chang
 ### Vendor / Model Change Path
 
 `PROVIDER CHANGE → IMPACT ASSESSMENT → TARGETED REGRESSION / CONTROL TESTING → APPROVAL → CONTINUED USE / RELEASE → MONITORING`
-
-
 
 
 ---
