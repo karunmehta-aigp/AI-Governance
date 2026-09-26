@@ -7,6 +7,9 @@
 > Third real-subject case study in this portfolio, following Use Case 07 (Microsoft 365 Copilot) and Use Case 08 (Salesforce Agentforce). Together they show a maturity progression: Copilot focuses on enterprise generative/productivity AI, Agentforce introduces action-taking agentic AI, and Claude Enterprise + Claude Code extends the assessment into tool/MCP access, execution boundaries, control-effectiveness testing, and action assurance. Areas marked **Review Further** are deployer due-diligence considerations, not confirmed gaps in Anthropic's practices.
 
 ---
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/82539bad-bf37-42e7-b7db-7ea19a8447d1" />
+
+____________________________________________________________________________________________________________________________________________________________________________________________________
 
 ## 1. Assessment Scope
 
