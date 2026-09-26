@@ -80,9 +80,9 @@ This is a **focused public-evidence review** of governance areas relevant to Cla
 | **AI Management System / Independent Certification** | Public ISO/IEC 42001:2023 certification information for Anthropic's AI management system | **Public Evidence** |
 | **Enterprise Administration & Security** | Public information on identity, roles/permissions, audit/compliance capabilities, retention, and enterprise controls | **Public Evidence** |
 | **Deployment-Specific Risk Assessment** | Provider evidence can inform assessment, but the enterprise's intended use, data, actions, impacts, and operating context require deployment-specific evidence | **Review Further** |
-| **Tool / MCP / Integration Governance** | Public controls exist for connectors, MCP permissions, tool permissions, file restrictions, and sandboxing; enterprise-specific configurations require verification | **Review Further** |
-| **Deployment Control Effectiveness** | Public provider controls do not establish that the enterprise's configured controls operate effectively in its deployment | **Review Further** |
-| **Ongoing Enterprise Assurance** | Provider monitoring/compliance capabilities can support assurance; deployers must establish their own monitoring, evidence, incidents, change triggers, and reassessment | **Review Further** |
+| **Tool / MCP / Integration Governance** | Public controls exist for connectors, MCP permissions, tool permissions, file restrictions, and sandboxing; enterprise-specific configurations require verification | **Public Evidence** |
+| **Deployment Control Effectiveness** | Public provider controls do not establish that the enterprise's configured controls operate effectively in its deployment | **Public Evidence** |
+| **Ongoing Enterprise Assurance** | Provider monitoring/compliance capabilities can support assurance; deployers must establish their own monitoring, evidence, incidents, change triggers, and reassessment | **Public Evidence** |
 
 **Interpretation:** **Public Evidence** means relevant governance information was observable in the public materials reviewed. **Review Further** means the deploying organisation should obtain additional assurance evidence or perform deployment-specific due diligence before relying on that area.
 
